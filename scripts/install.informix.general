@@ -2,7 +2,8 @@
 
 
 IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
-IOTKITDEPEND=$IOTKITDIR/../IotKit-depend
+IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
+export IOTKITDEPEND
 
 sudo chown informix /opt/IBM
 sudo chmod 755 /opt/IBM
