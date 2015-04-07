@@ -15,6 +15,6 @@ sudo cp $IOTKITDIR/config/configZwave.json ~informix/node-red/runIot/config/conf
 ########################
 sudo npm install openzwave -y
 cd ~informix/node-red/node_modules
-git clone https://github.com/IBM-IoT/node-red-contrib-openzwave.git
+git clone https://github.com/IBM-IoT/node-red-contrib-openzwave.git ~informix/node-red/node_modules/openzwave
 #sudo cp $IOTKITDIR/scripts/start.zwave ~informix/node-red/runIot/
 #sudo cp $IOTKITDIR/scripts/stop.zwave ~informix/node-red/runIot/
