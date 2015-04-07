@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo apt-get update
 IOTKITDIR=`pwd`;
 export IOTKITDIR
 sudo mkdir $IOTKITDIR/../iot-gateway-kit-depend
@@ -12,7 +13,7 @@ echo "============================================"
 echo "-  Installing Informix user                -"
 echo "============================================"
 
-. scripts/install.informix.user
+. $IOTKITDIR/scripts/install.informix.user
 
 ################################
 # Install Node
@@ -20,7 +21,7 @@ echo "============================================"
 echo "============================================"
 echo "-  Installing Node                         -"
 echo "============================================"
-. scripts/install.node
+. $IOTKITDIR/scripts/install.node
 
 
 ################################
@@ -29,7 +30,7 @@ echo "============================================"
 echo "============================================"
 echo "-  Installing Node Red                     -"
 echo "============================================"
-. scripts/install.nodered
+. $IOTKITDIR/scripts/install.nodered
 
 ################################
 # Install Ble
@@ -37,7 +38,7 @@ echo "============================================"
 echo "============================================"
 echo "-  Installing BLE                          -"
 echo "============================================"
-. scripts/install.ble
+. $IOTKITDIR/scripts/install.ble
 
 ################################
 # Install Zwave
@@ -45,7 +46,7 @@ echo "============================================"
 echo "============================================"
 echo "-  Installing Zwave                        -"
 echo "============================================"
-. scripts/install.zwave
+. $IOTKITDIR/scripts/install.zwave
 
 ################################
 # Install Informix Product 
@@ -54,7 +55,7 @@ echo "============================================"
 echo "-  Installing Informix Product             -"
 echo "============================================"
 
-. scripts/install.informix.prod
+. $IOTKITDIR/scripts/install.informix.prod
 
 
 ################################
@@ -63,7 +64,7 @@ echo "============================================"
 echo "============================================"
 echo "-  Installing Informix General             -"
 echo "============================================"
-. scripts/install.informix.general
+. $IOTKITDIR/scripts/install.informix.general
 
 sudo service informix start
 

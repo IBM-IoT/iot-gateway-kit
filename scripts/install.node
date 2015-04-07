@@ -32,4 +32,4 @@ if [ "$WC" != "0" ]; then
 fi
 
 
-
+sudo npm update
