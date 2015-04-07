@@ -1,3 +1,9 @@
+#!/bin/bash
+
+
+IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
+IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
+
 cd ~informix
 sudo apt-get install bluez libbluetooth-dev -y
 ##########################
