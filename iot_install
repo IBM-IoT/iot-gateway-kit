@@ -2,8 +2,8 @@
 
 IOTKITDIR=`pwd`;
 export IOTKITDIR
-sudo mkdir $IOTKITDIR/../IotKit-depend
-export IOTKITDEPEND=$IOTKITDIR/../IotKit-depend
+sudo mkdir $IOTKITDIR/../iot-gateway-kit-depend
+export IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
 
 ################################
 # Create Informix user
