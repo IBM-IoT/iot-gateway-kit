@@ -10,5 +10,5 @@ IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
 
 sudo groupadd informix
 sudo useradd -g informix -m informix
-sudo echo informix:informix | chpasswd informix
+sudo bash -c "echo informix:informix | chpasswd informix"
 
