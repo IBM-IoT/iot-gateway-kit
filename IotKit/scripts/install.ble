@@ -1,0 +1,13 @@
+########################
+# Copy program files
+########################
+sudo cp $IOTKITDIR/bin/readBle.js ~informix/node-red/runIot/readBle.js
+sudo cp $IOTKITDIR/config/configBle.json ~informix/node-red/runIot/config/configBle.json
+
+########################
+# Install components
+########################
+cd ~informix/node-red
+sudo npm install sensortag -y
+sudo cp $IOTKITDIR/scripts/start.ble ~informix/node-red/runIot/
+sudo cp $IOTKITDIR/scripts/stop.ble ~informix/node-red/runIot/ 

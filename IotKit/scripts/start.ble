@@ -1,0 +1,3 @@
+rm nohup.out
+node readBle.js > nohup.out &
+

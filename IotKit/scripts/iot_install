@@ -1,0 +1,91 @@
+#!/bin/bash
+
+IOTKITDIR=`pwd`;
+export IOTKITDIR
+
+sudo apt-get install libudev-dev bluez libbluetooth-dev -y
+cd ~ 
+wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+sudo dpkg -i node_latest_armhf.deb
+sudo npm install node-gyp -g
+git clone https://github.com/node-red/node-red.git
+sudo mkdir node-red/runIot
+sudo cp IotKit/bin/readZwave.js node-red/runIot/readZwave.js
+sudo cp IotKit/bin/readBle.js node-red/runIot/readBle.js
+sudo mkdir node-red/runIot/config
+sudo cp IotKit/bin/util.js node-red/runIot/util.js
+sudo cp IotKit/config/configZwave.json node-red/runIot/config/configZwave.json
+sudo cp IotKit/config/configBle.json node-red/runIot/config/configBle.json
+cd node-red
+sudo npm install -y
+sudo npm install openzwave getmac sensortag node-red-timeseries -y
+cd ~
+sudo cp IotKit/flows/zwaveFlow.json .node-red/lib/flow/zwaveFlow.json
+sudo cp IotKit/flows/bleFlow.json .node-red/lib/flow/bleFlow.json
+
+sudo apt-get install libpam0g:i386 libncurses5:i386 libaio1:i386 lib32stdc++6 -y
+
+sudo groupadd informix
+sudo useradd -g informix -m /home/informix informix
+echo informix:informix | chpasswd
+
+export LC_ALL="en_US.UTF-8"
+
+cd IotKit
+RESPONSEPATH=`pwd`
+ARCHITECTURE=`uname -a`
+WC=`echo $ARCHITECTURE | grep x86_64 | wc -l`
+if [ "$WC" != "0" ]; then
+	RESPONSEPATH=$RESPONSEPATH"/intel.response"
+	#Git pull
+	INFORMIX="./iif.12.10.UC4DE.Linux-RHEL5.tar"
+	tar xvf $INFORMIX
+	sudo ./ids_install -i silent -f $RESPONSEPATH -DLICENSE_ACCEPTED=TRUE
+fi
+
+WC=`echo $ARCHITECTURE | grep armv6 | wc -l`
+if [ "$WC" != "0" ]; then
+	#Git pull
+	INFORMIX="./ids.12.10.UC4DE.Linux-ARM6.tar"
+	tar xvf $INFORMIX
+	sudo ./ids_install -DINSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
+fi
+
+WC=`echo $ARCHITECTURE | grep armv7 | wc -l`
+if [ "$WC" != "0" ]; then
+	#Git pull
+	INFORMIX="./ids.12.10.UC4DE.Linux-ARM7.tar"
+	tar xvf $INFORMIX
+	sudo ./ids_install -DINSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
+fi
+
+cd /opt
+sudo chown informix IBM
+sudo chmod 755 IBM
+
+cd ~
+PWD=`pwd`
+sudo cp IotKit/init/informix.debian /etc/init.d/informix
+sudo cp IotKit/config/inf.env /etc/default/informix
+cd /etc/default
+. informix
+cd ~
+sudo cp IotKit/config/onconfig.iotkit $INFORMIXDIR/etc/onconfig.iotkit
+sudo cp IotKit/config/sch_init_iotkit.sql $INFORMIXDIR/sysadmin/sch_init_iotkit.sql
+sudo chown informix /etc/init.d/informix
+sudo chown informix /etc/default/informix
+sudo chown informix /opt/IBM/informix/etc/onconfig.iotkit
+sudo chown informix /opt/IBM/informix/etc/sysadmin/sch_init_iotkit.sql
+sudo ln -s /etc/default/informix /home/informix/inf.env
+sudo ln -s $PWD"/node-red" /home/informix/node-red
+sudo ln -s $PWD"/IotKit" /home/informix/IotKit
+sudo ln -s /etc/init.d/informix /etc/rc3.d/S20informix
+
+sudo cp IotKit/listener/listener.mongo.properties /opt/IBM/informix/etc/
+sudo cp IotKit/listener/listener.rest.properties /opt/IBM/informix/etc/
+
+sudo chown informix $INFORMIXDIR/etc/listener.mongo.properties
+sudo chown informix $INFORMIXDIR/etc/listener.rest.properties
+
+cd /opt/IBM/informix/etc
+sudo java -jar $INFORMIXDIR/bin/jsonListener.jar -config listener.mongo.properties -config listener.rest.properties -start -logfile jsonListener.log

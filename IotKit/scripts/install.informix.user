@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
+
+
+#################################
+# Create Informix user
+#################################
+
+sudo groupadd informix
+sudo useradd -g informix -m informix
+echo informix:informix | chpasswd
+

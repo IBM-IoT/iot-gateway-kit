@@ -1,0 +1,25 @@
+./stop
+
+P=$INFORMIXDIR/bin
+
+rm nohup.out
+PROG="JSON.jar"
+
+IPADDR="192.168.1.201"
+IPADDR="127.0.0.1"
+PASSWD_FILE="/home/informix/REST/jmxremote.password"
+ACCESS_FILE="/home/informix/REST/jmxremote.access"
+JAVA_ARGS="-Dcom.sun.management.jmxremote \
+     -Dcom.sun.management.jmxremote.ssl=false \
+     -Dcom.sun.management.jmxremote.password.file=$PASSWD_FILE \
+     -Dcom.sun.management.jmxremote.access.file=$ACCESS_FILE \
+     -Dcom.sun.management.jmxremote.port=1098 \
+     -Djava.rmi.server.hostname=$IPADDR \
+     -XX:+UnlockCommercialFeatures \
+     -XX:+FlightRecorder"
+#export CLASSPATH="$P/$PROG:$P/slf4j-simple-1.7.5.jar:$P/tomcat-embed-core.jar"
+export CLASSPATH="$P/$PROG:"
+export MAINCLASS="com.ibm.nosql.server.ListenerCLI"
+
+nohup java $JAVA_ARGS -cp $CLASSPATH $MAINCLASS -start -config $INFORMIXDIR/etc/rest.properties &
+

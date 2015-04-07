@@ -1,0 +1,12 @@
+sudo apt-get install libudev-dev -y
+ARCHITECTURE =`uname -a`
+WC=`echo $ARCHITECTURE | grep x86_64 | wc -l`
+if [ "$WC" != "0" ]; then
+	sudo apt-get install nodejs-legacy nodejs -gy
+fi
+WC=`echo $ARCHITECTURE | grep armv | wc -l`
+if [ "$WC" != "0" ]; then
+	wget http://node-arm.herokuapp.com/node_0.10.36_armhf.deb
+	sudo dpkg -i node_0.10.36_armhf.deb
+	mv node_0.10.36_armhf.deb $IOTKITDEPEND/
+fi

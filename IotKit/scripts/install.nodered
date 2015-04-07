@@ -1,0 +1,24 @@
+cd ~informix
+sudo apt-get install bluez libbluetooth-dev -y
+##########################
+# Pull in node-red
+##########################
+git clone https://github.com/node-red/node-red.git
+
+
+##########################
+# Make directories and copy util file
+##########################
+sudo mkdir ~informix/node-red/runIot
+sudo cp $IOTKITDIR/bin/util.js node-red/runIot/util.js
+sudo mkdir ~informix/node-red/runIot/config
+
+####################################
+# Install node-red and components
+####################################
+cd ~informix/node-red
+sudo npm install -y
+sudo npm install getmac node-red-timeseries -y
+sudo cp $IOTKITDIR/scripts/start.nodered ~informix/node-red/
+sudo cp $IOTKITDIR/scripts/stop.nodered ~informix/node-red/
+

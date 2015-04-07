@@ -1,0 +1,55 @@
+# Thu Mar 26 09:26:32 CDT 2015
+# Replay feature output
+# ---------------------
+# This file was built by the Replay feature of InstallAnywhere.
+# It contains variables that were set by Panels, Consoles or Custom Code.
+
+
+
+#Indicate whether the license agreement been accepted
+#----------------------------------------------------
+LICENSE_ACCEPTED=TRUE
+
+#Installation Location
+#---------------------
+USER_INSTALL_DIR=/opt/IBM/informix
+
+#Installation or Distribution
+#----------------------------
+
+#Server Instance Creation
+#------------------------
+
+#Host Name
+#---------
+
+#Specify Apache Port Number
+#--------------------------
+
+#Security Features
+#-----------------
+
+#OAT Administrator login setup
+#-----------------------------
+
+#
+#
+
+#Configuration - Number of Users
+#-------------------------------
+
+#Install
+#-------
+
+#Non-Root installation
+#---------------------
+UNIX_INSTALLTYPE_SELECT=DEFAULT
+
+#Licensing
+#---------
+LICENSE_ACCEPTED=TRUE
+
+#Location and Features
+#---------------------
+USER_INSTALL_DIR=/opt/IBM/informix
+IDS_INSTALL_TYPE=TYPICAL

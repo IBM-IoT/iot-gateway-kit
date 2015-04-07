@@ -1,0 +1,78 @@
+#!/bin/bash
+
+IOTKITDIR=`pwd`;
+export IOTKITDIR
+sudo mkdir $IOTKITDIR/../IotKit-depend
+export IOTKITDEPEND=$IOTKITDIR/../IotKit-depend
+
+################################
+# Create Informix user
+################################
+. scripts/install.informix.user
+
+################################
+# Install Node
+################################
+. scripts/install.node
+
+
+################################
+# Install Node-red
+################################
+. scripts/install.nodered
+
+################################
+# Install Ble
+################################
+. scripts/install.ble
+
+################################
+# Install Zwave
+################################
+. scripts/install.zwave
+
+################################
+# Install Informix Product 
+################################
+
+ARCHITECTURE=`uname -a`
+WC=`echo $ARCHITECTURE | grep x86_64 | wc -l`
+if [ "$WC" != "0" ]; then
+	RESPONSEPATH=$IOTKITDIR/response/intel.response
+	#Git pull
+	mv iif.12.10.UC4DE.Linux-RHEL5.tar $IOTKITDEPEND/iif.12.10.UC4DE.Linux-RHEL5.tar
+	INFORMIX="$IOTKITDEPEND/iif.12.10.UC4DE.Linux-RHEL5.tar"
+	tar xvf $INFORMIX
+	sudo $IOTKITDEPEND/ids_install -i silent -f $RESPONSEPATH -DLICENSE_ACCEPTED=TRUE
+fi
+
+WC=`echo $ARCHITECTURE | grep armv6 | wc -l`
+if [ "$WC" != "0" ]; then
+	#Git pull
+	INFORMIX="./ids.12.10.UC4DE.Linux-ARM6.tar"
+	tar xvf $INFORMIX
+	sudo ./ids_install -DINSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
+fi
+
+WC=`echo $ARCHITECTURE | grep armv7 | wc -l`
+if [ "$WC" != "0" ]; then
+	#Git pull
+	INFORMIX="./ids.12.10.UC4DE.Linux-ARM7.tar"
+	tar xvf $INFORMIX
+	sudo ./ids_install -DINSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
+fi
+
+
+
+
+
+################################
+# Install Informix 
+################################
+. scripts/install.informix.general
+
+sudo service informix start
+
+cd ~informix/node-red
+sudo ./start.nodered
+

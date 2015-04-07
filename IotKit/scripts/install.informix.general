@@ -1,0 +1,112 @@
+#!/bin/bash
+
+
+IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
+IOTKITDEPEND=$IOTKITDIR/../IotKit-depend
+
+sudo chown informix /opt/IBM
+sudo chmod 755 /opt/IBM
+
+########################
+# init.d Script
+########################
+sudo cp $IOTKITDIR/init/informix.debian /etc/init.d/informix
+[ ! -e /etc/rc3.d/S20informix ] && sudo ln -s /etc/init.d/informix /etc/rc3.d/S20informix
+[ ! -e /etc/rc3.d/K20informix ] && sudo ln -s /etc/init.d/informix /etc/rc3.d/K20informix
+
+
+########################
+# inf.env script 
+########################
+sudo cp $IOTKITDIR/config/inf.env /etc/default/informix
+[ ! -e ~informix/inf.env ] && sudo ln -s /etc/default/informix ~informix/inf.env
+sudo chown informix:informix /etc/default/informix
+sudo chmod 755 /etc/default/informix
+. ~informix/inf.env
+
+
+########################
+# $ONCONFIG file 
+########################
+sudo cp $IOTKITDIR/config/onconfig.iotkit $INFORMIXDIR/etc/onconfig.iotkit
+sudo chown informix:informix $INFORMIXDIR/etc/onconfig.iotkit
+
+########################
+# sqlhosts file 
+########################
+sudo cp $IOTKITDIR/config/sqlhosts $INFORMIXSQLHOSTS
+sudo chown informix:informix $INFORMIXSQLHOSTS 
+
+############################
+# sch_init_iotkit.sql file 
+############################
+sudo cp $IOTKITDIR/config/sch_init_iotkit.sql $INFORMIXDIR/etc/sysadmin
+sudo chown informix:informix $INFORMIXDIR/etc/sysadmin/sch_init_iotkit.sql
+sudo chmod 755 $INFORMIXDIR/etc/sysadmin/sch_init_iotkit.sql
+
+
+########################
+# Mongo properties file 
+########################
+sudo cp $IOTKITDIR/listener/mongo.properties $INFORMIXDIR/etc/
+sudo chown informix:informix $INFORMIXDIR/etc/mongo.properties
+
+
+########################
+# Rest properties file 
+########################
+sudo cp $IOTKITDIR/listener/rest.properties $INFORMIXDIR/etc/
+sudo chown informix:informix $INFORMIXDIR/etc/rest.properties
+
+
+########################
+# IotKit link 
+########################
+[ ! -e ~informix/IotKit ]  && sudo ln -s $IOTKITDIR ~informix/IotKit
+
+
+
+########################
+# Start Informix 
+########################
+[ ! -e $INFORMIXDIR/storage ] && sudo mkdir $INFORMIXDIR/storage
+sudo chown informix:informix $INFORMIXDIR/storage
+sudo chmod 755 $INFORMIXDIR/storage
+
+sudo touch $INFORMIXDIR/storage/rootdbs
+sudo chown informix:informix $INFORMIXDIR/storage/rootdbs
+sudo chmod 660 $INFORMIXDIR/storage/rootdbs
+
+sudo bash -c ". ~informix/inf.env;oninit -iwy"
+
+###############################
+# Setup instance 
+###############################
+
+sudo bash -c ". ~informix/inf.env;$IOTKITDIR/scripts/setup.ids"
+
+###############################
+# Get Listener and Configure 
+###############################
+cd $IOTKITDEPEND
+git clone https://github.com/IBM-IoT/rest-listener.git  
+sudo chown informix:informix $IOTKITDEPEND/rest-listener/* 
+sudo chmod 777 $IOTKITDEPEND/rest-listener
+sudo chmod 755 $IOTKITDEPEND/rest-listener/*
+sudo chmod 600 $IOTKITDEPEND/rest-listener/jmx*
+
+[ ! -e ~informix/REST ] && sudo ln -s $IOTKITDEPEND/rest-listener ~informix/REST
+[ ! -e $INFORMIXDIR/bin/JSON.jar ] && sudo ln -s $IOTKITDEPEND/rest-listener/nosql*.jar $INFORMIXDIR/bin/JSON.jar 
+
+sudo cp $IOTKITDIR/scripts/start.rest ~informix/REST
+sudo cp $IOTKITDIR/scripts/stop.rest ~informix/REST
+sudo chown informix:informix ~informix/REST/start.rest 
+sudo chown informix:informix ~informix/REST/stop.rest 
+sudo chmod 755 ~informix/REST/start.rest
+sudo chmod 755 ~informix/REST/stop.rest
+
+
+#cd $IOTKITDIR/scripts
+#sudo bash -c ". ~informix/inf.env;. ~informix/REST/start.rest"
+
+
