@@ -107,7 +107,7 @@ sudo chmod 755 ~informix/REST/start.rest
 sudo chmod 755 ~informix/REST/stop.rest
 
 
-#cd $IOTKITDIR/scripts
-#sudo bash -c ". ~informix/inf.env;. ~informix/REST/start.rest"
+cd $IOTKITDIR/scripts
+sudo bash -c ". ~informix/inf.env;. ~informix/REST/start.rest"
 
 
