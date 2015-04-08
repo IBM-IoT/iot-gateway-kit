@@ -1,3 +1,4 @@
 rm -f nohup.out
+cd ~informix/node-red/runIot
 node readBle.js > nohup.out &
 

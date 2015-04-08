@@ -11,9 +11,9 @@ sudo chmod 755 /opt/IBM
 ########################
 # init.d Script
 ########################
-sudo cp $IOTKITDIR/init/informix.debian /etc/init.d/informix
-[ ! -e /etc/rc3.d/S20informix ] && sudo ln -s /etc/init.d/informix /etc/rc3.d/S20informix
-[ ! -e /etc/rc3.d/K20informix ] && sudo ln -s /etc/init.d/informix /etc/rc3.d/K20informix
+sudo cp $IOTKITDIR/init/iot.debian /etc/init.d/iot
+[ ! -e /etc/rc3.d/S20iot ] && sudo ln -s /etc/init.d/iot /etc/rc3.d/S20iot
+[ ! -e /etc/rc3.d/K20informix ] && sudo ln -s /etc/init.d/iot /etc/rc3.d/K20iot
 
 
 ########################
