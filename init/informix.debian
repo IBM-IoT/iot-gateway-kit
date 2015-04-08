@@ -162,7 +162,7 @@ case "$1" in
 	## Start daemon with startproc(8). If this fails
 	## the return value is set appropriately by startproc.
 	/sbin/start-stop-daemon --start -u informix -g informix --exec ${ONINIT_BIN}
-        . ~informix/REST/start
+        . ~informix/REST/start.rest
 
 	## Remember status and be verbose
 	rc_status -v
