@@ -6,7 +6,7 @@ IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
 
 
 
-#sudo apt-get install libudev-dev -y
+sudo apt-get install libudev-dev -y
 
 
 
@@ -31,5 +31,5 @@ if [ "$WC" != "0" ]; then
 	sudo apt-get install -y build-essential python-dev python-rpi.gpio nodejs
 fi
 
-
+curl -L https://npmjs.org/install.sh | sh
 sudo npm update
