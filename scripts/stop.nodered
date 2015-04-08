@@ -1,4 +1,4 @@
 pid=`ps -elf|grep "node-red" |grep -v grep|awk '{print $4}'`
-echo "Killing " $pid
-kill -9 $pid
+
+[ "${#pid}" -gt 0 ] && { echo "Killing " $pid; kill -9 $pid; }
 
