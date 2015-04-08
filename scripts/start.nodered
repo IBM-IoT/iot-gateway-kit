@@ -1,2 +1,2 @@
-rm nohup.out
+rm -f nohup.out
 node red.js ~informix/IotKit/flows/flows_raspberrypi.json > nohup.out &

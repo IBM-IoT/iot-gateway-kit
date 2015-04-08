@@ -170,7 +170,7 @@ case "$1" in
     stop)
 	echo -n "Shutting down Informix "
 	$ONMODE_BIN -yuk
-        . ~informix/REST/stop
+        . ~informix/REST/stop.rest
 
 	## Remember status and be verbose
 	rc_status -v

@@ -1,8 +1,8 @@
-./stop
+. ~informix/REST/stop.rest
 
 P=$INFORMIXDIR/bin
 
-rm nohup.out
+rm -f nohup.out
 PROG="JSON.jar"
 
 IPADDR="192.168.1.201"
