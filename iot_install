@@ -82,7 +82,7 @@ echo "-  Installing Informix General             -"
 echo "============================================"
 . $IOTKITDIR/scripts/install.informix.general
 
-sudo service informix start
+sudo service iot start
 
 #cd ~informix/node-red
 #sudo ./start.nodered
