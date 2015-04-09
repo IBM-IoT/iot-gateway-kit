@@ -1,8 +1,0 @@
-starting rest listener on port 27018
-{ date: "2015-04-03 05:37:22.316" , thread: "main" , level: "WARN " , source: o.a.catalina.core.StandardContext , message: "A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []" }
-{ date: "2015-04-03 05:37:27.633" , thread: "main" , level: "INFO " , source: o.a.coyote.http11.Http11NioProtocol , message: "Initializing ProtocolHandler ["http-nio-27018"]" }
-{ date: "2015-04-03 05:37:30.753" , thread: "main" , level: "INFO " , source: o.a.tomcat.util.net.NioSelectorPool , message: "Using a shared selector for servlet write/read" }
-{ date: "2015-04-03 05:37:30.789" , thread: "main" , level: "INFO " , source: o.a.catalina.core.StandardService , message: "Starting service Tomcat" }
-{ date: "2015-04-03 05:37:30.797" , thread: "main" , level: "INFO " , source: o.a.catalina.core.StandardEngine , message: "Starting Servlet Engine: Apache Tomcat/8.0.20" }
-{ date: "2015-04-03 05:37:32.945" , thread: "localhost-startStop-1" , level: "INFO " , source: o.a.c.util.SessionIdGeneratorBase , message: "Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [157] milliseconds." }
-{ date: "2015-04-03 05:37:33.036" , thread: "main" , level: "INFO " , source: o.a.coyote.http11.Http11NioProtocol , message: "Starting ProtocolHandler ["http-nio-27018"]" }
