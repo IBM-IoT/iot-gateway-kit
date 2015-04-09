@@ -14,14 +14,15 @@ sudo chmod 755 /opt/IBM
 sudo cp $IOTKITDIR/init/informix /etc/init.d/informix
 sudo cp $IOTKITDIR/init/rest /etc/init.d/rest
 sudo cp $IOTKITDIR/init/node-red /etc/init.d/node-red
+sudo cp $IOTKITDIR/init/iot /etc/init.d/iot
 
 #[ ! -e /etc/rc3.d/S20iot ] && sudo ln -s /etc/init.d/iot /etc/rc3.d/S20iot
 #[ ! -e /etc/rc3.d/K20informix ] && sudo ln -s /etc/init.d/iot /etc/rc3.d/K20iot
 
-#sudo update-rc.d informix defaults
-#sudo update-rc.d rest defaults
-#sudo update-rc.d node-red defaults
-#sudo update-rc.d iot defaults
+sudo update-rc.d informix defaults
+sudo update-rc.d rest defaults
+sudo update-rc.d node-red defaults
+sudo update-rc.d iot defaults
 
 ########################
 # inf.env script 
