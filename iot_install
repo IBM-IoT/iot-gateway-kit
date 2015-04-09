@@ -87,6 +87,9 @@ sudo service informix start
 #cd ~informix/node-red
 #sudo ./start.nodered
 
+
+sudo bash -c "echo 'informix ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers"
+
 date >> log
 echo "Finished" >> log
 
