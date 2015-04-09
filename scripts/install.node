@@ -31,6 +31,6 @@ if [ "$WC" != "0" ]; then
 	sudo apt-get install -y build-essential python-dev python-rpi.gpio nodejs -y
 fi
 
-curl -L https://npmjs.org/install.sh | sh
+sudo curl -L https://npmjs.org/install.sh | sh
 sudo cp $IOTKITDIR/npm-install-2489.sh $IOTKITDEPEND/
 sudo npm update
