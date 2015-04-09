@@ -1,11 +1,17 @@
 #!/bin/bash
 
+date > log
+echo "apt-get update" >> log
+
 sudo apt-get update
 IOTKITDIR=`pwd`;
 export IOTKITDIR
 sudo mkdir $IOTKITDIR/../iot-gateway-kit-depend
 export IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
 
+
+date >> log
+echo "Installing informix user" >> log
 ################################
 # Create Informix user
 ################################
@@ -15,6 +21,8 @@ echo "============================================"
 
 . $IOTKITDIR/scripts/install.informix.user
 
+date >> log
+echo "Installing Node" >> log
 ################################
 # Install Node
 ################################
@@ -24,6 +32,8 @@ echo "============================================"
 . $IOTKITDIR/scripts/install.node
 
 
+date >> log
+echo "Installing node-red" >> log
 ################################
 # Install Node-red
 ################################
@@ -32,6 +42,8 @@ echo "-  Installing Node Red                     -"
 echo "============================================"
 . $IOTKITDIR/scripts/install.nodered
 
+date >> log
+echo "Installing ble" >> log
 ################################
 # Install Ble
 ################################
@@ -40,6 +52,8 @@ echo "-  Installing BLE                          -"
 echo "============================================"
 . $IOTKITDIR/scripts/install.ble
 
+date >> log
+echo "Installing zwave" >> log
 ################################
 # Install Zwave
 ################################
@@ -58,6 +72,8 @@ echo "============================================"
 . $IOTKITDIR/scripts/install.informix.prod
 
 
+date >> log
+echo "Installing informix" >> log
 ################################
 # Install Informix 
 ################################
@@ -68,6 +84,9 @@ echo "============================================"
 
 sudo service informix start
 
-cd ~informix/node-red
-sudo ./start.nodered
+#cd ~informix/node-red
+#sudo ./start.nodered
+
+date >> log
+echo "Finished" >> log
 
