@@ -4,7 +4,6 @@
 IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
 IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
 
-. $IOTKITDIR/scripts/funcs
 
 LOGSTART1 "cp files"
 ########################

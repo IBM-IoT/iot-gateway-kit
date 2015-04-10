@@ -4,8 +4,6 @@
 IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
 
 
-. $IOTKITDIR/scripts/funcs
-
 LOGSTART1 "Informix user"
 #################################
 # Create Informix user

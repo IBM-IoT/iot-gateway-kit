@@ -92,6 +92,8 @@ echo "-  Installing Informix General             -"
 echo "============================================"
 . $IOTKITDIR/scripts/install.informix.general
 
+LOGSTOP
+LOGSTART "Starting iot Service"
 sudo service iot start
 
 
