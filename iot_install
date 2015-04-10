@@ -1,30 +1,16 @@
 #!/bin/bash
 
 
-function LOGSTART() {
+IOTKITDIR=`pwd`;
+export IOTKITDIR
 
-echo "################################################" >> install.log
-echo "  Installing $1" >> install.log
-echo "################################################" >> install.log
-echo "   Start: " `date` >> install.log
-}
-
-
-function LOGSTOP() {
-echo "    Stop: " `date` >> install.log
-
-}
-
-
-
+. $IOTKITDIR/scripts/funcs
 
 echo "" > install.log
 
 LOGSTART "apt-get update"
 
 sudo apt-get update
-IOTKITDIR=`pwd`;
-export IOTKITDIR
 sudo mkdir $IOTKITDIR/../iot-gateway-kit-depend
 export IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
 

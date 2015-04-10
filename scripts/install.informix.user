@@ -4,6 +4,9 @@
 IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
 
 
+. $IOTKITDIR/scripts/funcs
+
+LOGSTART1 "Informix user"
 #################################
 # Create Informix user
 #################################
@@ -14,3 +17,4 @@ sudo bash -c "echo informix:informix | chpasswd informix"
 
 sudo bash -c "echo 'informix ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers"
 
+LOGSTOP1

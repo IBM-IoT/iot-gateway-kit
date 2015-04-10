@@ -4,14 +4,23 @@
 IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
 IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
 
+. $IOTKITDIR/scripts/funcs
+
+LOGSTART1 "apt-get install bluez"
+
 cd ~informix
 sudo apt-get install bluez libbluetooth-dev -y
+
+LOGSTOP1
+LOGSTART1 "git clone node-red"
 ##########################
 # Pull in node-red
 ##########################
 sudo git clone https://github.com/node-red/node-red.git ~informix/node-red
 
 
+LOGSTOP1
+LOGSTART1 "MK dir and cp"
 ##########################
 # Make directories and copy util file
 ##########################
@@ -19,6 +28,8 @@ sudo mkdir ~informix/node-red/runIot
 sudo cp $IOTKITDIR/bin/util.js node-red/runIot/util.js
 sudo mkdir ~informix/node-red/runIot/config
 
+LOGSTOP1
+LOGSTART1 "node-red and components"
 ####################################
 # Install node-red and components
 ####################################
@@ -28,3 +39,4 @@ sudo npm install getmac node-red-contrib-timeseries express -y
 sudo cp $IOTKITDIR/scripts/start.nodered ~informix/node-red/
 sudo cp $IOTKITDIR/scripts/stop.nodered ~informix/node-red/
 
+LOGSTOP1

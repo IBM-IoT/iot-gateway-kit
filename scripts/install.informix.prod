@@ -4,9 +4,14 @@
 IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
 IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
 
+
+. $IOTKITDIR/scripts/funcs
+
+
 cd $IOTKITDEPEND
 
 
+LOGSTART1 "Informix Product"
 ################################
 # Install Informix Product 
 ################################
@@ -41,3 +46,4 @@ fi
 
 cd $IOTKITDIR
 
+LOGSTOP1
