@@ -3,22 +3,22 @@
 
 function LOGSTART() {
 
-echo "################################################"
-echo "  Installing $1"
-echo "################################################"
-echo "   Start: " `date`
+echo "################################################" >> install.log
+echo "  Installing $1" >> install.log
+echo "################################################" >> install.log
+echo "   Start: " `date` >> install.log
 }
 
 
 function LOGSTOP() {
-echo "    Stop: " `date`
+echo "    Stop: " `date` >> install.log
 
 }
 
 
 
 
-echo "" > log
+echo "" > install.log
 
 LOGSTART "apt-get update"
 
