@@ -3,27 +3,39 @@
 
 function LOGSTART() {
 
-sudo echo "################################################" >> install.log
-sudo echo "  Installing $1" >> install.log
-sudo echo "################################################" >> install.log
-sudo echo "   Start: " `date` >> install.log
+sudo bash -c 'echo "################################################" >> install.log'
+sudo bash -c 'echo "  $1" >> install.log'
+sudo bash -c 'echo "################################################" >> install.log'
+sudo bash -c  'echo "   Start: " `date` >> install.log'
+
+echo "################################################" 
+echo "  $1"
+echo "################################################" 
+echo "   Start: " `date`
 }
 
 function LOGSTART1() {
 
-sudo echo "     ----------------------------------------" >> install.log
-sudo echo "          Installing $1" >> install.log
-sudo echo "     ----------------------------------------" >> install.log
-sudo echo "          Start: " `date` >> install.log
+sudo bash -c 'echo "     ----------------------------------------" >> install.log'
+sudo bash -c 'echo "          Installing $1" >> install.log'
+sudo bash -c 'echo "     ----------------------------------------" >> install.log'
+sudo bash -c 'echo "          Start: " `date` >> install.log'
+
+echo "     ----------------------------------------" 
+echo "          $1"
+echo "     ----------------------------------------" 
+echo "          Start: " `date`
 }
 
 
 function LOGSTOP() {
-sudo echo "    Stop: " `date` >> install.log
+sudo bash 'echo "    Stop: " `date` >> install.log'
+echo "    Stop: " `date` 
 }
 
 function LOGSTOP1() {
-sudo echo "           Stop: " `date` >> install.log
+sudo bash -c 'echo "           Stop: " `date` >> install.log'
+echo "           Stop: " `date`
 }
 
 

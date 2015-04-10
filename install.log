@@ -1,44 +1,42 @@
-
+Begin Install
 ################################################
-  Installing apt-get update
+  
 ################################################
-   Start:  Fri Apr 10 07:19:25 UTC 2015
-    Stop:  Fri Apr 10 07:20:25 UTC 2015
+   Start:  Fri Apr 10 16:50:11 UTC 2015
+     ----------------------------------------
+          Installing 
+     ----------------------------------------
+          Start:  Fri Apr 10 16:50:11 UTC 2015
+           Stop:  Fri Apr 10 16:51:18 UTC 2015
 ################################################
-  Installing Informix User
+  
 ################################################
-   Start:  Fri Apr 10 07:20:25 UTC 2015
+   Start:  Fri Apr 10 16:51:19 UTC 2015
      ----------------------------------------
-          Installing Informix user
+          Installing 
      ----------------------------------------
-          Start:  Fri Apr 10 07:20:25 UTC 2015
-           Stop:  Fri Apr 10 07:20:26 UTC 2015
-    Stop:  Fri Apr 10 07:20:26 UTC 2015
+          Start:  Fri Apr 10 16:51:19 UTC 2015
+           Stop:  Fri Apr 10 16:51:22 UTC 2015
 ################################################
-  Installing Node
+  
 ################################################
-   Start:  Fri Apr 10 07:20:27 UTC 2015
+   Start:  Fri Apr 10 16:51:23 UTC 2015
      ----------------------------------------
-          Installing apt-get install libudev
+          Installing 
      ----------------------------------------
-          Start:  Fri Apr 10 07:20:27 UTC 2015
-           Stop:  Fri Apr 10 07:20:32 UTC 2015
+          Start:  Fri Apr 10 16:51:23 UTC 2015
+           Stop:  Fri Apr 10 16:51:28 UTC 2015
      ----------------------------------------
-          Installing apt-get node
+          Installing 
      ----------------------------------------
-          Start:  Fri Apr 10 07:20:33 UTC 2015
-           Stop:  Fri Apr 10 07:21:28 UTC 2015
+          Start:  Fri Apr 10 16:51:28 UTC 2015
+           Stop:  Fri Apr 10 16:53:39 UTC 2015
      ----------------------------------------
-          Installing curl npmjs
+          Installing 
      ----------------------------------------
-          Start:  Fri Apr 10 07:21:28 UTC 2015
-           Stop:  Fri Apr 10 07:27:30 UTC 2015
-    Stop:  Fri Apr 10 07:27:30 UTC 2015
+          Start:  Fri Apr 10 16:53:40 UTC 2015
+           Stop:  Fri Apr 10 17:00:12 UTC 2015
 ################################################
-  Installing Node-Red
+  
 ################################################
-   Start:  Fri Apr 10 07:27:31 UTC 2015
-     ----------------------------------------
-          Installing apt-get install bluez
-     ----------------------------------------
-          Start:  Fri Apr 10 07:27:31 UTC 2015
+   Start:  Fri Apr 10 17:00:12 UTC 2015

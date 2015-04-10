@@ -1,102 +1,97 @@
 #!/bin/bash
 
 
+########################################################
+# Setup environment 
+########################################################
 IOTKITDIR=`pwd`;
 export IOTKITDIR
-
-. $IOTKITDIR/scripts/funcs
-
-echo "" > install.log
-
-LOGSTART "apt-get update"
-
-sudo apt-get update
 sudo mkdir $IOTKITDIR/../iot-gateway-kit-depend
 export IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
 
+
+########################################################
+# Read in the supporting functions 
+########################################################
+. $IOTKITDIR/scripts/funcs
+
+########################################################
+# Create install.log file
+########################################################
+sudo bash -c "echo 'Begin Install' > install.log"
+
+########################################################
+# Run apt-get update 
+########################################################
+LOGSTART "Run apt-get update"
+. $IOTKITDIR/scripts/install.apt-get.update
 LOGSTOP
-LOGSTART "Informix User"
 
 
-################################
+########################################################
 # Create Informix user
-################################
-echo "============================================"
-echo "-  Installing Informix user                -"
-echo "============================================"
-
+########################################################
+LOGSTART "Create Informix User"
 . $IOTKITDIR/scripts/install.informix.user
-
 LOGSTOP
-LOGSTART "Node"
 
 
-################################
+
+
+########################################################
 # Install Node
-################################
-echo "============================================"
-echo "-  Installing Node                         -"
-echo "============================================"
+########################################################
+LOGSTART "Install Node"
 . $IOTKITDIR/scripts/install.node
-
-
 LOGSTOP
-LOGSTART "Node-Red"
-################################
+
+
+########################################################
 # Install Node-red
-################################
-echo "============================================"
-echo "-  Installing Node Red                     -"
-echo "============================================"
+########################################################
+LOGSTART "Install Node-Red"
 . $IOTKITDIR/scripts/install.nodered
-
 LOGSTOP
-LOGSTART "Ble"
-################################
+
+
+########################################################
 # Install Ble
-################################
-echo "============================================"
-echo "-  Installing BLE                          -"
-echo "============================================"
+########################################################
+LOGSTART "Install Ble"
 . $IOTKITDIR/scripts/install.ble
-
 LOGSTOP
-LOGSTART "Zwave"
-################################
+
+
+########################################################
 # Install Zwave
-################################
-echo "============================================"
-echo "-  Installing Zwave                        -"
-echo "============================================"
+########################################################
+LOGSTART "Install Zwave"
 . $IOTKITDIR/scripts/install.zwave
-
 LOGSTOP
-LOGSTART "Informix Product"
-################################
+
+
+########################################################
 # Install Informix Product 
-################################
-echo "============================================"
-echo "-  Installing Informix Product             -"
-echo "============================================"
-
+########################################################
+LOGSTART "Install Informix Product"
 . $IOTKITDIR/scripts/install.informix.prod
-
-
 LOGSTOP
-LOGSTART "Informix General"
-################################
-# Install Informix 
-################################
-echo "============================================"
-echo "-  Installing Informix General             -"
-echo "============================================"
+
+
+########################################################
+# Install Informix General
+########################################################
+LOGSTART "Install Informix General"
 . $IOTKITDIR/scripts/install.informix.general
-
 LOGSTOP
+
+
+########################################################
+# Starting iot service 
+########################################################
 LOGSTART "Starting iot Service"
 sudo service iot start
-
-
-
 LOGSTOP
+
+
 

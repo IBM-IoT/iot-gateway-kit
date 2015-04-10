@@ -37,9 +37,9 @@ fi
 LOGSTOP1
 LOGSTART1 "curl npmjs"
 
-#sudo bash -c "curl -L https://npmjs.org/install.sh | sh" 
-#sudo cp $IOTKITDIR/npm-install-2489.sh $IOTKITDEPEND/
-#sudo npm update
+sudo bash -c "curl -L https://npmjs.org/install.sh | sh" 
+sudo cp $IOTKITDIR/npm-install-2489.sh $IOTKITDEPEND/
+sudo npm update
 
 
 LOGSTOP1
