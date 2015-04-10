@@ -12,7 +12,7 @@ LOGSTART1 "git clone node-red"
 ###############################################################
 # Pull in node-red
 ###############################################################
-sudo git clone https://github.com/node-red/node-red.git ~informix/node-red
+sudo git clone https://github.com/node-red/node-red.git 
 
 
 LOGSTOP1
@@ -31,7 +31,9 @@ LOGSTART1 "node-red and components"
 ###############################################################
 cd ~informix/node-red
 sudo npm install -g grunt-cli
+cd ~informix/node-red
 sudo npm install -y
+cd ~informix/node-red
 sudo grunt build
 sudo npm install node-red-contrib-timeseries express -y
 sudo cp $IOTKITDIR/scripts/start.nodered ~informix/node-red/
