@@ -29,7 +29,7 @@ echo "          Start: " `date`
 
 
 function LOGSTOP() {
-sudo bash 'echo "    Stop: " `date` >> install.log'
+sudo bash -c 'echo "    Stop: " `date` >> install.log'
 echo "    Stop: " `date` 
 }
 
