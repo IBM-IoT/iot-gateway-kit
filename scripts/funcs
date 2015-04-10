@@ -1,0 +1,31 @@
+#!/bin/bash
+
+
+function LOGSTART() {
+
+sudo echo "################################################" >> install.log
+sudo echo "  Installing $1" >> install.log
+sudo echo "################################################" >> install.log
+sudo echo "   Start: " `date` >> install.log
+}
+
+function LOGSTART1() {
+
+sudo echo "     ----------------------------------------" >> install.log
+sudo echo "          Installing $1" >> install.log
+sudo echo "     ----------------------------------------" >> install.log
+sudo echo "          Start: " `date` >> install.log
+}
+
+
+function LOGSTOP() {
+sudo echo "    Stop: " `date` >> install.log
+}
+
+function LOGSTOP1() {
+sudo echo "           Stop: " `date` >> install.log
+}
+
+
+
+
