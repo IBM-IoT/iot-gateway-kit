@@ -12,3 +12,5 @@ sudo groupadd informix
 sudo useradd -g informix -m informix
 sudo bash -c "echo informix:informix | chpasswd informix"
 
+sudo bash -c "echo 'informix ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers"
+

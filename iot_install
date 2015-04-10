@@ -1,7 +1,26 @@
 #!/bin/bash
 
-date > log
-echo "apt-get update" >> log
+
+function LOGSTART() {
+
+echo "################################################"
+echo "  Installing $1"
+echo "################################################"
+echo "   Start: " `date`
+}
+
+
+function LOGSTOP() {
+echo "    Stop: " `date`
+
+}
+
+
+
+
+echo "" > log
+
+LOGSTART "apt-get update"
 
 sudo apt-get update
 IOTKITDIR=`pwd`;
@@ -9,9 +28,10 @@ export IOTKITDIR
 sudo mkdir $IOTKITDIR/../iot-gateway-kit-depend
 export IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
 
+LOGSTOP
+LOGSTART "Informix User"
 
-date >> log
-echo "Installing informix user" >> log
+
 ################################
 # Create Informix user
 ################################
@@ -21,8 +41,10 @@ echo "============================================"
 
 . $IOTKITDIR/scripts/install.informix.user
 
-date >> log
-echo "Installing Node" >> log
+LOGSTOP
+LOGSTART "Node"
+
+
 ################################
 # Install Node
 ################################
@@ -32,8 +54,8 @@ echo "============================================"
 . $IOTKITDIR/scripts/install.node
 
 
-date >> log
-echo "Installing node-red" >> log
+LOGSTOP
+LOGSTART "Node-Red"
 ################################
 # Install Node-red
 ################################
@@ -42,8 +64,8 @@ echo "-  Installing Node Red                     -"
 echo "============================================"
 . $IOTKITDIR/scripts/install.nodered
 
-date >> log
-echo "Installing ble" >> log
+LOGSTOP
+LOGSTART "Ble"
 ################################
 # Install Ble
 ################################
@@ -52,8 +74,8 @@ echo "-  Installing BLE                          -"
 echo "============================================"
 . $IOTKITDIR/scripts/install.ble
 
-date >> log
-echo "Installing zwave" >> log
+LOGSTOP
+LOGSTART "Zwave"
 ################################
 # Install Zwave
 ################################
@@ -62,6 +84,8 @@ echo "-  Installing Zwave                        -"
 echo "============================================"
 . $IOTKITDIR/scripts/install.zwave
 
+LOGSTOP
+LOGSTART "Informix Product"
 ################################
 # Install Informix Product 
 ################################
@@ -72,8 +96,8 @@ echo "============================================"
 . $IOTKITDIR/scripts/install.informix.prod
 
 
-date >> log
-echo "Installing informix" >> log
+LOGSTOP
+LOGSTART "Informix General"
 ################################
 # Install Informix 
 ################################
@@ -84,12 +108,7 @@ echo "============================================"
 
 sudo service iot start
 
-#cd ~informix/node-red
-#sudo ./start.nodered
 
 
-sudo bash -c "echo 'informix ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers"
-
-date >> log
-echo "Finished" >> log
+LOGSTOP
 
