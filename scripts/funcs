@@ -15,7 +15,7 @@ echo "   Start: " `date`
 
 function LOGSTART1() {
 
-sudo bash -c "echo '     ----------------------------------------' >> install.log'
+sudo bash -c "echo '     ----------------------------------------' >> install.log"
 sudo bash -c "echo '          $1' >> install.log"
 sudo bash -c "echo '     ----------------------------------------' >> install.log"
 sudo bash -c "echo '          Start: ' `date` >> install.log"
