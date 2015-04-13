@@ -5,14 +5,14 @@ IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
 IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
 
 
-
-cd ~informix
-
 LOGSTART1 "git clone node-red"
 ###############################################################
 # Pull in node-red
 ###############################################################
-sudo git clone https://github.com/node-red/node-red.git 
+cd ~informix
+sudo npm install node-red -y
+sudo mv ~informix/node_modules/node-red ~informix/node-red
+sudo rm -rf ~informix/node_modules 
 
 
 LOGSTOP1
@@ -21,7 +21,7 @@ LOGSTART1 "MK dir and cp"
 # Make directories and copy util file
 ###############################################################
 sudo mkdir ~informix/node-red/runIot
-sudo cp $IOTKITDIR/bin/util.js node-red/runIot/util.js
+sudo cp $IOTKITDIR/bin/util.js ~informix/node-red/runIot/util.js
 sudo mkdir ~informix/node-red/runIot/config
 
 LOGSTOP1
@@ -30,11 +30,6 @@ LOGSTART1 "node-red and components"
 # Install node-red and components
 ###############################################################
 cd ~informix/node-red
-sudo npm install -g grunt-cli
-cd ~informix/node-red
-sudo npm install -y
-cd ~informix/node-red
-sudo grunt build
 sudo npm install node-red-contrib-timeseries express -y
 sudo cp $IOTKITDIR/scripts/start.nodered ~informix/node-red/
 sudo cp $IOTKITDIR/scripts/stop.nodered ~informix/node-red/
