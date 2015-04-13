@@ -23,3 +23,4 @@ export MAINCLASS="com.ibm.nosql.server.ListenerCLI"
 
 nohup java $JAVA_ARGS -cp $CLASSPATH $MAINCLASS -start -config $INFORMIXDIR/etc/rest.properties &
 
+echo "$!" > $1

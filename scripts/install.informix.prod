@@ -36,7 +36,8 @@ fi
 WC=`echo $ARCHITECTURE | grep armv7 | wc -l`
 if [ "$WC" != "0" ]; then
 	#Git pull
-	INFORMIX="./ids.12.10.UC4DE.Linux-ARM7.tar"
+	#INFORMIX="./ids.12.10.UC4DE.Linux-ARM7.tar"
+	INFORMIX="./ids.12.10.UC4DE.Linux-ARM6.tar"
 	tar xvf $INFORMIX
 	sudo $IOTKITDEPEND/ids_install -DINSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
 fi
