@@ -53,7 +53,7 @@ execute procedure tscontainercreate('sens_cont1','datadbs1','sensors_row_t', 102
 
 execute procedure tscreatevirtualtab('sensors_vti',
         'sensors',
-        'calendar(ts_1sec), origin($dt)'
+        'calendar(ts_1sec), origin($dt), irregular'
         );
 
 
