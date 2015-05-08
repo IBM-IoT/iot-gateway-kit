@@ -21,7 +21,7 @@ dbaccess iot - <<!
 
 drop table if exists sensors;
 drop table if exists sensors_vti;
-drop row type sensors_row_t restrict;
+drop row type if exists sensors_row_t restrict;
 
 
 insert into calendartable(c_name, c_calendar)
