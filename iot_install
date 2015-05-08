@@ -90,6 +90,7 @@ LOGSTOP
 # Starting iot service 
 ########################################################
 LOGSTART "Starting iot Service"
+sudo service informix stop 
 sudo service iot start
 LOGSTOP
 
