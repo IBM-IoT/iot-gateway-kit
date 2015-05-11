@@ -1,13 +1,12 @@
 #!/bin/bash
 
-
 ########################################################
 # Setup environment 
 ########################################################
 IOTKITDIR=`pwd`;
 export IOTKITDIR
-sudo mkdir $IOTKITDIR/../iot-gateway-kit-depend
-export IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
+sudo mkdir $IOTKITDIR/../iot-gateway-kit-depend 
+export IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend 
 
 
 ########################################################
@@ -18,13 +17,13 @@ export IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend
 ########################################################
 # Create install.log file
 ########################################################
-sudo bash -c "echo 'Begin Install' > install.log"
+sudo bash -c "echo 'Begin Install' > install.log" 
 
 ########################################################
 # Run apt-get update 
 ########################################################
 LOGSTART "Run apt-get update"
-. $IOTKITDIR/scripts/install.apt-get.update
+. $IOTKITDIR/scripts/install.apt-get.update > LOG/update.log 2>&1
 LOGSTOP
 
 
@@ -32,7 +31,7 @@ LOGSTOP
 # Create Informix user
 ########################################################
 LOGSTART "Create Informix User"
-. $IOTKITDIR/scripts/install.informix.user
+. $IOTKITDIR/scripts/install.informix.user > LOG/user.log 2>&1
 LOGSTOP
 
 
@@ -42,7 +41,7 @@ LOGSTOP
 # Install Node
 ########################################################
 LOGSTART "Install Node"
-. $IOTKITDIR/scripts/install.node
+. $IOTKITDIR/scripts/install.node > LOG/node.log 2>&1
 LOGSTOP
 
 
@@ -50,7 +49,7 @@ LOGSTOP
 # Install Node-red
 ########################################################
 LOGSTART "Install Node-Red"
-. $IOTKITDIR/scripts/install.nodered
+. $IOTKITDIR/scripts/install.nodered > LOG/nodered.log 2>&1
 LOGSTOP
 
 
@@ -58,7 +57,7 @@ LOGSTOP
 # Install Ble
 ########################################################
 LOGSTART "Install Ble"
-. $IOTKITDIR/scripts/install.ble
+. $IOTKITDIR/scripts/install.ble > LOG/ble.log 2>&1
 LOGSTOP
 
 
@@ -66,7 +65,7 @@ LOGSTOP
 # Install Zwave
 ########################################################
 LOGSTART "Install Zwave"
-#. $IOTKITDIR/scripts/install.zwave
+#. $IOTKITDIR/scripts/install.zwave > LOG/zwave.log 2>&1 
 LOGSTOP
 
 
@@ -74,7 +73,7 @@ LOGSTOP
 # Install Informix Product 
 ########################################################
 LOGSTART "Install Informix Product"
-. $IOTKITDIR/scripts/install.informix.prod
+. $IOTKITDIR/scripts/install.informix.prod > LOG/prod.log 2>&1
 LOGSTOP
 
 
@@ -82,16 +81,15 @@ LOGSTOP
 # Install Informix General
 ########################################################
 LOGSTART "Install Informix General"
-. $IOTKITDIR/scripts/install.informix.general
+. $IOTKITDIR/scripts/install.informix.general > LOG/informix.log 2>&1 
 LOGSTOP
-
 
 ########################################################
 # Starting iot service 
 ########################################################
 LOGSTART "Starting iot Service"
-sudo service informix stop 
-sudo service iot start
+sudo service informix stop  
+sudo service iot start 
 LOGSTOP
 
 
