@@ -30,14 +30,14 @@ fi
 
 WC=`echo $ARCHITECTURE | grep armv7 | wc -l`
 if [ "$WC" != "0" ]; then
-        curl -sL https://deb.nodesource.com/setup | sudo bash - 	
+        curl -kL https://deb.nodesource.com/setup | sudo bash - 	
 	sudo apt-get install -y build-essential python-dev python-rpi.gpio nodejs -y
 fi
 
 LOGSTOP1
 LOGSTART1 "curl npmjs"
 
-sudo bash -c "curl -L https://npmjs.org/install.sh | sh" 
+sudo bash -c "curl -kL https://npmjs.org/install.sh | sh" 
 sudo cp $IOTKITDIR/npm-install-*.sh $IOTKITDEPEND/
 sudo npm update
 
