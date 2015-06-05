@@ -23,7 +23,7 @@ sudo bash -c "echo 'Begin Install' > install.log"
 # Run apt-get update 
 ########################################################
 LOGSTART "Run apt-get update"
-. $IOTKITDIR/scripts/install.apt-get.update > LOG/update.log 2>&1
+. $IOTKITDIR/scripts/install.apt-get.update > $IOTKITDIR/LOG/update.log 2>&1
 LOGSTOP
 
 
@@ -31,7 +31,7 @@ LOGSTOP
 # Create Informix user
 ########################################################
 LOGSTART "Create Informix User"
-. $IOTKITDIR/scripts/install.informix.user > LOG/user.log 2>&1
+. $IOTKITDIR/scripts/install.informix.user > $IOTKITDIR/LOG/user.log 2>&1
 LOGSTOP
 
 
@@ -41,7 +41,7 @@ LOGSTOP
 # Install Node
 ########################################################
 LOGSTART "Install Node"
-. $IOTKITDIR/scripts/install.node > LOG/node.log 2>&1
+. $IOTKITDIR/scripts/install.node > $IOTKITDIR/LOG/node.log 2>&1
 LOGSTOP
 
 
@@ -49,7 +49,7 @@ LOGSTOP
 # Install Node-red
 ########################################################
 LOGSTART "Install Node-Red"
-. $IOTKITDIR/scripts/install.nodered > LOG/nodered.log 2>&1
+. $IOTKITDIR/scripts/install.nodered > $IOTKITDIR/LOG/nodered.log 2>&1
 LOGSTOP
 
 
@@ -57,7 +57,7 @@ LOGSTOP
 # Install Ble
 ########################################################
 LOGSTART "Install Ble"
-. $IOTKITDIR/scripts/install.ble > LOG/ble.log 2>&1
+. $IOTKITDIR/scripts/install.ble > $IOTKITDIR/LOG/ble.log 2>&1
 LOGSTOP
 
 
@@ -65,7 +65,7 @@ LOGSTOP
 # Install Zwave
 ########################################################
 LOGSTART "Install Zwave"
-#. $IOTKITDIR/scripts/install.zwave > LOG/zwave.log 2>&1 
+#. $IOTKITDIR/scripts/install.zwave > $IOTKITDIR/LOG/zwave.log 2>&1 
 LOGSTOP
 
 
@@ -73,7 +73,7 @@ LOGSTOP
 # Install Informix Product 
 ########################################################
 LOGSTART "Install Informix Product"
-. $IOTKITDIR/scripts/install.informix.prod > LOG/prod.log 2>&1
+. $IOTKITDIR/scripts/install.informix.prod > $IOTKITDIR/LOG/prod.log 2>&1
 LOGSTOP
 
 
@@ -81,7 +81,7 @@ LOGSTOP
 # Install Informix General
 ########################################################
 LOGSTART "Install Informix General"
-. $IOTKITDIR/scripts/install.informix.general > LOG/informix.log 2>&1 
+. $IOTKITDIR/scripts/install.informix.general > $IOTKITDIR/LOG/informix.log 2>&1 
 LOGSTOP
 
 ########################################################
