@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd $IOTKITDEPEND
+sudo wget http://nodejs.org/dist/v0.10.25/node-v0.10.25-linux-x86.tar.gz
+sudo tar xzvf $IOTKITDEPEND/node-v0.10.25-linux-x86.tar.gz
+sudo cp -rp $IOTKITDEPEND/node-v0.10.25-linux-x86/bin/node /usr/bin/node

@@ -1,0 +1,51 @@
+#!/bin/bash
+
+export PATH=$PATH:.
+IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
+
+#touch /opt/IBM/informix/storage/datadbs1
+#onspaces -c -d datadbs1 -p /home/informix/chunks/DATADBS01.01 -o 0 -s 1000000
+
+#UTC
+dt=`date -u +"%Y-%m-%d %H:%M:%S.00000"`
+#non-UTC
+dt=`date +"%Y-%m-%d %H:%M:%S.00000"`
+
+dbaccess - - <<!
+
+drop database if exists iot;
+create database iot in datadbs1 with buffered log ;
+!
+
+dbaccess iot - <<!
+
+drop table if exists sensors;
+drop table if exists sensors_vti;
+drop row type if exists sensors_row_t restrict;
+
+insert into calendartable(c_name, c_calendar)
+	values ("ts_1sec", 'startdate($dt), pattstart($dt), pattern( {1 on} second)' );
+
+create row type sensors_row_t
+(
+	tstamp		datetime year to fraction(5),
+	json_data	bson
+);
+
+create table sensors
+(
+	id		varchar(255) not null primary key,
+	data		timeseries(sensors_row_t)
+);
+
+execute procedure tscontainercreate('sens_cont1','datadbs1','sensors_row_t', 1024, 1024);
+
+execute procedure tscreatevirtualtab('sensors_vti',
+	'sensors',
+	'calendar(ts_1sec), origin($dt), irregular'
+	);
+{
+insert into sensors values ('1',tscreateirr('ts_1sec','$dt', 0,0,0,'sens_cont1'));
+}
+
+!

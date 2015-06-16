@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd $IOTKITDEPEND
+sudo wget http://nosqldemo.com/gateway-kit/quark/node-red.tar
+sudo tar xvf $IOTKITDEPEND/node-red.tar
+sudo mv $IOTKITDEPEND/node-red ~informix/

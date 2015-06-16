@@ -1,0 +1,148 @@
+#!/bin/bash
+
+sudo chown informix /opt/IBM
+sudo chmod 755 /opt/IBM
+
+LOGSTART1 "init.d"
+###############################
+# init.d Script
+###############################
+sudo cp $IOTKITDIR/init/informix /etc/init.d/informix
+sudo cp $IOTKITDIR/init/rest /etc/init.d/rest
+sudo cp $IOTKITDIR/init/node-red /etc/init.d/node-red
+sudo cp $IOTKITDIR/init/iot /etc/init.d/iot
+
+sudo chmod 755 /etc/init.d/informix
+sudo chmod 755 /etc/init.d/rest
+sudo chmod 755 /etc/init.d/node-red
+sudo chmod 755 /etc/init.d/iot	
+
+sudo update-rc.d informix defaults
+sudo update-rc.d rest defaults
+sudo update-rc.d node-red defaults
+sudo update-rc.d iot defaults
+
+LOGSTOP1
+LOGSTART1 "inf.env"
+############################
+# inf.env script
+############################
+sudo cp $IOTKITDIR/config/inf.env /etc/default/informix
+[ ! -e ~informix/inf.env ] && sudo ln -s /etc/default/informix ~informix/inf.env
+sudo chown informix:informix /etc/default/informix
+sudo chmod 755 /etc/default/informix
+. ~informix/inf.env
+
+LOGSTOP1
+LOGSTART1 "ONCONFIG"
+#########################
+# $ONCONFIG file
+#########################
+sudo cp $IOTKITDIR/config/onconfig.iotkit $INFORMIXDIR/etc/onconfig.iotkit
+sudo chown informix:informix $INFORMIXDIR/etc/onconfig.iotkit
+
+LOG1STOP
+LOG1START "SQLHOSTS"
+############################
+# sqlhosts file
+############################
+sudo cp $IOTKITDIR/config/sqlhosts $INFORMIXSQLHOSTS
+sudo chown informix:informix $INFORMIXSQLHOSTS
+
+LOGSTOP1
+LOGSTART1 "sch_init_iotkit"
+#############################
+# sch_init_iotkit.sql file
+#############################
+sudo cp $IOTKITDIR/config/sch_init_iotkit.sql $INFORMIXDIR/etc/sysadmin
+sudo chown informix:informix $INFORMIXDIR/etc/sysadmin/sch_init_iotkit.sql
+sudo chmod 755 $INFORMIXDIR/etc/sysadmin/sch_init_iotkit.sql
+
+LOGSTOP1
+LOGSTART1 "mongo.properties"
+###########################
+# Mongo properties file
+###########################
+sudo cp $IOTKITDIR/listener/mongo.properties $INFORMIXDIR/etc/
+sudo chown informix:informix $INFORMIXDIR/etc/mongo.properties
+
+LOGSTOP1
+LOGSTART1 "rest.properties"
+###########################
+# Rest properties file
+###########################
+sudo cp $IOTKITDIR/listener/rest.properties $INFORMIXDIR/etc/
+sudo chown informix:informix $INFORMIXDIR/etc/rest.properties
+
+LOGSTOP1
+LOGSTART1 "iotkitlink"
+#########################
+# IotKit link
+#########################
+[ ! -e ~informix/IotKit ] && sudo ln -s $IOTKITDIR ~informix/IotKit
+
+LOGSTOP1
+LOGSTART1 "Start Informix"
+##########################
+# Start Informix
+##########################
+[ ! -e $INFORMIXDIR/storage ] && sudo mkdir $INFORMIXDIR/storage
+sudo chown informix:informix $INFORMIXDIR/storage
+sudo chmod 755 $INFORMIXDIR/storage
+
+sudo touch $INFORMIXDIR/storage/rootdbs
+sudo chown informix:informix $INFORMIXDIR/storage/rootdbs
+sudo chmod 660 $INFORMIXDIR/storage/rootdbs
+
+sudo bash -c ". ~informix/inf.env;oninit -iwy"
+
+LOGSTOP1
+LOGSTART1 "Setup Instance"
+###########################
+# Setup instance
+###########################
+sudo bash -c ". ~informix/inf.env;$IOTKITDIR/scripts/setup.ids"
+
+LOGSTOP1
+
+LOGSTART1 "Configure Java"
+###########################
+# Get Java
+###########################
+cd $IOTKITDEPEND
+sudo wget http://nosqldemo.com/gateway-kit/quark/jdk-7u79-linux-i586.tar.gz
+sudo tar zxvf $IOTKITDEPEND/jdk-7u79-linux-i586.tar.gz
+sudo cp -rp $IOTKITDEPEND/jdk1.7.0_79 /opt/jdk1.7.0_79
+echo "PATH=$PATH:/opt/jdk1.7.0_79/bin" >> /etc/profile
+
+LOGSTART1 "Configure Listener"
+############################
+# Get Listener and Configure
+############################
+cd $IOTKITDEPEND
+sudo wget http://nosqldemo.com/gateway-kit/quark/rest-listener.tar
+sudo tar xvf $IOTKITDEPEND/rest-listener.tar
+sudo chown informix:informix $IOTKITDEPEND/rest-listener/*
+sudo chmod 777 $IOTKITDEPEND/rest-listener
+sudo chmod 755 $IOTKITDEPEND/rest-listener/*
+sudo chmod 600 $IOTKITDEPEND/rest-listener/jmx*
+
+[ ! -e ~informix/REST ] && sudo ln -s $IOTKITDEPEND/rest-listener ~informix/REST
+[ ! -e $INFORMIXDIR/bin/JSON.jar ] && sudo ln -s $IOTKITDEPEND/rest-listener/nosql*.jar $INFORMIXDIR/bin/JSON.jar
+
+sudo cp $IOTKITDIR/scripts/start.rest ~informix/REST
+sudo cp $IOTKITDIR/scripts/stop.rest ~informix/REST
+sudo chown informix:informix ~informix/REST/start.rest
+sudo chown informix:informix ~informix/REST/stop.rest
+sudo chmod 755 ~informix/REST/start.rest
+sudo chmod 755 ~informix/REST/stop.rest
+
+cd $IOTKITDIR/scripts
+sudo bash -c ". ~informix/inf.env;. ~informix/REST/start"
+
+LOGSTOP1
+
+
+
+
+

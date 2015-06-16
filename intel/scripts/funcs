@@ -1,0 +1,42 @@
+
+
+function LOGSTART() {
+
+sudo bash -c "echo '################################################' >> install.log"
+sudo bash -c "echo '  $1' >> install.log"
+sudo bash -c "echo '################################################' >> install.log"
+sudo bash -c  "echo '	Start: ' `date` >> install.log"
+
+echo "################################################"
+echo "	$1"
+echo "################################################"
+echo "	 Start: " `date`
+}
+
+function LOGSTART1() {
+
+sudo bash -c "echo '	 ----------------------------------------' >> install.log"
+sudo bash -c "echo '	      $1' >> install.log"
+sudo bash -c "echo '	 ----------------------------------------' >> install.log"
+sudo bash -c "echo '	      Start: ' `date` >> install.log"
+
+echo "	   ----------------------------------------"
+echo "		$1"
+echo "	   ----------------------------------------"
+echo "		Start: " `date`
+}
+
+
+function LOGSTOP() {
+sudo bash -c "echo '	Stop: ' `date` >> install.log"
+echo "	  Stop: " `date`
+}
+
+function LOGSTOP1() {
+sudo bash -c "echo '	       Stop: ' `date` >> install.log"
+echo "		 Stop: " `date`
+}
+
+
+
+

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cd $IOTKITDEPEND
+
+LOGSTART1 "Informix Product"
+##################################
+# Install Informix Product
+##################################
+
+cd $IOTKITDEPEND
+sudo wget http://nosqldemo.com/gateway-kit/quark/informix.tar
+sudo mkdir /opt/IBM
+sudo cp $IOTKITDEPEND/informix.tar /opt/IBM/
+cd /opt/IBM
+sudo tar xvf /opt/IBM/informix.tar
+
+cd $IOTKITDIR
+
+LOGSTOP1

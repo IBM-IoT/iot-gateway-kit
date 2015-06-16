@@ -1,0 +1,22 @@
+#!/bin/bash
+
+LOGSTART1 "cp files"
+########################
+# Copy program files
+########################
+sudo cp $IOTKITDIR/bin/readZwave.js ~informix/node-red/runIot/readZwave.js
+sudo cp $IOTKITDIR/config/configZwave.json ~informix/node-red/runIot/config/configZwave.json
+
+LOGSTOP1
+LOGSTART1 "components"
+########################
+# Install components
+########################
+sudo npm install openzwave -y
+cd ~informix/node-red/node_modules
+git clone https://github.com/IBM-IoT/node-red-contrib-openzwave.git ~informix/node-red/node_modules/openzwave
+#sudo cp $IOTKITDIR/scripts/start.zwave ~informix/node-red/runIot/
+#sudo cp $IOTKITDIR/scripts/stop.zwave ~informix/node-red/runIot/
+
+LOGSTOP1
+

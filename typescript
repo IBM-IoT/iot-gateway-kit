@@ -1,897 +1,0 @@
-Script started on Tue 05 May 2015 17:07:14 UTC
-]0;pi@raspberrypi: ~/iot-gateway-kit[01;32mpi@raspberrypi[00m [01;34m~/iot-gateway-kit $[00m 
-]0;pi@raspberrypi: ~/iot-gateway-kit[01;32mpi@raspberrypi[00m [01;34m~/iot-gateway-kit $[00m ./inst[K[K[K[K[K[Kmore inst
-while true
-do
-SZ1=`ls -l ../iot-gateway-kit-depend/*.tar|awk '{print $5}'`
-sleep 5
-SZ2=`ls -l ../iot-gateway-kit-depend/*.tar|awk '{print $5}'`
-echo "$SZ1 $SZ2"
-
-if [ $SZ1 != $SZ2 ]
-then
-
-echo "not same "
-else
-echo "same "
-break
-fi
-done
-
-./iot_install
-]0;pi@raspberrypi: ~/iot-gateway-kit[01;32mpi@raspberrypi[00m [01;34m~/iot-gateway-kit $[00m ./inst
-106184704 106905600
-not same 
-106905600 107593728
-not same 
-107593728 108576768
-not same 
-108576768 109101056
-not same 
-109101056 110182400
-not same 
-110182400 110542848
-not same 
-110542848 111329280
-not same 
-111329280 112279552
-not same 
-112279552 112672768
-not same 
-112672768 113491968
-not same 
-113491968 114737152
-not same 
-114737152 115916800
-not same 
-115916800 116441088
-not same 
-116441088 116998144
-not same 
-116998144 117489664
-not same 
-117489664 117915648
-not same 
-117915648 118931456
-not same 
-118931456 119554048
-not same 
-119554048 120274944
-not same 
-120274944 120700928
-not same 
-120700928 121192448
-not same 
-121192448 122241024
-not same 
-122241024 122798080
-not same 
-122798080 123125760
-not same 
-123125760 123879424
-not same 
-123879424 124370944
-not same 
-124370944 124764160
-not same 
-124764160 125616128
-not same 
-125616128 126238720
-not same 
-126238720 126697472
-not same 
-126697472 127483904
-not same 
-127483904 128073728
-not same 
-128073728 128729088
-not same 
-128729088 129273856
-not same 
-129417216 129875968
-not same 
-129875968 130859008
-not same 
-130859008 131842048
-not same 
-131842048 132628480
-not same 
-132628480 133447680
-not same 
-133447680 133808128
-not same 
-133873664 134660096
-not same 
-134660096 135806976
-not same 
-135806976 136495104
-not same 
-136495104 137052160
-not same 
-137052160 137904128
-not same 
-137904128 138559488
-not same 
-138559488 139182080
-not same 
-139182080 140165120
-not same 
-140165120 140591104
-not same 
-140591104 141312000
-not same 
-141312000 141836288
-not same 
-141934592 142360576
-not same 
-142360576 143114240
-not same 
-143114240 143769600
-not same 
-143769600 144621568
-not same 
-144621568 145440768
-not same 
-145440768 145833984
-not same 
-145833984 146489344
-not same 
-146489344 147177472
-not same 
-147243008 147996672
-not same 
-147996672 148815872
-not same 
-148815872 149274624
-not same 
-149274624 150061056
-not same 
-150093824 150519808
-not same 
-150519808 151273472
-not same 
-151273472 151928832
-not same 
-151928832 152616960
-not same 
-152616960 153042944
-not same 
-153042944 153665536
-not same 
-153665536 154746880
-not same 
-154746880 155271168
-not same 
-155271168 156155904
-not same 
-156155904 156385280
-not same 
-156385280 157270016
-not same 
-157270016 157925376
-not same 
-157925376 158777344
-not same 
-158777344 159334400
-not same 
-159334400 160382976
-not same 
-160382976 160907264
-not same 
-160907264 161693696
-not same 
-161693696 162578432
-not same 
-162578432 163037184
-not same 
-163037184 163725312
-not same 
-163725312 164511744
-not same 
-164511744 165232640
-not same 
-165232640 165822464
-not same 
-165822464 166641664
-not same 
-166641664 167362560
-not same 
-167362560 167952384
-not same 
-167952384 169132032
-not same 
-169132032 169721856
-not same 
-169721856 170573824
-not same 
-170573824 171524096
-not same 
-171524096 172146688
-not same 
-172146688 173162496
-not same 
-173162496 173850624
-not same 
-173850624 174669824
-not same 
-174669824 175521792
-not same 
-175521792 176144384
-not same 
-176144384 176734208
-not same 
-176734208 177487872
-not same 
-177487872 178438144
-not same 
-178438144 179027968
-not same 
-179060736 179683328
-not same 
-179683328 180338688
-not same 
-180338688 181780480
-not same 
-181780480 182665216
-not same 
-182665216 183222272
-not same 
-183222272 184074240
-not same 
-184074240 184827904
-not same 
-184827904 186171392
-not same 
-186171392 186662912
-not same 
-186662912 187547648
-not same 
-187547648 188203008
-not same 
-188203008 188203008
-same 
-mkdir: cannot create directory `/home/pi/iot-gateway-kit/../iot-gateway-kit-depend': File exists
-################################################
-  Run apt-get update
-################################################
-   Start:  Tue May 5 17:17:06 UTC 2015
-     ----------------------------------------
-          apt-get update
-     ----------------------------------------
-          Start:  Tue May 5 17:17:06 UTC 2015
-0% [Working]            Get:1 http://raspberrypi.collabora.com wheezy Release.gpg [836 B]
-            0% [Waiting for headers] [1 Release.gpg 0 B/836 B 0%] [Waiting for headers]                                                                           100% [Waiting for headers] [Waiting for headers]                                                Get:2 http://raspberrypi.collabora.com wheezy Release [7,493 B]
-                                                10% [Waiting for headers] [2 Release 0 B/7,493 B 0%] [Waiting for headers]                                                                          100% [Waiting for headers] [Waiting for headers]                                                Get:3 http://mirrordirector.raspbian.org wheezy Release.gpg [490 B]
-                                                Get:4 http://archive.raspberrypi.org wheezy Release.gpg [490 B]
-                                                100% [Working]              100% [2 Release gpgv 7,493 B] [Waiting for headers] [Waiting for headers]                                                                         100% [Waiting for headers] [Waiting for headers]                                                Get:5 http://mirrordirector.raspbian.org wheezy Release [14.4 kB]
-                                                73% [5 Release 7,993 B/14.4 kB 56%] [Waiting for headers] [Waiting for headers]                                                                               Get:6 http://raspberrypi.collabora.com wheezy/rpi armhf Packages [2,214 B]
-                                                                               Get:7 http://archive.raspberrypi.org wheezy Release [12.3 kB]
-                                                                               100% [5 Release 14.4 kB/14.4 kB 100%]                                     100% [Working]              100% [7 Release gpgv 12.3 kB] [Waiting for headers]                                                   100% [6 Packages gzip 0 B] [7 Release gpgv 12.3 kB] [Waiting for headers]                                                                         100% [7 Release gpgv 12.3 kB] [Waiting for headers]                                                   100% [Waiting for headers]                          100% [5 Release gpgv 14.4 kB] [Waiting for headers] [Waiting for headers]                                                                         100% [Waiting for headers] [Waiting for headers]                                                Get:8 http://archive.raspberrypi.org wheezy/main armhf Packages [126 kB]
-                                                35% [Waiting for headers] [Waiting for headers] [8 Packages 18.8 kB/126 kB 15%]                                                                               100% [Waiting for headers] [Waiting for headers]                                                100% [8 Packages gzip 0 B] [Waiting for headers] [Waiting for headers]                                                                      Get:9 http://mirrordirector.raspbian.org wheezy/main armhf Packages [6,903 kB]
-                                                                      2% [8 Packages gzip 0 B] [9 Packages 3,866 B/6,903 kB 0%] [Waiting for headers]3% [9 Packages 25.9 kB/6,903 kB 0%] [Waiting for headers] [Waiting for headers]3% [9 Packages 71.5 kB/6,903 kB 1%] [Waiting for headers] [Waiting for headers]                                                                               Ign http://raspberrypi.collabora.com wheezy/rpi Translation-en_GB
-                                                                               4% [9 Packages 114 kB/6,903 kB 2%] [Waiting for headers]                                                        Ign http://archive.raspberrypi.org wheezy/main Translation-en_GB
-4% [9 Packages 136 kB/6,903 kB 2%] [Waiting for headers]                                                        Ign http://raspberrypi.collabora.com wheezy/rpi Translation-en
-4% [9 Packages 136 kB/6,903 kB 2%] [Waiting for headers]                                                        Ign http://archive.raspberrypi.org wheezy/main Translation-en
-                                                        4% [9 Packages 150 kB/6,903 kB 2%]5% [9 Packages 168 kB/6,903 kB 2%]6% [9 Packages 265 kB/6,903 kB 4%]                                  7% [9 Packages 331 kB/6,903 kB 5%]                           78.4 kB/s 1min 23s8% [9 Packages 400 kB/6,903 kB 6%]                           78.4 kB/s 1min 22s9% [9 Packages 463 kB/6,903 kB 7%]                           78.4 kB/s 1min 22s10% [9 Packages 532 kB/6,903 kB 8%]                          78.4 kB/s 1min 21s11% [9 Packages 633 kB/6,903 kB 9%]                          78.4 kB/s 1min 19s13% [9 Packages 750 kB/6,903 kB 11%]                         78.4 kB/s 1min 18s15% [9 Packages 894 kB/6,903 kB 13%]                         78.4 kB/s 1min 16s17% [9 Packages 1,068 kB/6,903 kB 15%]                       78.4 kB/s 1min 14s20% [9 Packages 1,278 kB/6,903 kB 19%]                       78.4 kB/s 1min 11s24% [9 Packages 1,557 kB/6,903 kB 23%]                        78.4 kB/s 1min 8s28% [9 Packages 1,819 kB/6,903 kB 26%]                        78.4 kB/s 1min 4s32% [9 Packages 2,082 kB/6,903 kB 30%]                        78.4 kB/s 1min 1s35% [9 Packages 2,337 kB/6,903 kB 34%]                             333 kB/s 13s39% [9 Packages 2,591 kB/6,903 kB 38%]                             333 kB/s 12s43% [9 Packages 2,845 kB/6,903 kB 41%]                             333 kB/s 12s46% [9 Packages 3,099 kB/6,903 kB 45%]                             333 kB/s 11s49% [9 Packages 3,327 kB/6,903 kB 48%]                             333 kB/s 10s53% [9 Packages 3,589 kB/6,903 kB 52%]                              333 kB/s 9s57% [9 Packages 3,851 kB/6,903 kB 56%]                              333 kB/s 9s61% [9 Packages 4,113 kB/6,903 kB 60%]                              333 kB/s 8s64% [9 Packages 4,368 kB/6,903 kB 63%]                              333 kB/s 7s68% [9 Packages 4,623 kB/6,903 kB 67%]                              333 kB/s 6s71% [9 Packages 4,876 kB/6,903 kB 71%]                              333 kB/s 6s75% [9 Packages 5,130 kB/6,903 kB 74%]                              333 kB/s 5s79% [9 Packages 5,384 kB/6,903 kB 78%]                              507 kB/s 2s82% [9 Packages 5,638 kB/6,903 kB 82%]                              507 kB/s 2s86% [9 Packages 5,891 kB/6,903 kB 85%]                              507 kB/s 1s89% [9 Packages 6,146 kB/6,903 kB 89%]                              507 kB/s 1s93% [9 Packages 6,400 kB/6,903 kB 93%]                              507 kB/s 0s96% [9 Packages 6,622 kB/6,903 kB 96%]                              507 kB/s 0s100% [9 Packages 6,875 kB/6,903 kB 100%]                            507 kB/s 0s100% [Working]                                                      507 kB/s 0s100% [9 Packages xz 0 B] [Waiting for headers]                      507 kB/s 0s                                                                               Get:10 http://mirrordirector.raspbian.org wheezy/contrib armhf Packages [23.6 kB]
-100% [9 Packages xz 0 B] [10 Packages 23.6 kB/23.6 kB 100%]         507 kB/s 0s100% [9 Packages xz 0 B]                                            507 kB/s 0s                                                                               Get:11 http://mirrordirector.raspbian.org wheezy/non-free armhf Packages [49.3 kB]
-99% [9 Packages xz 0 B] [11 Packages 0 B/49.3 kB 0%]                507 kB/s 0s100% [9 Packages xz 0 B]                                            507 kB/s 0s                                                                               Get:12 http://mirrordirector.raspbian.org wheezy/rpi armhf Packages [592 B]
-100% [9 Packages xz 0 B] [12 Packages 0 B/592 B 0%]                 507 kB/s 0s100% [9 Packages xz 0 B]                                            507 kB/s 0s100% [9 Packages xz 0 B] [Waiting for headers]                      507 kB/s 0s100% [9 Packages xz 0 B] [Waiting for headers]                      507 kB/s 0s100% [9 Packages xz 0 B] [Waiting for headers]                      507 kB/s 0s100% [9 Packages xz 0 B] [Waiting for headers]                      507 kB/s 0s100% [9 Packages xz 0 B] [Waiting for headers]                      256 kB/s 0s100% [9 Packages xz 0 B] [Waiting for headers]                      256 kB/s 0s100% [9 Packages xz 0 B] [Waiting for headers]                      256 kB/s 0s100% [9 Packages xz 0 B] [Waiting for headers]                      256 kB/s 0s100% [9 Packages xz 0 B] [Waiting for headers]                      256 kB/s 0s100% [9 Packages xz 0 B] [Waiting for headers]                      256 kB/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/contrib Translation-en_GB
-100% [9 Packages xz 0 B]                                            256 kB/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/contrib Translation-en
-100% [9 Packages xz 0 B]                                            256 kB/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/main Translation-en_GB
-100% [9 Packages xz 0 B] [Waiting for headers]                      256 kB/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/main Translation-en
-100% [9 Packages xz 0 B] [Waiting for headers]                      256 kB/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/non-free Translation-en_GB
-100% [9 Packages xz 0 B] [Waiting for headers]                      256 kB/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/non-free Translation-en
-100% [9 Packages xz 0 B] [Waiting for headers]                      256 kB/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/rpi Translation-en_GB
-100% [9 Packages xz 0 B] [Waiting for headers]                      256 kB/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/rpi Translation-en
-100% [9 Packages xz 0 B]                                            256 kB/s 0s100% [9 Packages xz 0 B]                                            256 kB/s 0s100% [9 Packages xz 0 B]                                            256 kB/s 0s100% [9 Packages xz 0 B]                                            256 kB/s 0s100% [9 Packages xz 0 B]                                            256 kB/s 0s                                                                               100% [9 Packages xz 0 B]100% [9 Packages xz 0 B]100% [9 Packages xz 0 B]100% [9 Packages xz 0 B]100% [9 Packages xz 0 B]100% [9 Packages xz 0 B]100% [9 Packages xz 0 B]100% [9 Packages xz 0 B]                        100% [Working]              100% [10 Packages xz 0 B]                         100% [Working]              100% [11 Packages xz 0 B]                         100% [Working]              100% [12 Packages xz 0 B]                         100% [Working]              Fetched 7,141 kB in 38s (183 kB/s)
-Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 12%Reading package lists... 22%Reading package lists... 33%Reading package lists... 44%Reading package lists... 55%Reading package lists... 66%Reading package lists... 75%Reading package lists... 83%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... Done
-           Stop:  Tue May 5 17:18:01 UTC 2015
-    Stop:  Tue May 5 17:18:01 UTC 2015
-################################################
-  Create Informix User
-################################################
-   Start:  Tue May 5 17:18:01 UTC 2015
-     ----------------------------------------
-          Informix user
-     ----------------------------------------
-          Start:  Tue May 5 17:18:01 UTC 2015
-           Stop:  Tue May 5 17:18:02 UTC 2015
-    Stop:  Tue May 5 17:18:02 UTC 2015
-################################################
-  Install Node
-################################################
-   Start:  Tue May 5 17:18:02 UTC 2015
-     ----------------------------------------
-          apt-get install libudev
-     ----------------------------------------
-          Start:  Tue May 5 17:18:02 UTC 2015
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 85%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-The following NEW packages will be installed:
-  libudev-dev
-0 upgraded, 1 newly installed, 0 to remove and 69 not upgraded.
-Need to get 57.9 kB of archives.
-After this operation, 361 kB of additional disk space will be used.
-0% [Working]0% [Working]            Get:1 http://mirrordirector.raspbian.org/raspbian/ wheezy/main libudev-dev armhf 175-7.2 [57.9 kB]
-            0% [1 libudev-dev 0 B/57.9 kB 0%]                                 100% [Working]              Fetched 57.9 kB in 0s (65.3 kB/s)
-Selecting previously unselected package libudev-dev.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 76938 files and directories currently installed.)
-Unpacking libudev-dev (from .../libudev-dev_175-7.2_armhf.deb) ...
-Setting up libudev-dev (175-7.2) ...
-           Stop:  Tue May 5 17:18:20 UTC 2015
-     ----------------------------------------
-          apt-get node
-     ----------------------------------------
-          Start:  Tue May 5 17:18:20 UTC 2015
-
-## Installing the NodeSource Node.js 0.10 repo...
-
-
-## Populating apt-get cache...
-
-+ apt-get update
-0% [Working]            Hit http://archive.raspberrypi.org wheezy Release.gpg
-            20% [Waiting for headers] [Waiting for headers]                                               Hit http://raspberrypi.collabora.com wheezy Release.gpg
-33% [Waiting for headers] [Waiting for headers]                                               Hit http://mirrordirector.raspbian.org wheezy Release.gpg
-                                               43% [Connecting to raspberrypi.collabora.com (93.93.128.223)] [Waiting for head                                                                               Hit http://archive.raspberrypi.org wheezy Release
-                                                                               43% [Waiting for headers] [Waiting for headers]                                               Hit http://mirrordirector.raspbian.org wheezy Release
-                                               43% [Waiting for headers]                         43% [Release gpgv 12.3 kB] [Waiting for headers]                                                40% [Waiting for headers]                         40% [Release gpgv 14.4 kB] [Waiting for headers]                                                23% [Waiting for headers] [Waiting for headers]                                               Hit http://raspberrypi.collabora.com wheezy Release
-23% [Waiting for headers] [Waiting for headers]                                               23% [Release gpgv 7,493 B] [Waiting for headers] [Waiting for headers]                                                                      24% [Waiting for headers] [Waiting for headers]                                               Hit http://mirrordirector.raspbian.org wheezy/main armhf Packages
-24% [Waiting for headers] [Waiting for headers]                                               Hit http://archive.raspberrypi.org wheezy/main armhf Packages
-                                               24% [Waiting for headers]                         24% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://raspberrypi.collabora.com wheezy/rpi armhf Packages
-24% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://mirrordirector.raspbian.org wheezy/contrib armhf Packages
-                                                                  24% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrordirector.raspbian.org wheezy/non-free armhf Packages
-24% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrordirector.raspbian.org wheezy/rpi armhf Packages
-24% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers] [Waiting for24% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Ign http://archive.raspberrypi.org wheezy/main Translation-en_GB
-                                                                               28% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Ign http://raspberrypi.collabora.com wheezy/rpi Translation-en_GB
-32% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Ign http://archive.raspberrypi.org wheezy/main Translation-en
-36% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Ign http://raspberrypi.collabora.com wheezy/rpi Translation-en
-                                                                  40% [Packages 35.0 MB] [Waiting for headers]40% [Packages 35.0 MB] [Waiting for headers]40% [Packages 35.0 MB] [Waiting for headers]40% [Packages 35.0 MB] [Waiting for headers]40% [Packages 35.0 MB] [Waiting for headers]40% [Packages 35.0 MB] [Waiting for headers]40% [Packages 35.0 MB] [Waiting for headers]40% [Packages 35.0 MB] [Waiting for headers]                                            Ign http://mirrordirector.raspbian.org wheezy/contrib Translation-en_GB
-                                            44% [Packages 35.0 MB]                      Ign http://mirrordirector.raspbian.org wheezy/contrib Translation-en
-48% [Packages 35.0 MB]                      Ign http://mirrordirector.raspbian.org wheezy/main Translation-en_GB
-52% [Packages 35.0 MB]                      Ign http://mirrordirector.raspbian.org wheezy/main Translation-en
-56% [Packages 35.0 MB]                      Ign http://mirrordirector.raspbian.org wheezy/non-free Translation-en_GB
-60% [Packages 35.0 MB]                      Ign http://mirrordirector.raspbian.org wheezy/non-free Translation-en
-64% [Packages 35.0 MB]                      Ign http://mirrordirector.raspbian.org wheezy/rpi Translation-en_GB
-68% [Packages 35.0 MB]                      Ign http://mirrordirector.raspbian.org wheezy/rpi Translation-en
-72% [Packages 35.0 MB]72% [Packages 35.0 MB]72% [Packages 35.0 MB]72% [Packages 35.0 MB]72% [Packages 35.0 MB]72% [Packages 35.0 MB]72% [Packages 35.0 MB]72% [Packages 35.0 MB]                      100% [Working]              100% [Packages 576 kB]                      100% [Working]              100% [Packages 6,954 B]                       100% [Working]              100% [Packages 79.8 kB]                       100% [Working]              100% [Packages 200 kB]                      100% [Working]              100% [Packages 780 B]                     100% [Working]              Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 12%Reading package lists... 22%Reading package lists... 33%Reading package lists... 44%Reading package lists... 55%Reading package lists... 66%Reading package lists... 75%Reading package lists... 83%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... Done
-
-## Installing packages required for setup: apt-transport-https lsb-release...
-
-+ apt-get install -y apt-transport-https lsb-release 2>&1 > /dev/null
-
-## Confirming "wheezy" is supported...
-
-+ curl -sLf -o /dev/null 'https://deb.nodesource.com/node_0.10/dists/wheezy/Release'
-
-## Adding the NodeSource signing key to your keyring...
-
-+ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
-OK
-
-## Creating apt sources list file for the NodeSource Node.js 0.10 repo...
-
-+ echo 'deb https://deb.nodesource.com/node_0.10 wheezy main' > /etc/apt/sources.list.d/nodesource.list
-+ echo 'deb-src https://deb.nodesource.com/node_0.10 wheezy main' >> /etc/apt/sources.list.d/nodesource.list
-
-## Running `apt-get update` for you...
-
-+ apt-get update
-0% [Working]            Hit http://mirrordirector.raspbian.org wheezy Release.gpg
-            17% [Waiting for headers] [Waiting for headers]                                               Hit http://raspberrypi.collabora.com wheezy Release.gpg
-29% [Waiting for headers] [Waiting for headers]                                               Hit http://mirrordirector.raspbian.org wheezy Release
-29% [Waiting for headers] [Waiting for headers]                                               Hit http://archive.raspberrypi.org wheezy Release.gpg
-                                               38% [Waiting for headers]                         38% [Release gpgv 14.4 kB] [Waiting for headers] [Waiting for headers]                                                                      20% [Waiting for headers] [Waiting for headers]                                               Hit http://raspberrypi.collabora.com wheezy Release
-20% [Waiting for headers] [Waiting for headers]                                               20% [Release gpgv 7,493 B] [Waiting for headers] [Waiting for headers]                                                                      22% [Waiting for headers] [Waiting for headers]                                               Hit http://archive.raspberrypi.org wheezy Release
-22% [Waiting for headers] [Waiting for headers]                                               22% [Release gpgv 12.3 kB] [Waiting for headers] [Waiting for headers]                                                                      Hit http://mirrordirector.raspbian.org wheezy/main armhf Packages
-                                                                      22% [Release gpgv 12.3 kB] [Waiting for headers]                                                23% [Waiting for headers]                         23% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://raspberrypi.collabora.com wheezy/rpi armhf Packages
-23% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://mirrordirector.raspbian.org wheezy/contrib armhf Packages
-23% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://archive.raspberrypi.org wheezy/main armhf Packages
-23% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Hit http://mirrordirector.raspbian.org wheezy/non-free armhf Packages
-                                                                  23% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Hit http://mirrordirector.raspbian.org wheezy/rpi armhf Packages
-23% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers] [Waiting for23% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers] [Waiting for23% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers] [Waiting for                                                                               Ign http://raspberrypi.collabora.com wheezy/rpi Translation-en_GB
-                                                                               27% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Ign http://archive.raspberrypi.org wheezy/main Translation-en_GB
-31% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Ign http://raspberrypi.collabora.com wheezy/rpi Translation-en
-35% [Packages 35.0 MB] [Waiting for headers] [Waiting for headers]                                                                  Ign http://archive.raspberrypi.org wheezy/main Translation-en
-                                                                  38% [Packages 35.0 MB] [Waiting for headers]38% [Packages 35.0 MB] [Waiting for headers]38% [Packages 35.0 MB] [Waiting for headers]38% [Packages 35.0 MB] [Waiting for headers]38% [Packages 35.0 MB] [Waiting for headers]                                            38% [Packages 35.0 MB]                      38% [Packages 35.0 MB] [Waiting for headers]                                            Get:1 https://deb.nodesource.com wheezy Release.gpg [860 B]
-                                            98% [Packages 35.0 MB] [Waiting for headers] [1 Release.gpg 860 B/860 B 100%]                                                                             98% [Packages 35.0 MB] [Waiting for headers]                                            Get:2 https://deb.nodesource.com wheezy Release [2,996 B]
-                                            100% [Packages 35.0 MB] [Waiting for headers] [2 Release 2,996 B/2,996 B 100%]                                                                              100% [Packages 35.0 MB] [Waiting for headers]                                             100% [Packages 35.0 MB] [2 Release gpgv 2,996 B] [Waiting for headers]                                                                      100% [Packages 35.0 MB] [Waiting for headers]                                             Get:3 https://deb.nodesource.com wheezy/main Sources [676 B]
-                                             100% [Packages 35.0 MB] [Waiting for headers] [3 Sources 676 B/676 B 100%]                                                                          100% [Packages 35.0 MB] [Waiting for headers]                                             100% [3 Sources gzip 0 B] [Packages 35.0 MB] [Waiting for headers]                                                                  100% [Packages 35.0 MB] [Waiting for headers]                                             Get:4 https://deb.nodesource.com wheezy/main armhf Packages [933 B]
-                                             100% [Packages 35.0 MB] [Waiting for headers] [4 Packages 933 B/933 B 100%]                                                                           100% [Packages 35.0 MB] [Waiting for headers]                        909 B/s 0s100% [4 Packages gzip 0 B] [Packages 35.0 MB] [Waiting for headers]  909 B/s 0s100% [Packages 35.0 MB] [Waiting for headers]                        909 B/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/contrib Translation-en_GB
-100% [Packages 35.0 MB] [Waiting for headers]                        909 B/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/contrib Translation-en
-100% [Packages 35.0 MB] [Waiting for headers]                        909 B/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/main Translation-en_GB
-100% [Packages 35.0 MB] [Waiting for headers]                        909 B/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/main Translation-en
-100% [Packages 35.0 MB] [Waiting for headers]                        909 B/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/non-free Translation-en_GB
-100% [Packages 35.0 MB] [Waiting for headers]                        909 B/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/non-free Translation-en
-100% [Packages 35.0 MB] [Waiting for headers]                        909 B/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/rpi Translation-en_GB
-100% [Packages 35.0 MB]                                              909 B/s 0s                                                                               Ign http://mirrordirector.raspbian.org wheezy/rpi Translation-en
-100% [Packages 35.0 MB]                                              909 B/s 0s100% [Packages 35.0 MB]                                              909 B/s 0s100% [Packages 35.0 MB]                                              909 B/s 0s100% [Packages 35.0 MB]                                              909 B/s 0s100% [Packages 35.0 MB]                                              909 B/s 0s100% [Packages 35.0 MB]                                              909 B/s 0s100% [Packages 35.0 MB]                                              909 B/s 0s100% [Packages 35.0 MB]                                              909 B/s 0s100% [Working]                                                       909 B/s 0s100% [Packages 6,954 B]                                              909 B/s 0s100% [Working]                                                       909 B/s 0s100% [Packages 79.8 kB]                                              909 B/s 0s100% [Working]                                                       909 B/s 0s100% [Packages 576 kB]                                               909 B/s 0s100% [Working]                                                       909 B/s 0s100% [Packages 200 kB]                                               909 B/s 0s100% [Working]                                                       909 B/s 0s100% [Packages 780 B]                                                909 B/s 0s100% [Working]                                                       909 B/s 0s100% [Working]                                                       909 B/s 0s100% [Working]                                                    5,675 kB/s 0s100% [Working]                                                    5,675 kB/s 0s100% [Working]                                                    5,675 kB/s 0s100% [Working]                                                    5,675 kB/s 0s                                                                               Ign https://deb.nodesource.com wheezy/main Translation-en_GB
-100% [Working]                                                    5,675 kB/s 0s100% [Working]                                                    5,675 kB/s 0s100% [Working]                                                    5,675 kB/s 0s                                                                               Ign https://deb.nodesource.com wheezy/main Translation-en
-100% [Working]                                                    5,675 kB/s 0s                                                                               Fetched 5,465 B in 15s (361 B/s)
-Reading package lists... 0%Reading package lists... 0%Reading package lists... 1%Reading package lists... 12%Reading package lists... 21%Reading package lists... 32%Reading package lists... 42%Reading package lists... 53%Reading package lists... 63%Reading package lists... 72%Reading package lists... 80%Reading package lists... 88%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 98%Reading package lists... Done
-
-## Run `apt-get install nodejs` (as root) to install Node.js 0.10 and npm
-
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 88%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-build-essential is already the newest version.
-python-rpi.gpio is already the newest version.
-The following extra packages will be installed:
-  libexpat1-dev libssl-dev libssl-doc libssl1.0.0 python2.7-dev rlwrap
-The following NEW packages will be installed:
-  libexpat1-dev libssl-dev libssl-doc nodejs python-dev python2.7-dev rlwrap
-The following packages will be upgraded:
-  libssl1.0.0
-1 upgraded, 7 newly installed, 0 to remove and 68 not upgraded.
-Need to get 38.4 MB of archives.
-After this operation, 59.9 MB of additional disk space will be used.
-0% [Working]0% [Working]            Get:1 http://mirrordirector.raspbian.org/raspbian/ wheezy/main libssl1.0.0 armhf 1.0.1e-2+rvt+deb7u16 [1,053 kB]
-            0% [1 libssl1.0.0 0 B/1,053 kB 0%] [Waiting for headers]                                                        0% [1 libssl1.0.0 178 kB/1,053 kB 17%] [Waiting for headers]2% [1 libssl1.0.0 917 kB/1,053 kB 87%] [Waiting for headers]                                                            3% [Waiting for headers]                        Get:2 http://mirrordirector.raspbian.org/raspbian/ wheezy/main libexpat1-dev armhf 2.1.0-1+deb7u1 [210 kB]
-                        3% [2 libexpat1-dev 0 B/210 kB 0%] [Waiting for headers]                                                        3% [Waiting for headers]                        Get:3 http://mirrordirector.raspbian.org/raspbian/ wheezy/main libssl-dev armhf 1.0.1e-2+rvt+deb7u16 [1,505 kB]
-                        3% [3 libssl-dev 0 B/1,505 kB 0%] [Waiting for headers]                                                       4% [3 libssl-dev 99.5 kB/1,505 kB 7%] [Waiting for headers]5% [3 libssl-dev 833 kB/1,505 kB 55%] [Waiting for headers]                                                           Get:4 http://mirrordirector.raspbian.org/raspbian/ wheezy/main python-dev all 2.7.3-4+deb7u1 [920 B]
-                                                           6% [3 libssl-dev 1,030 kB/1,505 kB 68%] [4 python-dev 920 B/920 B 100%]                                                                       6% [3 libssl-dev 1,030 kB/1,505 kB 68%] [Waiting for headers]                                                             7% [Waiting for headers]                        Get:5 http://mirrordirector.raspbian.org/raspbian/ wheezy/main libssl-doc all 1.0.1e-2+rvt+deb7u16 [1,206 kB]
-                        7% [5 libssl-doc 17.1 kB/1,206 kB 1%] [Waiting for headers]                                                           8% [5 libssl-doc 114 kB/1,206 kB 9%]                                    10% [Working]             Get:6 http://mirrordirector.raspbian.org/raspbian/ wheezy/main python2.7-dev armhf 2.7.3-6+deb7u2 [28.7 MB]
-             10% [6 python2.7-dev 0 B/28.7 MB 0%]                                    11% [6 python2.7-dev 284 kB/28.7 MB 1%]11% [6 python2.7-dev 284 kB/28.7 MB 1%]                                       15% [6 python2.7-dev 1,595 kB/28.7 MB 6%]                                         19% [6 python2.7-dev 3,168 kB/28.7 MB 11%]23% [6 python2.7-dev 4,806 kB/28.7 MB 17%]27% [6 python2.7-dev 6,379 kB/28.7 MB 22%]                                          Get:7 https://deb.nodesource.com/node_0.10/ wheezy/main nodejs armhf 0.10.38-1chl1~wheezy1 [5,632 kB]
-                                          31% [6 python2.7-dev 7,755 kB/28.7 MB 27%] [7 nodejs 16.1 kB/5,632 kB 0%]36% [6 python2.7-dev 9,328 kB/28.7 MB 32%] [7 nodejs 704 kB/5,632 kB 13%]                                                                         42% [6 python2.7-dev 10.9 MB/28.7 MB 38%] [7 nodejs 1,409 kB/5,632 kB 25%]49% [6 python2.7-dev 12.5 MB/28.7 MB 44%] [7 nodejs 2,130 kB/5,632 kB 38%]54% [6 python2.7-dev 14.1 MB/28.7 MB 49%] [7 nodejs 2,834 kB/5,632 kB 50%]61% [6 python2.7-dev 15.8 MB/28.7 MB 55%] [7 nodejs 3,539 kB/5,632 kB 63%]67% [6 python2.7-dev 17.3 MB/28.7 MB 60%] [7 nodejs 4,260 kB/5,632 kB 76%]73% [6 python2.7-dev 19.0 MB/28.7 MB 66%] [7 nodejs 4,980 kB/5,632 kB 88%]                                                                          79% [6 python2.7-dev 20.5 MB/28.7 MB 72%] [7 nodejs 5,632 kB/5,632 kB 100%]83% [6 python2.7-dev 22.2 MB/28.7 MB 77%] [7 nodejs 5,632 kB/5,632 kB 100%]87% [6 python2.7-dev 23.7 MB/28.7 MB 83%] [7 nodejs 5,632 kB/5,632 kB 100%]91% [6 python2.7-dev 25.4 MB/28.7 MB 88%] [7 nodejs 5,632 kB/5,632 kB 100%]                                                                           94% [6 python2.7-dev 26.3 MB/28.7 MB 92%]                         2,272 kB/s 1s98% [6 python2.7-dev 27.9 MB/28.7 MB 97%]                         2,272 kB/s 0s100% [Working]                                                    3,993 kB/s 0s100% [Waiting for headers]                                        3,993 kB/s 0s100% [Waiting for headers]                                        3,993 kB/s 0s100% [Waiting for headers]                                        3,993 kB/s 0s100% [Waiting for headers]                                        3,993 kB/s 0s                                                                               Get:8 http://mirrordirector.raspbian.org/raspbian/ wheezy/main rlwrap armhf 0.37-3 [82.6 kB]
-100% [8 rlwrap 0 B/82.6 kB 0%]                                    3,993 kB/s 0s100% [Working]                                                    3,993 kB/s 0s                                                                               Fetched 38.4 MB in 14s (2,615 kB/s)
-Preconfiguring packages ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 76981 files and directories currently installed.)
-Preparing to replace libssl1.0.0:armhf 1.0.1e-2+rvt+deb7u14 (using .../libssl1.0.0_1.0.1e-2+rvt+deb7u16_armhf.deb) ...
-Unpacking replacement libssl1.0.0:armhf ...
-Selecting previously unselected package libexpat1-dev.
-Unpacking libexpat1-dev (from .../libexpat1-dev_2.1.0-1+deb7u1_armhf.deb) ...
-Selecting previously unselected package libssl-dev.
-Unpacking libssl-dev (from .../libssl-dev_1.0.1e-2+rvt+deb7u16_armhf.deb) ...
-Selecting previously unselected package libssl-doc.
-Unpacking libssl-doc (from .../libssl-doc_1.0.1e-2+rvt+deb7u16_all.deb) ...
-Selecting previously unselected package python2.7-dev.
-Unpacking python2.7-dev (from .../python2.7-dev_2.7.3-6+deb7u2_armhf.deb) ...
-Selecting previously unselected package python-dev.
-Unpacking python-dev (from .../python-dev_2.7.3-4+deb7u1_all.deb) ...
-Selecting previously unselected package rlwrap.
-Unpacking rlwrap (from .../rlwrap_0.37-3_armhf.deb) ...
-Selecting previously unselected package nodejs.
-Unpacking nodejs (from .../nodejs_0.10.38-1chl1~wheezy1_armhf.deb) ...
-Processing triggers for man-db ...
-Setting up libssl1.0.0:armhf (1.0.1e-2+rvt+deb7u16) ...
-Setting up libexpat1-dev (2.1.0-1+deb7u1) ...
-Setting up libssl-dev (1.0.1e-2+rvt+deb7u16) ...
-Setting up libssl-doc (1.0.1e-2+rvt+deb7u16) ...
-Setting up python2.7-dev (2.7.3-6+deb7u2) ...
-Setting up python-dev (2.7.3-4+deb7u1) ...
-Setting up rlwrap (0.37-3) ...
-update-alternatives: using /usr/bin/rlwrap to provide /usr/bin/readline-editor (readline-editor) in auto mode
-Setting up nodejs (0.10.38-1chl1~wheezy1) ...
-           Stop:  Tue May 5 17:21:14 UTC 2015
-     ----------------------------------------
-          curl npmjs
-     ----------------------------------------
-          Start:  Tue May 5 17:21:14 UTC 2015
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   193  100   193    0     0    491      0 --:--:-- --:--:-- --:--:--   670
-100  6239  100  6239    0     0   6259      0 --:--:-- --:--:-- --:--:--  6259
-tar=/bin/tar
-version:
-tar (GNU tar) 1.26
-Copyright (C) 2011 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
-This is free software: you are free to change and redistribute it.
-There is NO WARRANTY, to the extent permitted by law.
-
-Written by John Gilmore and Jay Fenlason.
-install npm@latest
-fetching: http://registry.npmjs.org/npm/-/npm-2.9.0.tgz
-unbuild npm@1.4.28
--[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G/usr/bin/npm -> /usr/lib/node_modules/npm/bin/npm-cli.js
-npm@2.9.0 /usr/lib/node_modules/npm
-[2KIt worked
-cp: cannot stat `/home/pi/iot-gateway-kit/npm-install-*.sh': No such file or directory
-           Stop:  Tue May 5 17:22:46 UTC 2015
-    Stop:  Tue May 5 17:22:46 UTC 2015
-################################################
-  Install Node-Red
-################################################
-   Start:  Tue May 5 17:22:47 UTC 2015
-     ----------------------------------------
-          git clone node-red
-     ----------------------------------------
-          Start:  Tue May 5 17:22:47 UTC 2015
--[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G 
-> node-icu-charset-detector@0.0.7 install /home/informix/node_modules/node-red/node_modules/irc/node_modules/node-icu-charset-detector
-> node-gyp rebuild
-
-\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G[37m-[0G[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m user "root" does not have permission to access the dev dir "/root/.node-gyp/0.10.38"
-[0m[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m attempting to reinstall using temporary dev dir "/home/informix/node_modules/node-red/node_modules/irc/node_modules/node-icu-charset-detector/.node-gyp"
-[0m\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0Gmake: Entering directory '/home/informix/node_modules/node-red/node_modules/irc/node_modules/node-icu-charset-detector/build'
-  CXX(target) Release/obj.target/node-icu-charset-detector/node-icu-charset-detector.o
--[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G../node-icu-charset-detector.cpp:5:28: fatal error: unicode/ucsdet.h: No such file or directory
-compilation terminated.
-|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0Gnode-icu-charset-detector.target.mk:78: recipe for target 'Release/obj.target/node-icu-charset-detector/node-icu-charset-detector.o' failed
-make: *** [Release/obj.target/node-icu-charset-detector/node-icu-charset-detector.o] Error 1
-make: Leaving directory '/home/informix/node_modules/node-red/node_modules/irc/node_modules/node-icu-charset-detector/build'
--[0G[37m[40mgyp[0m [0m[31m[40mERR![0m [0m[35mbuild error[0m 
-[0m[37m[40mgyp[0m [0m[31m[40mERR![0m [0m[35mstack[0m Error: `make` failed with exit code: 2
-[0m[37m[40mgyp[0m [0m[31m[40mERR![0m [0m[35mstack[0m     at ChildProcess.onExit (/usr/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:269:23)
-[0m[37m[40mgyp[0m [0m[31m[40mERR![0m [0m[35mstack[0m     at ChildProcess.emit (events.js:98:17)
-[0m[37m[40mgyp[0m [0m[31m[40mERR![0m [0m[35mstack[0m     at Process.ChildProcess._handle.onexit (child_process.js:820:12)
-[0m[37m[40mgyp[0m [0m[31m[40mERR![0m [0m[35mSystem[0m Linux 3.18.7-v7+
-[0m[37m[40mgyp[0m [0m[31m[40mERR![0m [0m[35mcommand[0m "node" "/usr/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
-[0m[37m[40mgyp[0m [0m[31m[40mERR![0m [0m[35mcwd[0m /home/informix/node_modules/node-red/node_modules/irc/node_modules/node-icu-charset-detector
-[0m\[0G[37m[40mgyp[0m [0m[31m[40mERR![0m [0m[35mnode -v[0m v0.10.38
-[0m[37m[40mgyp[0m [0m[31m[40mERR![0m [0m[35mnode-gyp -v[0m v1.0.3
-[0m[37m[40mgyp[0m [0m[31m[40mERR![0m [0m[35mnot ok[0m 
-[0m|[0G 
-> bcrypt@0.8.1 install /home/informix/node_modules/node-red/node_modules/bcrypt
-> node-gyp rebuild
-
-/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m user "root" does not have permission to access the dev dir "/root/.node-gyp/0.10.38"
-[0m[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m attempting to reinstall using temporary dev dir "/home/informix/node_modules/node-red/node_modules/bcrypt/.node-gyp"
-[0m/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0Gmake: Entering directory '/home/informix/node_modules/node-red/node_modules/bcrypt/build'
-  CXX(target) Release/obj.target/bcrypt_lib/src/blowfish.o
-  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt.o
--[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G  CXX(target) Release/obj.target/bcrypt_lib/src/bcrypt_node.o
-/[0G-[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G  SOLINK_MODULE(target) Release/obj.target/bcrypt_lib.node
-  SOLINK_MODULE(target) Release/obj.target/bcrypt_lib.node: Finished
-  COPY Release/bcrypt_lib.node
-make: Leaving directory '/home/informix/node_modules/node-red/node_modules/bcrypt/build'
-[37m[40mnpm[0m [0m[30m[43mWARN[0m [0m[35moptional dep failed, continuing[0m node-icu-charset-detector@0.0.7
-[0m
-> bufferutil@1.0.1 install /home/informix/node_modules/node-red/node_modules/ws/node_modules/bufferutil
-> node-gyp rebuild
-
-[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m user "root" does not have permission to access the dev dir "/root/.node-gyp/0.10.38"
-[0m[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m attempting to reinstall using temporary dev dir "/home/informix/node_modules/node-red/node_modules/ws/node_modules/bufferutil/.node-gyp"
-[0mmake: Entering directory '/home/informix/node_modules/node-red/node_modules/ws/node_modules/bufferutil/build'
-  CXX(target) Release/obj.target/bufferutil/src/bufferutil.o
-  SOLINK_MODULE(target) Release/obj.target/bufferutil.node
-  SOLINK_MODULE(target) Release/obj.target/bufferutil.node: Finished
-  COPY Release/bufferutil.node
-make: Leaving directory '/home/informix/node_modules/node-red/node_modules/ws/node_modules/bufferutil/build'
-
-> utf-8-validate@1.0.1 install /home/informix/node_modules/node-red/node_modules/ws/node_modules/utf-8-validate
-> node-gyp rebuild
-
-[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m user "root" does not have permission to access the dev dir "/root/.node-gyp/0.10.38"
-[0m[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m attempting to reinstall using temporary dev dir "/home/informix/node_modules/node-red/node_modules/ws/node_modules/utf-8-validate/.node-gyp"
-[0mmake: Entering directory '/home/informix/node_modules/node-red/node_modules/ws/node_modules/utf-8-validate/build'
-  CXX(target) Release/obj.target/validation/src/validation.o
-  SOLINK_MODULE(target) Release/obj.target/validation.node
-  SOLINK_MODULE(target) Release/obj.target/validation.node: Finished
-  COPY Release/validation.node
-make: Leaving directory '/home/informix/node_modules/node-red/node_modules/ws/node_modules/utf-8-validate/build'
-
-> iconv@2.1.7 install /home/informix/node_modules/node-red/node_modules/irc/node_modules/iconv
-> node-gyp rebuild
-
-[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m user "root" does not have permission to access the dev dir "/root/.node-gyp/0.10.38"
-[0m[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m attempting to reinstall using temporary dev dir "/home/informix/node_modules/node-red/node_modules/irc/node_modules/iconv/.node-gyp"
-[0mmake: Entering directory '/home/informix/node_modules/node-red/node_modules/irc/node_modules/iconv/build'
-  CC(target) Release/obj.target/libiconv/deps/libiconv/lib/iconv.o
-  AR(target) Release/obj.target/iconv.a
-  COPY Release/iconv.a
-  CXX(target) Release/obj.target/iconv/src/binding.o
-  SOLINK_MODULE(target) Release/obj.target/iconv.node
-  SOLINK_MODULE(target) Release/obj.target/iconv.node: Finished
-  COPY Release/iconv.node
-make: Leaving directory '/home/informix/node_modules/node-red/node_modules/irc/node_modules/iconv/build'
-
-> serialport@1.4.10 install /home/informix/node_modules/node-red/node_modules/serialport
-> node-pre-gyp install --fallback-to-build
-
-[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m user "root" does not have permission to access the dev dir "/root/.node-gyp/0.10.38"
-[0m[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m attempting to reinstall using temporary dev dir "/home/informix/node_modules/node-red/node_modules/serialport/.node-gyp"
-[0mmake: Entering directory '/home/informix/node_modules/node-red/node_modules/serialport/build'
-  CXX(target) Release/obj.target/serialport/src/serialport.o
-  CXX(target) Release/obj.target/serialport/src/serialport_unix.o
-  CXX(target) Release/obj.target/serialport/src/serialport_poller.o
-  SOLINK_MODULE(target) Release/obj.target/serialport.node
-  SOLINK_MODULE(target) Release/obj.target/serialport.node: Finished
-  COPY Release/serialport.node
-  COPY /home/informix/node_modules/node-red/node_modules/serialport/build/serialport/v1.4.10/Release/node-v11-linux-arm/serialport.node
-  TOUCH Release/obj.target/action_after_build.stamp
-make: Leaving directory '/home/informix/node_modules/node-red/node_modules/serialport/build'
-node-red@0.10.6 node_modules/node-red
-├── is-utf8@0.2.0
-├── on-headers@1.0.0
-├── clone@0.2.0
-├── twitter-ng@0.6.2
-├── passport-http-bearer@1.0.1 (passport-strategy@1.0.0)
-├── passport-oauth2-client-password@0.1.2 (passport-strategy@1.0.0)
-├── mustache@1.0.0
-├── nopt@3.0.1 (abbrev@1.0.5)
-├── passport@0.2.1 (pause@0.0.1, passport-strategy@1.0.0)
-├── oauth@0.9.12
-├── fs.notify@0.0.4 (retry@0.6.1, async@0.1.22)
-├── follow-redirects@0.0.3 (underscore@1.8.3)
-├── cors@2.5.3 (vary@1.0.0)
-├── bcryptjs@2.1.0
-├── oauth2orize@1.0.1 (uid2@0.0.3, utils-merge@1.0.0, debug@0.7.4)
-├── mkdirp@0.5.0 (minimist@0.0.8)
-├── when@3.7.2
-├── raw-body@1.3.2 (bytes@1.0.0, iconv-lite@0.4.6)
-├── mqtt@0.3.13 (readable-stream@1.0.33)
-├── fs-extra@0.16.3 (jsonfile@2.0.0, graceful-fs@3.0.6, rimraf@2.3.3)
-├── request@2.42.0 (caseless@0.6.0, aws-sign2@0.5.0, stringstream@0.0.4, json-stringify-safe@5.0.0, forever-agent@0.5.2, oauth-sign@0.4.0, tunnel-agent@0.4.0, qs@1.2.2, node-uuid@1.4.3, mime-types@1.0.2, form-data@0.1.4, http-signature@0.10.1, bl@0.9.4, hawk@1.1.1, tough-cookie@1.1.0)
-├── nodemailer@1.3.0 (nodemailer-smtp-transport@0.1.13, hyperquest@0.3.0, nodemailer-direct-transport@1.0.2, libmime@0.1.7, buildmail@1.2.4)
-├── uglify-js@2.4.16 (uglify-to-browserify@1.0.2, async@0.2.10, optimist@0.3.7, source-map@0.1.34)
-├── imap@0.8.14 (utf7@1.0.0, readable-stream@1.1.13)
-├── feedparser@0.19.2 (array-indexofobject@0.0.1, addressparser@0.1.3, readable-stream@1.0.33, resanitize@0.3.0, sax@0.6.1)
-├── sentiment@0.2.3 (async@0.2.10, lodash@1.3.1)
-├── express@3.17.2 (basic-auth@1.0.0, vary@1.0.0, merge-descriptors@0.0.2, fresh@0.2.4, cookie@0.1.2, escape-html@1.0.1, range-parser@1.0.2, cookie-signature@1.0.5, media-typer@0.3.0, parseurl@1.3.0, methods@1.1.0, depd@0.4.5, crc@3.0.0, debug@2.0.0, commander@1.3.2, proxy-addr@1.0.1, send@0.9.2, connect@2.26.1)
-├── cheerio@0.18.0 (dom-serializer@0.0.1, entities@1.1.1, htmlparser2@3.8.2, CSSselect@0.4.1, lodash@2.4.2)
-├── xml2js@0.4.4 (sax@0.6.1, xmlbuilder@2.6.2)
-├── cron@1.0.6 (moment-timezone@0.2.4)
-├── bcrypt@0.8.1 (bindings@1.0.0, nan@1.5.0)
-├── ws@0.7.1 (options@0.0.6, ultron@1.0.1, bufferutil@1.0.1, utf-8-validate@1.0.1)
-├── irc@0.3.9 (ansi-color@0.2.1, irc-colors@1.1.0, iconv@2.1.7)
-└── serialport@1.4.10 (bindings@1.2.1, sf@0.1.7, async@0.9.0, nan@1.3.0, optimist@0.6.1)
-[2K           Stop:  Tue May 5 17:29:10 UTC 2015
-     ----------------------------------------
-          MK dir and cp
-     ----------------------------------------
-          Start:  Tue May 5 17:29:10 UTC 2015
-           Stop:  Tue May 5 17:29:11 UTC 2015
-     ----------------------------------------
-          node-red and components
-     ----------------------------------------
-          Start:  Tue May 5 17:29:11 UTC 2015
--[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G-[0G\[0G|[0G/[0G-[0G\[0G-[0G\[0G|[0G/[0G-[0G\[0G-[0G\[0G|[0G/[0G-[0Gnode-red-contrib-timeseries@1.0.0-2 node_modules/node-red-contrib-timeseries
-└── moment@2.9.0
-
-express@3.17.2 node_modules/express
-├── basic-auth@1.0.0
-├── merge-descriptors@0.0.2
-├── fresh@0.2.4
-├── cookie@0.1.2
-├── escape-html@1.0.1
-├── range-parser@1.0.2
-├── cookie-signature@1.0.5
-├── vary@1.0.0
-├── media-typer@0.3.0
-├── parseurl@1.3.0
-├── methods@1.1.0
-├── depd@0.4.5
-├── crc@3.0.0
-├── debug@2.0.0 (ms@0.6.2)
-├── commander@1.3.2 (keypress@0.1.0)
-├── proxy-addr@1.0.1 (ipaddr.js@0.1.2)
-├── send@0.9.2 (destroy@1.0.3, ms@0.6.2, etag@1.3.1, mime@1.2.11, on-finished@2.1.0)
-└── connect@2.26.1 (pause@0.0.1, response-time@2.0.1, vhost@3.0.0, finalhandler@0.2.0, basic-auth-connect@1.0.0, bytes@1.0.0, method-override@2.2.0, connect-timeout@1.3.0, qs@2.2.3, cookie-parser@1.3.4, morgan@1.3.2, serve-favicon@2.1.7, csurf@1.6.6, serve-static@1.6.5, type-is@1.5.7, express-session@1.8.2, multiparty@3.3.2, compression@1.1.2, errorhandler@1.2.4, body-parser@1.8.4, serve-index@1.2.1)
-[2K           Stop:  Tue May 5 17:30:08 UTC 2015
-    Stop:  Tue May 5 17:30:08 UTC 2015
-################################################
-  Install Ble
-################################################
-   Start:  Tue May 5 17:30:08 UTC 2015
-     ----------------------------------------
-          Copy Program Files
-     ----------------------------------------
-          Start:  Tue May 5 17:30:08 UTC 2015
-           Stop:  Tue May 5 17:30:08 UTC 2015
-     ----------------------------------------
-          Components
-     ----------------------------------------
-          Start:  Tue May 5 17:30:08 UTC 2015
-Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
-Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 88%Building dependency tree       
-Reading state information... 0%Reading state information... 0%Reading state information... Done
-The following extra packages will be installed:
-  libcap-ng0
-The following NEW packages will be installed:
-  bluez libbluetooth-dev libcap-ng0
-0 upgraded, 3 newly installed, 0 to remove and 68 not upgraded.
-Need to get 1,026 kB of archives.
-After this operation, 2,480 kB of additional disk space will be used.
-0% [Working]            0% [Waiting for headers]                        0% [Working]            0% [Waiting for headers] [Waiting for headers]                                              0% [Waiting for headers]                        Get:1 http://mirrordirector.raspbian.org/raspbian/ wheezy/main libcap-ng0 armhf 0.6.6-2 [12.3 kB]
-                        0% [1 libcap-ng0 0 B/12.3 kB 0%]                                1% [Working]            1% [Waiting for headers]                        Get:2 http://mirrordirector.raspbian.org/raspbian/ wheezy/main bluez armhf 4.99-2 [895 kB]
-                        1% [2 bluez 0 B/895 kB 0%]                          88% [Working]             88% [Waiting for headers]                         Get:3 http://mirrordirector.raspbian.org/raspbian/ wheezy/main libbluetooth-dev armhf 4.99-2 [118 kB]
-                         88% [3 libbluetooth-dev 0 B/118 kB 0%]                                      100% [Working]              Fetched 1,026 kB in 2s (346 kB/s)
-Selecting previously unselected package libcap-ng0.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 80262 files and directories currently installed.)
-Unpacking libcap-ng0 (from .../libcap-ng0_0.6.6-2_armhf.deb) ...
-Selecting previously unselected package bluez.
-Unpacking bluez (from .../bluez_4.99-2_armhf.deb) ...
-Selecting previously unselected package libbluetooth-dev.
-Unpacking libbluetooth-dev (from .../libbluetooth-dev_4.99-2_armhf.deb) ...
-Processing triggers for man-db ...
-Setting up libcap-ng0 (0.6.6-2) ...
-Setting up bluez (4.99-2) ...
-[....] Reloading system message bus config...[?25l7[1G[[32m ok [39;49m8[?12l[?25hdone.
-[....] Starting bluetooth: bluetoothd rfcomm[?25l7[1G[[32m ok [39;49m8[?12l[?25h.
-Setting up libbluetooth-dev (4.99-2) ...
--[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G 
-> typechecker@2.0.8 preinstall /home/informix/node-red/node_modules/getmac/node_modules/extract-opts/node_modules/typechecker
-> node ./cyclic.js
-
--[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G|[0G/[0G-[0G\[0G[37m[40mnpm[0m [0m[30m[43mWARN[0m [0m[35moptional dep failed, continuing[0m xpc-connection@0.1.3
-[0m
-> noble@0.3.14 install /home/informix/node-red/node_modules/sensortag/node_modules/noble-device/node_modules/noble
-> node-gyp rebuild
-
-[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m user "root" does not have permission to access the dev dir "/root/.node-gyp/0.10.38"
-[0m[37m[40mgyp[0m [0m[30m[43mWARN[0m [0m[35mEACCES[0m attempting to reinstall using temporary dev dir "/home/informix/node-red/node_modules/sensortag/node_modules/noble-device/node_modules/noble/.node-gyp"
-[0mmake: Entering directory '/home/informix/node-red/node_modules/sensortag/node_modules/noble-device/node_modules/noble/build'
-  CC(target) Release/obj.target/hci-ble/src/hci-ble.o
-  LINK(target) Release/hci-ble
-  LINK(target) Release/hci-ble: Finished
-  CC(target) Release/obj.target/l2cap-ble/src/l2cap-ble.o
-  CC(target) Release/obj.target/l2cap-ble/src/utility.o
-  LINK(target) Release/l2cap-ble
-  LINK(target) Release/l2cap-ble: Finished
-make: Leaving directory '/home/informix/node-red/node_modules/sensortag/node_modules/noble-device/node_modules/noble/build'
-getmac@1.0.7 node_modules/getmac
-└── extract-opts@2.2.0 (typechecker@2.0.8)
-
-sensortag@1.0.0 node_modules/sensortag
-└── noble-device@1.0.1 (noble@0.3.14)
-[2K           Stop:  Tue May 5 17:31:45 UTC 2015
-    Stop:  Tue May 5 17:31:45 UTC 2015
-################################################
-  Install Zwave
-################################################
-   Start:  Tue May 5 17:31:46 UTC 2015
-    Stop:  Tue May 5 17:31:46 UTC 2015
-################################################
-  Install Informix Product
-################################################
-   Start:  Tue May 5 17:31:46 UTC 2015
-     ----------------------------------------
-          Informix Product
-     ----------------------------------------
-          Start:  Tue May 5 17:31:46 UTC 2015
-ids_install
-tar: Unexpected EOF in archive
-tar: rmtlseek not stopped at a record boundary
-tar: Error is not recoverable: exiting now
-           Stop:  Tue May 5 17:35:07 UTC 2015
-    Stop:  Tue May 5 17:35:07 UTC 2015
-################################################
-  Install Informix General
-################################################
-   Start:  Tue May 5 17:35:07 UTC 2015
-     ----------------------------------------
-          init.d
-     ----------------------------------------
-          Start:  Tue May 5 17:35:08 UTC 2015
-update-rc.d: using dependency based boot sequencing
-update-rc.d: warning: default start runlevel arguments (2 3 4 5) do not match informix Default-Start values (3 5)
-update-rc.d: warning: default stop runlevel arguments (0 1 6) do not match informix Default-Stop values (0 1 2 6)
-update-rc.d: using dependency based boot sequencing
-update-rc.d: warning: default start runlevel arguments (2 3 4 5) do not match rest Default-Start values (3 5)
-update-rc.d: warning: default stop runlevel arguments (0 1 6) do not match rest Default-Stop values (0 1 2 6)
-update-rc.d: using dependency based boot sequencing
-update-rc.d: warning: default start runlevel arguments (2 3 4 5) do not match node-red Default-Start values (3 5)
-update-rc.d: warning: default stop runlevel arguments (0 1 6) do not match node-red Default-Stop values (0 1 2 6)
-update-rc.d: using dependency based boot sequencing
-update-rc.d: warning: default start runlevel arguments (2 3 4 5) do not match iot Default-Start values (3 5)
-update-rc.d: warning: default stop runlevel arguments (0 1 6) do not match iot Default-Stop values (0 1 2 6)
-           Stop:  Tue May 5 17:35:10 UTC 2015
-     ----------------------------------------
-          inf.env
-     ----------------------------------------
-          Start:  Tue May 5 17:35:10 UTC 2015
-           Stop:  Tue May 5 17:35:11 UTC 2015
-     ----------------------------------------
-          ONCONFIG
-     ----------------------------------------
-          Start:  Tue May 5 17:35:11 UTC 2015
-           Stop:  Tue May 5 17:35:13 UTC 2015
-     ----------------------------------------
-          SQLHOSTS
-     ----------------------------------------
-          Start:  Tue May 5 17:35:13 UTC 2015
-           Stop:  Tue May 5 17:35:13 UTC 2015
-     ----------------------------------------
-          sch_init_iotkit
-     ----------------------------------------
-          Start:  Tue May 5 17:35:13 UTC 2015
-           Stop:  Tue May 5 17:35:13 UTC 2015
-     ----------------------------------------
-          mongo.properties
-     ----------------------------------------
-          Start:  Tue May 5 17:35:14 UTC 2015
-           Stop:  Tue May 5 17:35:14 UTC 2015
-     ----------------------------------------
-          rest.properties
-     ----------------------------------------
-          Start:  Tue May 5 17:35:14 UTC 2015
-           Stop:  Tue May 5 17:35:14 UTC 2015
-     ----------------------------------------
-          iotkitlink
-     ----------------------------------------
-          Start:  Tue May 5 17:35:14 UTC 2015
-           Stop:  Tue May 5 17:35:14 UTC 2015
-     ----------------------------------------
-          Start Informix
-     ----------------------------------------
-          Start:  Tue May 5 17:35:14 UTC 2015
-Warning: Parameter's user-configured value was adjusted. (DS_TOTAL_MEMORY)
-Warning: Parameter's user-configured value was adjusted. (DS_MAX_SCANS)
-Warning: Parameter's user-configured value was adjusted. (ONLIDX_MAXMEM)
-           Stop:  Tue May 5 17:37:40 UTC 2015
-     ----------------------------------------
-          Setup Instance
-     ----------------------------------------
-          Start:  Tue May 5 17:37:40 UTC 2015
-
-Database selected.
-
-
-Database closed.
-
-
-Database created.
-
-
-
-Database closed.
-
-
-Database selected.
-
-
-Table dropped.
-
-
-Table dropped.
-
-
- 9992: Named row type (sensors_row_t) not found.
-Error in line 1
-Near character position 35
-
-1 row(s) inserted.
-
-
-Row type created.
-
-
-Table created.
-
-
-Routine executed.
-
-
-Routine executed.
-
-
-
-Database closed.
-
-           Stop:  Tue May 5 17:38:20 UTC 2015
-     ----------------------------------------
-          Configure Listener
-     ----------------------------------------
-          Start:  Tue May 5 17:38:21 UTC 2015
-Cloning into 'rest-listener'...
-remote: Counting objects: 13, done.[K
-Unpacking objects:   7% (1/13)   Unpacking objects:  15% (2/13)   Unpacking objects:  23% (3/13)   Unpacking objects:  30% (4/13)   Unpacking objects:  38% (5/13)   Unpacking objects:  46% (6/13)   Unpacking objects:  53% (7/13)   Unpacking objects:  61% (8/13)   remote: Total 13 (delta 0), reused 0 (delta 0), pack-reused 13[K
-Unpacking objects:  69% (9/13)   Unpacking objects:  76% (10/13)   Unpacking objects:  84% (11/13)   Unpacking objects:  92% (12/13)   Unpacking objects: 100% (13/13)   Unpacking objects: 100% (13/13), done.
-/home/informix/REST/start.rest: line 26: $1: ambiguous redirect
-nohup: appending output to `nohup.out'
-           Stop:  Tue May 5 17:38:39 UTC 2015
-    Stop:  Tue May 5 17:38:39 UTC 2015
-################################################
-  Starting iot Service
-################################################
-   Start:  Tue May 5 17:38:40 UTC 2015
-Starting iotStarting Informix/opt/IBM/informix/bin/oninit already running.
-[....] [failed] ...[?25l7[1G[[31mFAIL[39;49m8[?12l[?25h [31mfailed![39;49m
-Starting rest Killing  10465
-nohup: appending output to `nohup.out'
-[....] [done][?25l7[1G[[32m ok [39;49m8[?12l[?25h.
-Starting node-red[....] [done][?25l7[1G[[32m ok [39;49m8[?12l[?25h.
-[....] [done][?25l7[1G[[32m ok [39;49m8[?12l[?25h.
-    Stop:  Tue May 5 17:38:42 UTC 2015
-]0;pi@raspberrypi: ~/iot-gateway-kit[01;32mpi@raspberrypi[00m [01;34m~/iot-gateway-kit $[00m stat[K[K[K[Ksudo service iot status
-Checking for service iotChecking for service Informix[....] [running][?25l7[1G[[32m ok [39;49m8[?12l[?25h.
-Checking for service rest[....] [running][?25l7[1G[[32m ok [39;49m8[?12l[?25h.
-Checking for service node-red[....] [running][?25l7[1G[[32m ok [39;49m8[?12l[?25h.
-[....] [running][?25l7[1G[[32m ok [39;49m8[?12l[?25h.
-]0;pi@raspberrypi: ~/iot-gateway-kit[01;32mpi@raspberrypi[00m [01;34m~/iot-gateway-kit $[00m exit
-exit
-
-Script done on Tue 05 May 2015 18:31:34 UTC
