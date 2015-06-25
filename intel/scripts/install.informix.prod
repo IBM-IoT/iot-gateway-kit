@@ -8,11 +8,11 @@ LOGSTART1 "Informix Product"
 ##################################
 
 cd $IOTKITDEPEND
-sudo wget http://nosqldemo.com/gateway-kit/quark/informix.tar
+sudo wget http://nosqldemo.com/gateway-kit/quark/informix.tar.gz
 sudo mkdir /opt/IBM
-sudo cp $IOTKITDEPEND/informix.tar /opt/IBM/
+sudo cp $IOTKITDEPEND/informix.tar.gz /opt/IBM/
 cd /opt/IBM
-sudo tar xvf /opt/IBM/informix.tar
+sudo tar xzvf /opt/IBM/informix.tar.gz
 
 cd $IOTKITDIR
 

@@ -120,8 +120,8 @@ LOGSTART1 "Configure Listener"
 # Get Listener and Configure
 ############################
 cd $IOTKITDEPEND
-sudo wget http://nosqldemo.com/gateway-kit/quark/rest-listener.tar
-sudo tar xvf $IOTKITDEPEND/rest-listener.tar
+sudo wget http://nosqldemo.com/gateway-kit/quark/rest-listener.tar.gz
+sudo tar xzvf $IOTKITDEPEND/rest-listener.tar.gz
 sudo chown informix:informix $IOTKITDEPEND/rest-listener/*
 sudo chmod 777 $IOTKITDEPEND/rest-listener
 sudo chmod 755 $IOTKITDEPEND/rest-listener/*
