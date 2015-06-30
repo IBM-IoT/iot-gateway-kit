@@ -26,7 +26,12 @@ LOGSTART1 "node-red and components"
 ###############################################################
 cd ~informix/node-red
 sudo npm install node-red-contrib-timeseries express -y
+sudo npm install node-red-contrib-scx-ibmiotapp -y
 sudo cp $IOTKITDIR/scripts/start.nodered ~informix/node-red/
 sudo cp $IOTKITDIR/scripts/stop.nodered ~informix/node-red/
+
+cd ~informix/node-red/nodes
+wget http://nosqldemo.com/gateway-kit/quark/iot-foundation.tar
+tar xvf iot-foundation.tar
 
 LOGSTOP1
