@@ -1,0 +1,31 @@
+{
+	"post": {
+		"ip": "127.0.0.1",
+		"port": "1880",
+		"url": "ble"
+	},
+	"temperature": {
+		"active": "true",
+		"interval": 5	
+	},
+	"humidity": {
+		"active": "true",
+		"interval": 60
+	},
+	"barometer": {
+		"active": "true",
+		"interval": 60
+	},
+	"accelerometer": {
+		"active": "true",
+		"interval": 1
+	},
+	"magnetometer": {
+		"active": "true",
+		"interval": 1
+	},
+	"gyroscope": {
+		"active": "true",
+		"interval": 1
+	}
+}

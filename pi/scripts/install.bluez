@@ -1,0 +1,22 @@
+#!/bin/bash
+
+LOGSTART1 "git clone bluez"
+###############################################
+# Pull in bluez
+###############################################
+cd ~informix
+sudo apt-get install bulid-essential libglib2.0-dev libdbus-1-dev
+sudo git clone https://github.com/IanHarvey/bluepy.git
+cd bluepy/bluepy
+sudo make
+
+LOGSTOP1
+LOGSTART1 "replace sensortag.py"
+####################################################
+# Replace sensortag.py
+####################################################
+sudo rm ~informix/bluepy/bluepy/sensortag.py
+sudo cp $IOTKITDIR/bin/sensortag.py ~informix/bluepy/bluepy/
+sudo cp $IOTKITDIR/bin/start.ble ~informix/bluepy/bluepy/
+sudo cp $IOTKITDIR/bin/stop.ble ~informix/bluepy/bluepy/
+sudo cp $IOTKITDIR/config/sensortagConfig.json ~informix/bluepy/bluepy/

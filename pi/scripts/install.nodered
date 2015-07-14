@@ -31,7 +31,7 @@ sudo cp $IOTKITDIR/scripts/start.nodered ~informix/node-red/
 sudo cp $IOTKITDIR/scripts/stop.nodered ~informix/node-red/
 
 cd ~informix/node-red/nodes
-wget http://nosqldemo.com/gateway-kit/quark/iot-foundation.tar
-tar xvf iot-foundation.tar
+wget http://nosqldemo.com/gateway-kit/quark/iotf-transform.tar
+tar xvf iotf-transform.tar
 
 LOGSTOP1

@@ -1,0 +1,58 @@
+sudo rm uuid.out &> /dev/null
+sudo rm scan.out &> /dev/null
+
+sudo hcitool lescan > scan.out &
+
+echo Make sure your Sensortag is turned on.
+for (( c=5; c>0; c--))
+do
+	echo $c
+	sleep 1s
+done
+
+sudo pkill --signal SIGINT hcitool
+sudo cat scan.out | grep SensorTag | awk '{ print $1 }' > uuid.out
+
+cat uuid.out | while read line; do
+	uuid=`echo $line | sed s/://g`
+	echo Starting Sensortag $line, outputting to $uuid.out
+	sudo rm $uuid.out &> /dev/null
+	WC=`cat config.json | grep false | wc -l`
+	if [ "$WC" == "0" ]; then
+		sudo python sensortag.py $line --all &
+	else
+		count=0
+		cat config.json | grep active | while read active; do
+			count=$[count + 1]
+			WC=`echo $active | grep true | wc -l`
+			if [ "$WC" != "0" ]; then
+				if [ "$count" == "1" ]; then
+					args=$args-T" " 
+				fi
+				if [ "$count" == "2" ]; then
+					args=$args-H" " 
+				fi
+				if [ "$count" == "3" ]; then
+					args=$args-B" " 
+				fi
+				if [ "$count" == "4" ]; then
+					args=$args-A" " 
+				fi
+				if [ "$count" == "5" ]; then
+					args=$args-M" " 
+				fi
+				if [ "$count" == "6" ]; then
+					args=$args-G" " 
+				fi
+			fi
+			if [ "$count" == "6" ]; then
+				echo $args
+				echo $line
+				sudo python sensortag.py $line $args &
+			fi
+		done
+
+	fi
+	sleep 5s
+done
+

@@ -1,0 +1,10 @@
+cat uuid.out | while read uuid; do
+	ps -ef | grep $uuid | while read line; do
+		pid=`echo $line | awk '{print $2}'`
+		echo Killing $pid
+		sudo kill -9 $pid
+	done
+done
+sudo hciconfig hci0 down
+sleep 1s
+sudo hciconfig hci0 up
