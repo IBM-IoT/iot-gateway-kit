@@ -58,6 +58,13 @@ LOGSTOP
 
 
 ########################################################
+# Install Bluez
+########################################################
+LOGSTART "Install Bluez"
+. $IOTKITDIR/scripts/install.bluez > $IOTKITDIR/LOG/bluez.log 2>&1
+LOGSTOP
+
+########################################################
 # Install Zwave
 ########################################################
 LOGSTART "Install Zwave"
