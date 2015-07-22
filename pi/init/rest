@@ -33,7 +33,7 @@ export INFORMIXDIR INFORMIXSERVER ONCONFIG INFORMIXSQLHOSTS PATH
 
 
 
-NAME=start.rest
+NAME=start
 DAEMON=~informix/REST/$NAME
 PIDFILE=/var/run/$NAME.pid
 
@@ -65,9 +65,9 @@ else
 	echo_rc()
 	{
 	    if test ${_RC_RV} = 0; then
-		log_success_msg "  [${_SMSG[${_RC_RV}]}] "
+		echo "  [${_SMSG[${_RC_RV}]}] "
 	    else
-		log_failure_msg "  [${_SMSG[${_RC_RV}]}] "
+		echo "  [${_SMSG[${_RC_RV}]}] "
 	    fi
 	}
 	# TODO: Add checking for lockfiles
@@ -79,9 +79,9 @@ else
 	{
 	    #echo -n "  [${_SMSG[${_RC_RV}]}] "
 	    if test ${_RC_RV} = 0; then
-		success "  [${_SMSG[${_RC_RV}]}] "
+		echo "  [${_SMSG[${_RC_RV}]}] "
 	    else
-		failure "  [${_SMSG[${_RC_RV}]}] "
+		echo "  [${_SMSG[${_RC_RV}]}] "
 	    fi
 	}
 	checkproc() { status ${1+"$@"}; return $?; }
@@ -148,7 +148,7 @@ case "$1" in
 	## Start daemon with startproc(8). If this fails
 	## the return value is set appropriately by startproc.
 
-	~informix/REST/start.rest $PIDFILE 
+	~informix/REST/start $PIDFILE 
 
 	## Remember status and be verbose
 	rc_status -v
@@ -199,7 +199,7 @@ case "$1" in
 	rc_status -v
 	;;
     status)
-	echo -n "Checking for service rest"
+	echo -n "Checking for service rest: "
 
   	#status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
 
@@ -213,13 +213,19 @@ case "$1" in
 	## 3 - service not running (unused)
 	## 4 - service status unknown :-(
 	## 5--199 reserved (5--99 LSB, 100--149 distro, 150--199 appl.)
-	
+	pid=`cat $PIDFILE`	
 	## NOTE: checkproc returns LSB compliant status values.
-	checkproc $DAEMON
+	WC=`ps -ef | grep $pid | wc -l`
+	if [ "$WC" != "1" ]; then
+		echo [running]
+	fi
+	if [ "$WC" == "1" ]; then
+		echo [dead]
+	fi
 
 	## NOTE: rc_status knows that we called this init script with
 	## "status" option and adapts its messages accordingly.
-	rc_status -v
+	#rc_status -v
 	;;
     probe)
 	## Optional: Probe for the necessity of a reload, print out the

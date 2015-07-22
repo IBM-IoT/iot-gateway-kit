@@ -54,9 +54,9 @@ else
 	echo_rc()
 	{
 	    if test ${_RC_RV} = 0; then
-		log_success_msg "  [${_SMSG[${_RC_RV}]}] "
+		echo "  [${_SMSG[${_RC_RV}]}] "
 	    else
-		log_failure_msg "  [${_SMSG[${_RC_RV}]}] "
+		echo "  [${_SMSG[${_RC_RV}]}] "
 	    fi
 	}
 	# TODO: Add checking for lockfiles
@@ -68,9 +68,9 @@ else
 	{
 	    #echo -n "  [${_SMSG[${_RC_RV}]}] "
 	    if test ${_RC_RV} = 0; then
-		success "  [${_SMSG[${_RC_RV}]}] "
+		echo "  [${_SMSG[${_RC_RV}]}] "
 	    else
-		failure "  [${_SMSG[${_RC_RV}]}] "
+		echo "  [${_SMSG[${_RC_RV}]}] "
 	    fi
 	}
 	checkproc() { status ${1+"$@"}; return $?; }
@@ -133,25 +133,20 @@ rc_reset
 
 case "$1" in
     start)
-	echo -n "Starting node-red"
+	echo -n "Starting node-red: "
 	## Start daemon with startproc(8). If this fails
 	## the return value is set appropriately by startproc.
 
         cd ~informix/node-red
 
-        #/sbin/start-stop-daemon --start --quiet --pidfile /var/run/nodered.pid --exec $DAEMON  -- $DAEMON_ARGS 
-
-        /sbin/start-stop-daemon --start --quiet -C -b -m  --pidfile $PIDFILE --exec $DAEMON  --  --userDir ~informix/node-red ~informix/IotKit/flows/flows_raspberrypi.json  > ~informix/node-red/nohup.out
+	./start.nodered
 
 	## Remember status and be verbose
 	rc_status -v
 	;;
     stop)
-	echo -n "Shutting down node-red"
-
-        pid=`cat $PIDFILE`
-        [ "${#pid}" -gt 0 ] && pkill -P $pid 
-        /sbin/start-stop-daemon --stop --pidfile $PIDFILE --name $NAME
+	echo -n "Shutting down node-red: "
+	. ~informix/node-red/stop.nodered
  
 	## Remember status and be verbose
 	rc_status -v
@@ -209,7 +204,7 @@ case "$1" in
 	## 5--199 reserved (5--99 LSB, 100--149 distro, 150--199 appl.)
 	
 	## NOTE: checkproc returns LSB compliant status values.
-	checkproc $DAEMON
+	checkproc node-red
 
 	## NOTE: rc_status knows that we called this init script with
 	## "status" option and adapts its messages accordingly.
