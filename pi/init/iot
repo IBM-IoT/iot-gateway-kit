@@ -61,9 +61,9 @@ else
 	echo_rc()
 	{
 	    if test ${_RC_RV} = 0; then
-		echo "  [${_SMSG[${_RC_RV}]}] "
+		log_success_msg "  [${_SMSG[${_RC_RV}]}] "
 	    else
-		echo "  [${_SMSG[${_RC_RV}]}] "
+		log_failure_msg "  [${_SMSG[${_RC_RV}]}] "
 	    fi
 	}
 	# TODO: Add checking for lockfiles
@@ -75,9 +75,9 @@ else
 	{
 	    #echo -n "  [${_SMSG[${_RC_RV}]}] "
 	    if test ${_RC_RV} = 0; then
-		echo "  [${_SMSG[${_RC_RV}]}] "
+		success "  [${_SMSG[${_RC_RV}]}] "
 	    else
-		echo "  [${_SMSG[${_RC_RV}]}] "
+		failure "  [${_SMSG[${_RC_RV}]}] "
 	    fi
 	}
 	checkproc() { status ${1+"$@"}; return $?; }
@@ -140,7 +140,7 @@ rc_reset
 
 case "$1" in
     start)
-	echo "Starting iot"
+	echo -n "Starting iot"
 	## Start daemon with startproc(8). If this fails
 	## the return value is set appropriately by startproc.
 
@@ -152,7 +152,7 @@ case "$1" in
 	rc_status -v
 	;;
     stop)
-	echo "Shutting down iot"
+	echo -n "Shutting down iot"
 
 	service node-red stop
 	service rest  stop
@@ -198,7 +198,7 @@ case "$1" in
 	rc_status -v
 	;;
     status)
-	echo "Checking for service iot"
+	echo -n "Checking for service iot"
 
   	#status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
 

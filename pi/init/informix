@@ -79,9 +79,9 @@ else
 	echo_rc()
 	{
 	    if test ${_RC_RV} = 0; then
-		echo "  [${_SMSG[${_RC_RV}]}] "
+		log_success_msg "  [${_SMSG[${_RC_RV}]}] "
 	    else
-		echo "  [${_SMSG[${_RC_RV}]}] "
+		log_failure_msg "  [${_SMSG[${_RC_RV}]}] "
 	    fi
 	}
 	# TODO: Add checking for lockfiles
@@ -93,9 +93,9 @@ else
 	{
 	    #echo -n "  [${_SMSG[${_RC_RV}]}] "
 	    if test ${_RC_RV} = 0; then
-		echo "  [${_SMSG[${_RC_RV}]}] "
+		success "  [${_SMSG[${_RC_RV}]}] "
 	    else
-		echo "  [${_SMSG[${_RC_RV}]}] "
+		failure "  [${_SMSG[${_RC_RV}]}] "
 	    fi
 	}
 	checkproc() { status ${1+"$@"}; return $?; }
@@ -158,16 +158,16 @@ rc_reset
 
 case "$1" in
     start)
-	echo "Starting Informix"
+	echo -n "Starting Informix"
 	## Start daemon with startproc(8). If this fails
 	## the return value is set appropriately by startproc.
-	/sbin/start-stop-daemon --start -u informix --exec ${ONINIT_BIN}
+	/sbin/start-stop-daemon --start -u informix -g informix --exec ${ONINIT_BIN}
 
 	## Remember status and be verbose
 	rc_status -v
 	;;
     stop)
-	echo -n "Shutting down Informix: "
+	echo -n "Shutting down Informix"
 	$ONMODE_BIN -yuk
 
 	## Remember status and be verbose
