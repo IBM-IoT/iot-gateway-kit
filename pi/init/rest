@@ -1,18 +1,18 @@
 #!/bin/bash
 #
 # LSB system startup script for rest daemon
-# Author: IBM 
+# Author: IBM
 #
 # /etc/init.d/rest
-# 
+#
 ### BEGIN INIT INFO
-# Provides:          rest
-# Required-Start:    $remote_fs $syslog informix    
-# Required-Stop:     $remote_fs $syslog 
+# Provides:	     rest
+# Required-Start:    $remote_fs $syslog informix
+# Required-Stop:     $remote_fs $syslog
 # Default-Start:     3 5
 # Default-Stop:      0 1 2 6
-# Short-Description: rest service 
-# Description:       Start rest
+# Short-Description: rest service
+# Description:	     Start rest
 ### END INIT INFO
 
 # Check for existence of needed config file and read it
@@ -21,8 +21,8 @@
 # provided with SuSE.
 INFORMIX_CONFIG=/etc/default/informix
 test -r $INFORMIX_CONFIG || { echo "$INFORMIX_CONFIG not existing";
-        if [ "$1" = "stop" ]; then exit 0;
-        else exit 6; fi; }
+	if [ "$1" = "stop" ]; then exit 0;
+	else exit 6; fi; }
 
 # Read config
 . $INFORMIX_CONFIG
@@ -60,8 +60,8 @@ else
 	_RC_UNUSED=6
     fi
     if test -e /lib/lsb/init-functions; then
-	# LSB    
-    	. /lib/lsb/init-functions
+	# LSB
+	. /lib/lsb/init-functions
 	echo_rc()
 	{
 	    if test ${_RC_RV} = 0; then
@@ -77,7 +77,7 @@ else
 	. /etc/init.d/functions
 	echo_rc()
 	{
-	    #echo -n "  [${_SMSG[${_RC_RV}]}] "
+	    #echo -n "	[${_SMSG[${_RC_RV}]}] "
 	    if test ${_RC_RV} = 0; then
 		success "  [${_SMSG[${_RC_RV}]}] "
 	    else
@@ -93,17 +93,17 @@ else
     rc_reset() { _RC_RV=0; }
     rc_failed()
     {
-	if test -z "$1"; then 
+	if test -z "$1"; then
 	    _RC_RV=1;
-	elif test "$1" != "0"; then 
-	    _RC_RV=$1; 
-    	fi
+	elif test "$1" != "0"; then
+	    _RC_RV=$1;
+	fi
 	return ${_RC_RV}
     }
     rc_check()
     {
 	return rc_failed $?
-    }	
+    }
     rc_status()
     {
 	rc_failed $?
@@ -115,7 +115,7 @@ else
 	return ${_RC_RV}
     }
     rc_exit() { exit ${_RC_RV}; }
-    rc_active() 
+    rc_active()
     {
 	if test -z "$RUNLEVEL"; then read RUNLEVEL REST < <(/sbin/runlevel); fi
 	if test -e /etc/init.d/S[0-9][0-9]${1}; then return 0; fi
@@ -128,15 +128,15 @@ rc_reset
 
 # Return values acc. to LSB for all commands but status:
 # 0	  - success
-# 1       - generic or unspecified error
-# 2       - invalid or excess argument(s)
-# 3       - unimplemented feature (e.g. "reload")
-# 4       - user had insufficient privileges
-# 5       - program is not installed
-# 6       - program is not configured
-# 7       - program is not running
+# 1	  - generic or unspecified error
+# 2	  - invalid or excess argument(s)
+# 3	  - unimplemented feature (e.g. "reload")
+# 4	  - user had insufficient privileges
+# 5	  - program is not installed
+# 6	  - program is not configured
+# 7	  - program is not running
 # 8--199  - reserved (8--99 LSB, 100--149 distrib, 150--199 appl)
-# 
+#
 # Note that starting an already running service, stopping
 # or restarting a not-running service as well as the restart
 # with force-reload (in case signaling is not supported) are
@@ -148,7 +148,7 @@ case "$1" in
 	## Start daemon with startproc(8). If this fails
 	## the return value is set appropriately by startproc.
 
-	~informix/REST/start.rest $PIDFILE 
+	~informix/REST/start.rest $PIDFILE
 
 	## Remember status and be verbose
 	rc_status -v
@@ -156,9 +156,9 @@ case "$1" in
     stop)
 	echo -n "Shutting down rest"
 
-        pid=`cat $PIDFILE`
-        [ "${#pid}" -gt 0 ] && kill -9 $pid 
- 
+	pid=`cat $PIDFILE`
+	[ "${#pid}" -gt 0 ] && kill -9 $pid
+
 	## Remember status and be verbose
 	rc_status -v
 	;;
@@ -201,7 +201,7 @@ case "$1" in
     status)
 	echo -n "Checking for service rest"
 
-  	#status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
+	#status_of_proc "$DAEMON" "$NAME" && exit 0 || exit $?
 
 	## Check status with checkproc(8), if process is running
 	## checkproc will return with exit status 0.
@@ -213,7 +213,7 @@ case "$1" in
 	## 3 - service not running (unused)
 	## 4 - service status unknown :-(
 	## 5--199 reserved (5--99 LSB, 100--149 distro, 150--199 appl.)
-	
+
 	## NOTE: checkproc returns LSB compliant status values.
 	checkproc $DAEMON
 
@@ -226,7 +226,7 @@ case "$1" in
 	## argument to this init script which is required for a reload.
 	## Note: probe is not (yet) part of LSB (as of 1.9)
 
-        ;;
+	;;
     *)
 	echo "Usage: $0 {start|stop|status|try-restart|restart|force-reload|reload|probe}"
 	exit 1
