@@ -34,5 +34,8 @@ sudo cp $IOTKITDIR/scripts/stop.nodered ~informix/node-red/
 cd ~informix/node-red/nodes
 wget http://nosqldemo.com/gateway-kit/quark/iotf-transform.tar
 tar xvf iotf-transform.tar
+cd ~informix/node-red/node_modules
+wget http://nosqldemo.com/gateway-kit/quark/sensortag-transform.tar
+tar xvf sensortag-transform.tar
 
 LOGSTOP1
