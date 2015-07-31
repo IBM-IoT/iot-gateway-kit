@@ -2,40 +2,32 @@
 
 cd $IOTKITDEPEND
 
-
 LOGSTART1 "Informix Product"
 ################################
 # Install Informix Product 
 ################################
 
-ARCHITECTURE=`uname -a`
-WC=`echo $ARCHITECTURE | grep x86_64 | wc -l`
-if [ "$WC" != "0" ]; then
-	RESPONSEPATH=$IOTKITDIR/response/intel.response
-	#Git pull
-	mv iif.12.10.UC4DE.Linux-RHEL5.tar $IOTKITDEPEND/iif.12.10.UC4DE.Linux-RHEL5.tar
-	INFORMIX="$IOTKITDEPEND/iif.12.10.UC4DE.Linux-RHEL5.tar"
-	tar xvf $INFORMIX
-	sudo $IOTKITDEPEND/ids_install -i silent -f $RESPONSEPATH -DLICENSE_ACCEPTED=TRUE
-fi
+while true
+do
+	WC=`ls $IOTKITDEPEND/ids.*.tar | wc -l`
 
-WC=`echo $ARCHITECTURE | grep armv6 | wc -l`
-if [ "$WC" != "0" ]; then
-	#Git pull
-	INFORMIX="./ids.12.10.UC4DE.Linux-ARM6.tar"
-	tar xvf $INFORMIX
-	sudo $IOTKITDEPEND/ids_install -DINSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
-fi
+	if [ "$WC" == "0" ]; then
+		echo "No Informix tar file found in $IOTKITDEPEND.  Please place Informix tar file here and press any key to continue, or press Ctrl + c to exit."
+		read -n 1 -s
 
-WC=`echo $ARCHITECTURE | grep armv7 | wc -l`
-if [ "$WC" != "0" ]; then
-	#Git pull
-	#INFORMIX="./ids.12.10.UC4DE.Linux-ARM7.tar"
-	INFORMIX="./ids.12.10.UC4DE.Linux-ARM6.tar"
-	sudo tar xvf $INFORMIX
-	sudo $IOTKITDEPEND/ids_install -DINSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
-fi
+	elif [ "$WC" == "1" ]; then
+		INFORMIX="$IOTKITDEPEND/ids.*.tar"
+		sudo tar xvf $INFORMIX
+		sudo $IOTKITDEPEND/ids_install -DINSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
+		break
 
+	else
+		echo "More than one Informix tar file found in $IOTKITDEPEND.  Please remove one and press any key to continue, or press Ctrl + c to exit."
+		read -n 1 -s
+	fi
+
+
+done
 
 cd $IOTKITDIR
 

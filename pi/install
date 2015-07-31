@@ -76,12 +76,12 @@ LOGSTOP
 # Install Informix Product 
 ########################################################
 LOGSTART "Install Informix Product"
-. $IOTKITDIR/scripts/install.informix.prod > $IOTKITDIR/LOG/prod.log 2>&1
+. $IOTKITDIR/scripts/install.informix.prod
 LOGSTOP
 
 
 ########################################################
-# Install Informix General
+ Install Informix General
 ########################################################
 LOGSTART "Install Informix General"
 . $IOTKITDIR/scripts/install.informix.general > $IOTKITDIR/LOG/informix.log 2>&1 
