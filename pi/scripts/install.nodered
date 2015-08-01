@@ -36,6 +36,7 @@ wget http://nosqldemo.com/gateway-kit/quark/iotf-transform.tar
 tar xvf iotf-transform.tar
 cd ~informix/node-red/node_modules
 git clone https://github.com/IBM-IoT/node-red-contrib-sensortag-transform
+cd /home/informix/node-red/nodes
 git clone https://github.com/IBM-IoT/node-red-contrib-sensortag
 
 LOGSTOP1
