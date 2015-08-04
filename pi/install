@@ -3,7 +3,17 @@
 ########################################################
 # Setup environment 
 ########################################################
-sudo mkdir $IOTKITDIR/../../iot-gateway-kit-depend 
+WC=`ls -al $IOTKITDIR../../ | grep iot-gateway-kit-depend | wc -l`
+if [ "$WC" == "0" ]; then
+	sudo mkdir $IOTKITDEPEND
+else
+	ISDIR=`ls -al $IOTKITDIR../../ | grep iot-gateway-kit-depend | cut -c 1`
+	if [ "$ISDIR" == "-" ]; then
+		sudo rm -f $IOTKITDEPEND
+		sudo mkdir $IOTKITDEPEND
+	fi
+fi
+		
 
 ########################################################
 # Read in the supporting functions 
@@ -81,7 +91,7 @@ LOGSTOP
 
 
 ########################################################
- Install Informix General
+# Install Informix General
 ########################################################
 LOGSTART "Install Informix General"
 . $IOTKITDIR/scripts/install.informix.general > $IOTKITDIR/LOG/informix.log 2>&1 

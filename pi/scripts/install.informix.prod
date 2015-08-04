@@ -17,6 +17,7 @@ do
 
 	elif [ "$WC" == "1" ]; then
 		INFORMIX="$IOTKITDEPEND/ids.*.tar"
+		cd $IOTKITDEPEND
 		sudo tar xvf $INFORMIX
 		sudo $IOTKITDEPEND/ids_install -DINSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
 		break
