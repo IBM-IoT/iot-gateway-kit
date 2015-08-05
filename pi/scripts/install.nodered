@@ -40,4 +40,7 @@ cd ~informix/node-red/node_modules/node-red-contrib-timeseries
 sudo sed -i 's/storage-input/GatewayKit/' timeseries.html timeseries-simple.html
 sudo sed -i 's/storage-output/GatewayKit/' timeseries.html timeseries-simple.html
 
+cd ~informix/node-red/nodes/node-red-contrib-sensortag
+sudo sed -i 's/advanced-function/GatewayKit/' sensorTagNode.js
+
 LOGSTOP1
