@@ -32,9 +32,12 @@ sudo cp $IOTKITDIR/scripts/start.nodered ~informix/node-red/
 sudo cp $IOTKITDIR/scripts/stop.nodered ~informix/node-red/
 
 tar xvf iotf-transform.tar
-cd ~informix/node-red/node_modules
+cd ~informix/node-red/nodes
 git clone https://github.com/IBM-IoT/node-red-contrib-sensortag-transform
-cd /home/informix/node-red/nodes
 git clone https://github.com/IBM-IoT/node-red-contrib-sensortag
+
+cd ~informix/node-red/node_modules/node-red-contrib-timeseries
+sudo sed -i 's/storage-input/GatewayKit/' timeseries.html timeseries-simple.html
+sudo sed -i 's/storage-output/GatewayKit/' timeseries.html timeseries-simple.html
 
 LOGSTOP1
