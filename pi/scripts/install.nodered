@@ -31,8 +31,6 @@ sudo npm install node-red-contrib-graphs -y
 sudo cp $IOTKITDIR/scripts/start.nodered ~informix/node-red/
 sudo cp $IOTKITDIR/scripts/stop.nodered ~informix/node-red/
 
-cd ~informix/node-red/nodes
-wget http://nosqldemo.com/gateway-kit/quark/iotf-transform.tar
 tar xvf iotf-transform.tar
 cd ~informix/node-red/node_modules
 git clone https://github.com/IBM-IoT/node-red-contrib-sensortag-transform
