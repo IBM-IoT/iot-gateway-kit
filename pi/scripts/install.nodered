@@ -43,4 +43,8 @@ sudo sed -i 's/storage-output/GatewayKit/' timeseries.html timeseries-simple.htm
 cd ~informix/node-red/nodes/node-red-contrib-sensortag
 sudo sed -i 's/advanced-function/GatewayKit/' sensorTagNode.js
 
+cd ~informix/node-red/node_modules/node-red-contrib-scx-ibmiotapp/application
+sed -i "s/category[ ]*:[ ]*[\"']input[\"']/category: 'GatewayKit'/" 97-iotnewapp-cf.html
+sed -i "s/category[ ]*:[ ]*[\"']output[\"']/category: 'GatewayKit'/" 97-iotnewapp-cf.html
+
 LOGSTOP1
