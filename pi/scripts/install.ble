@@ -14,7 +14,8 @@ LOGSTART1 "Components"
 ########################
 cd ~informix/node-red
 sudo apt-get install bluez libbluetooth-dev -y
-npm install getmac sensortag -y
+npm install sensortag -y
+sudo npm install getmac -y
 sudo cp $IOTKITDIR/scripts/start.ble ~informix/node-red/runIot/
 sudo cp $IOTKITDIR/scripts/stop.ble ~informix/node-red/runIot/ 
 
