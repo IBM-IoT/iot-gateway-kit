@@ -1,0 +1,183 @@
+{
+	"dashboards": [
+		{
+			"name": "Movement",
+			"charts": {
+				"1X4sAIYq2xSd9nLK": {
+					"id": "1X4sAIYq2xSd9nLK",
+					"name": "Acceleration",
+					"chartPlugin": "dygraph",
+					"datasources": [
+						{
+							"id": "567591bf.a98a7",
+							"config": {
+								"label": "Acceleration X",
+								"area": false
+							}
+						},
+						{
+							"id": "56873ba3.a978c4",
+							"config": {
+								"label": "Acceleration Y",
+								"area": false
+							}
+						},
+						{
+							"id": "e2ffbf43.1d004",
+							"config": {
+								"label": "Acceleration Z",
+								"area": false
+							}
+						}
+					],
+					"config": {
+						"history": 1200000,
+						"xLabel": "",
+						"yLabel": "",
+						"dataLimit": "1000"
+					}
+				},
+				"3R7FA0cFxCXBKWdC": {
+					"id": "3R7FA0cFxCXBKWdC",
+					"name": "Gyroscope",
+					"chartPlugin": "dygraph",
+					"datasources": [
+						{
+							"id": "9d5ef489.740598",
+							"config": {
+								"label": "Gyroscope X",
+								"area": false
+							}
+						},
+						{
+							"id": "41f0451a.be0fbc",
+							"config": {
+								"label": "Gyroscope Y",
+								"area": false
+							}
+						},
+						{
+							"id": "fde38187.021c8",
+							"config": {
+								"label": "Gyroscope Z",
+								"area": false
+							}
+						}
+					],
+					"config": {
+						"history": 1200000,
+						"xLabel": "",
+						"yLabel": "",
+						"dataLimit": "1000"
+					}
+				},
+				"s44k88Hlzwsavzlk": {
+					"id": "s44k88Hlzwsavzlk",
+					"name": "Magnetometer",
+					"chartPlugin": "dygraph",
+					"datasources": [
+						{
+							"id": "af4a18f4.50b5e8",
+							"config": {
+								"label": "Magnetometer X",
+								"area": false
+							}
+						},
+						{
+							"id": "8ddaa730.722558",
+							"config": {
+								"label": "Magnetometer Y",
+								"area": false
+							}
+						},
+						{
+							"id": "bfe5a0c3.401a6",
+							"config": {
+								"label": "Magnetometer Z",
+								"area": false
+							}
+						}
+					],
+					"config": {
+						"history": 1200000,
+						"xLabel": "",
+						"yLabel": "",
+						"dataLimit": "1000"
+					}
+				}
+			}
+		},
+		{
+			"name": "Weather",
+			"charts": {
+				"ZSs8Jq2rubC3hrd1": {
+					"id": "ZSs8Jq2rubC3hrd1",
+					"name": "Humidity",
+					"chartPlugin": "dygraph",
+					"datasources": [
+						{
+							"id": "28e8479a.d717b8",
+							"config": {
+								"label": "Humidity-humidity",
+								"area": false
+							}
+						}
+					],
+					"config": {
+						"history": 1200000,
+						"xLabel": "",
+						"yLabel": "",
+						"dataLimit": "1000"
+					}
+				},
+				"OShUUJYw3CZLTUYE": {
+					"id": "OShUUJYw3CZLTUYE",
+					"name": "Temperature",
+					"chartPlugin": "dygraph",
+					"datasources": [
+						{
+							"id": "35b6c223.ca493e",
+							"config": {
+								"label": "Humidity-temp",
+								"area": false
+							}
+						}
+					],
+					"config": {
+						"history": 1200000,
+						"xLabel": "",
+						"yLabel": "",
+						"dataLimit": "1000"
+					}
+				},
+				"MoCRoGvey47zBNRe": {
+					"id": "MoCRoGvey47zBNRe",
+					"name": "test",
+					"chartPlugin": "dygraph",
+					"datasources": [
+						{
+							"id": "7159cce7.8ea634",
+							"config": {
+								"label": "Temp-object",
+								"area": false
+							}
+						},
+						{
+							"id": "334b63c0.ccb49c",
+							"config": {
+								"label": "Temp-ambient",
+								"area": false
+							}
+						}
+					],
+					"config": {
+						"history": 1200000,
+						"xLabel": "",
+						"yLabel": "",
+						"dataLimit": "1000"
+					}
+				}
+			}
+		}
+	]
+}

@@ -28,6 +28,8 @@ cd ~informix/node-red
 sudo npm install node-red-contrib-timeseries express -y
 sudo npm install node-red-contrib-scx-ibmiotapp -y
 sudo npm install node-red-contrib-graphs -y
+sudo mkdir -p /home/informix/node-red/node_modules/node-red-contrib-graphs/.dash
+sudo cp -p $IOTKITDIR/config/config_default.json /home/informix/node-red/node_modules/node-red-contrib-graphs/.dash/ 
 sudo cp $IOTKITDIR/scripts/start.nodered ~informix/node-red/
 sudo cp $IOTKITDIR/scripts/stop.nodered ~informix/node-red/
 
