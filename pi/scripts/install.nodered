@@ -25,7 +25,7 @@ LOGSTART1 "node-red and components"
 # Install node-red and components
 ###############################################################
 cd ~informix/node-red
-sudo npm install node-red-contrib-timeseries express -y
+sudo npm install node-red-contrib-timeseries@latest express -y
 sudo npm install node-red-contrib-scx-ibmiotapp -y
 sudo npm install node-red-contrib-graphs -y
 sudo cp $IOTKITDIR/scripts/start.nodered ~informix/node-red/
