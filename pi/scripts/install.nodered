@@ -38,7 +38,7 @@ cd ~informix/node-red/nodes
 git clone https://github.com/IBM-IoT/node-red-contrib-sensortag-transform
 git clone https://github.com/IBM-IoT/node-red-contrib-sensortag
 
-cd ~informix/node-red/node_modules/node-red-contrib-timeseries
+cd ~informix/node-red/node_modules/node-red-contrib-timeseries/timeseries
 sudo sed -i 's/storage-input/GatewayKit/' timeseries.html timeseries-simple.html
 sudo sed -i 's/storage-output/GatewayKit/' timeseries.html timeseries-simple.html
 
