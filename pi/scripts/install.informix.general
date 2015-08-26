@@ -37,7 +37,14 @@ LOGSTART1 "ONCONFIG"
 ########################
 # $ONCONFIG file 
 ########################
-sudo cp $IOTKITDIR/config/onconfig.iotkit $INFORMIXDIR/etc/onconfig.iotkit
+mem=`cat /proc/meminfo | grep MemTotal | awk '{print $2}'`
+
+if [ "$mem" -le "524288" ]; then
+	sudo cp $IOTKITDIR/config/onconfig.iotkit.small $INFORMIXDIR/etc/onconfig.iotkit
+else
+	sudo cp $IOTKITDIR/config/onconfig.iotkit $INFORMIXDIR/etc/onconfig.iotkit
+fi
+
 sudo chown informix:informix $INFORMIXDIR/etc/onconfig.iotkit
 
 LOGSTOP1
