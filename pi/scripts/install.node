@@ -8,26 +8,14 @@ LOGSTOP1
 LOGSTART1 "apt-get node"
 
 
-ARCHITECTURE=`uname -a`
-WC=`echo $ARCHITECTURE | grep x86_64 | wc -l`
-if [ "$WC" != "0" ]; then
-	sudo apt-get install nodejs-legacy nodejs -gy
-fi
+wget http://node-arm.herokuapp.com/node_0.10.36_armhf.deb
+sudo dpkg -i node_0.10.36_armhf.deb
+sudo apt-get install build-essential python-dev python-rpi.gpio -y
+sudo mv $IOTKITDIR/node_0.10.36_armhf.deb $IOTKITDEPEND/
 
-WC=`echo $ARCHITECTURE | grep armv6 | wc -l`
-if [ "$WC" != "0" ]; then
-	wget http://node-arm.herokuapp.com/node_0.10.36_armhf.deb
-	sudo dpkg -i node_0.10.36_armhf.deb
-	sudo apt-get install build-essential python-dev python-rpi.gpio -y
-	sudo mv $IOTKITDIR/node_0.10.36_armhf.deb $IOTKITDEPEND/
 
-fi
-
-WC=`echo $ARCHITECTURE | grep armv7 | wc -l`
-if [ "$WC" != "0" ]; then
-        curl -kL https://deb.nodesource.com/setup | sudo bash - 	
-	sudo apt-get install -y build-essential python-dev python-rpi.gpio nodejs -y
-fi
+#curl -kL https://deb.nodesource.com/setup | sudo bash - 	
+#sudo apt-get install -y build-essential python-dev python-rpi.gpio nodejs -y
 
 LOGSTOP1
 LOGSTART1 "curl npmjs"
