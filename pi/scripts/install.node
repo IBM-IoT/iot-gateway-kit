@@ -8,21 +8,21 @@ LOGSTOP1
 LOGSTART1 "apt-get node"
 
 
-wget http://node-arm.herokuapp.com/node_0.10.36_armhf.deb
-sudo dpkg -i node_0.10.36_armhf.deb
-sudo apt-get install build-essential python-dev python-rpi.gpio -y
-sudo mv $IOTKITDIR/node_0.10.36_armhf.deb $IOTKITDEPEND/
+#wget http://node-arm.herokuapp.com/node_0.10.36_armhf.deb
+#sudo dpkg -i node_0.10.36_armhf.deb
+#sudo apt-get install build-essential python-dev python-rpi.gpio -y
+#sudo mv $IOTKITDIR/node_0.10.36_armhf.deb $IOTKITDEPEND/
 
 
-#curl -kL https://deb.nodesource.com/setup | sudo bash - 	
-#sudo apt-get install -y build-essential python-dev python-rpi.gpio nodejs -y
+curl -kL https://deb.nodesource.com/setup_0.12 | sudo bash - 	
+sudo apt-get install -y build-essential python-dev python-rpi.gpio nodejs -y
 
 LOGSTOP1
 LOGSTART1 "curl npmjs"
 
-sudo bash -c "curl -kL https://npmjs.org/install.sh | sh" 
-sudo cp $IOTKITDIR/npm-install-*.sh $IOTKITDEPEND/
-sudo npm update
+#sudo bash -c "curl -kL https://npmjs.org/install.sh | sh" 
+#sudo cp $IOTKITDIR/npm-install-*.sh $IOTKITDEPEND/
+#sudo npm update
 
 
 LOGSTOP1
