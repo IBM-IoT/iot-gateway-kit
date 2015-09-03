@@ -7,15 +7,21 @@ sudo apt-get install libudev-dev -y
 LOGSTOP1
 LOGSTART1 "apt-get node"
 
+wc=`lscpu | grep armv6 | wc -l`
+if [ "$wc" -eq "1" ]; then
+	cd $IOTKITDEPEND
+	wget http://node-arm.herokuapp.com/node_0.10.36_armhf.deb
+	sudo dpkg -i node_0.10.36_armhf.deb
+	sudo apt-get install build-essential python-dev python-rpi.gpio -y
 
-#wget http://node-arm.herokuapp.com/node_0.10.36_armhf.deb
-#sudo dpkg -i node_0.10.36_armhf.deb
-#sudo apt-get install build-essential python-dev python-rpi.gpio -y
-#sudo mv $IOTKITDIR/node_0.10.36_armhf.deb $IOTKITDEPEND/
+fi
 
+wc=`lscpu | grep armv7 | wc -l`
 
-curl -kL https://deb.nodesource.com/setup_0.12 | sudo bash - 	
-sudo apt-get install -y build-essential python-dev python-rpi.gpio nodejs -y
+if [ "$wc" -eq "1" ]; then
+	curl -kL https://deb.nodesource.com/setup_0.12 | sudo bash - 	
+	sudo apt-get install -y build-essential python-dev python-rpi.gpio nodejs -y
+fi
 
 LOGSTOP1
 LOGSTART1 "curl npmjs"
