@@ -28,25 +28,27 @@ cd ~informix/node-red
 sudo npm install node-red-contrib-timeseries express -y
 sudo npm install node-red-contrib-scx-ibmiotapp -y
 sudo npm install node-red-contrib-graphs -y
+sudo npm install node-red-contrib-sensortag -y
+sudo npm install iot-gateway-kit-misc -y
 sudo mkdir -p /home/informix/node-red/node_modules/node-red-contrib-graphs/.dash
 sudo cp -p $IOTKITDIR/config/config_default.json /home/informix/node-red/node_modules/node-red-contrib-graphs/.dash/ 
 sudo cp $IOTKITDIR/scripts/start.nodered ~informix/node-red/
 sudo cp $IOTKITDIR/scripts/stop.nodered ~informix/node-red/
 
-tar xvf iotf-transform.tar
-cd ~informix/node-red/nodes
-git clone https://github.com/IBM-IoT/node-red-contrib-sensortag-transform
-git clone https://github.com/IBM-IoT/node-red-contrib-sensortag
+#tar xvf iotf-transform.tar
+#cd ~informix/node-red/nodes
+#git clone https://github.com/IBM-IoT/node-red-contrib-sensortag-transform
+#git clone https://github.com/IBM-IoT/node-red-contrib-sensortag
 
-cd ~informix/node-red/node_modules/node-red-contrib-timeseries/timeseries
-sudo sed -i 's/storage-input/GatewayKit/' timeseries.html timeseries-simple.html
-sudo sed -i 's/storage-output/GatewayKit/' timeseries.html timeseries-simple.html
+#cd ~informix/node-red/node_modules/node-red-contrib-timeseries/timeseries
+#sudo sed -i 's/storage-input/GatewayKit/' timeseries.html timeseries-simple.html
+#sudo sed -i 's/storage-output/GatewayKit/' timeseries.html timeseries-simple.html
 
-cd ~informix/node-red/nodes/node-red-contrib-sensortag
-sudo sed -i 's/advanced-function/GatewayKit/' sensorTagNode.html
+#cd ~informix/node-red/nodes/node-red-contrib-sensortag
+#sudo sed -i 's/advanced-function/GatewayKit/' sensorTagNode.html
 
-cd ~informix/node-red/node_modules/node-red-contrib-scx-ibmiotapp/application
-sed -i "s/category[ ]*:[ ]*[\"']input[\"']/category: 'GatewayKit'/" 97-iotnewapp-cf.html
-sed -i "s/category[ ]*:[ ]*[\"']output[\"']/category: 'GatewayKit'/" 97-iotnewapp-cf.html
+#cd ~informix/node-red/node_modules/node-red-contrib-scx-ibmiotapp/application
+#sed -i "s/category[ ]*:[ ]*[\"']input[\"']/category: 'GatewayKit'/" 97-iotnewapp-cf.html
+#sed -i "s/category[ ]*:[ ]*[\"']output[\"']/category: 'GatewayKit'/" 97-iotnewapp-cf.html
 
 LOGSTOP1

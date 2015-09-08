@@ -1,183 +1,112 @@
 {
 	"dashboards": [
 		{
-			"name": "Movement",
-			"charts": {
-				"1X4sAIYq2xSd9nLK": {
-					"id": "1X4sAIYq2xSd9nLK",
+			"name": "Sensor Tag Dashboard",
+			"charts": [
+				{
+					"id": "WYAyEDTUecB7ikaO",
 					"name": "Acceleration",
-					"chartPlugin": "dygraph",
+					"config": {
+						"xLabel": "",
+						"yLabel": "",
+						"dataLimit": "100",
+						"history": 1200000
+					},
 					"datasources": [
 						{
-							"id": "567591bf.a98a7",
+							"id": "493725b.fb6c8dc",
 							"config": {
-								"label": "Acceleration X",
-								"area": false
-							}
-						},
-						{
-							"id": "56873ba3.a978c4",
-							"config": {
-								"label": "Acceleration Y",
-								"area": false
-							}
-						},
-						{
-							"id": "e2ffbf43.1d004",
-							"config": {
-								"label": "Acceleration Z",
-								"area": false
+								"area": false,
+								"label": "Accelerometer",
+								"components": {
+									"x": {
+										"enabled": true,
+										"label": ""
+									},
+									"y": {
+										"enabled": true,
+										"label": ""
+									},
+									"z": {
+										"enabled": true,
+										"label": ""
+									}
+								}
 							}
 						}
 					],
-					"config": {
-						"history": 1200000,
-						"xLabel": "",
-						"yLabel": "",
-						"dataLimit": "1000"
-					}
+					"pos": {
+						"x": 0,
+						"y": 0,
+						"w": 2,
+						"h": 1
+					},
+					"plugin": "dygraph"
 				},
-				"3R7FA0cFxCXBKWdC": {
-					"id": "3R7FA0cFxCXBKWdC",
-					"name": "Gyroscope",
-					"chartPlugin": "dygraph",
+				{
+					"id": "c8LWLKtTffWI5bgY",
+					"name": "Luxometer",
+					"config": {
+						"xLabel": "",
+						"yLabel": "",
+						"dataLimit": "100",
+						"history": 1200000
+					},
 					"datasources": [
 						{
-							"id": "9d5ef489.740598",
+							"id": "c42e7060.3bd19",
 							"config": {
-								"label": "Gyroscope X",
-								"area": false
-							}
-						},
-						{
-							"id": "41f0451a.be0fbc",
-							"config": {
-								"label": "Gyroscope Y",
-								"area": false
-							}
-						},
-						{
-							"id": "fde38187.021c8",
-							"config": {
-								"label": "Gyroscope Z",
-								"area": false
+								"area": false,
+								"label": "Luxometer",
+								"components": {}
 							}
 						}
 					],
-					"config": {
-						"history": 1200000,
-						"xLabel": "",
-						"yLabel": "",
-						"dataLimit": "1000"
-					}
+					"pos": {
+						"x": 2,
+						"y": 0,
+						"w": 2,
+						"h": 1
+					},
+					"plugin": "dygraph"
 				},
-				"s44k88Hlzwsavzlk": {
-					"id": "s44k88Hlzwsavzlk",
-					"name": "Magnetometer",
-					"chartPlugin": "dygraph",
-					"datasources": [
-						{
-							"id": "af4a18f4.50b5e8",
-							"config": {
-								"label": "Magnetometer X",
-								"area": false
-							}
-						},
-						{
-							"id": "8ddaa730.722558",
-							"config": {
-								"label": "Magnetometer Y",
-								"area": false
-							}
-						},
-						{
-							"id": "bfe5a0c3.401a6",
-							"config": {
-								"label": "Magnetometer Z",
-								"area": false
-							}
-						}
-					],
-					"config": {
-						"history": 1200000,
-						"xLabel": "",
-						"yLabel": "",
-						"dataLimit": "1000"
-					}
-				}
-			}
-		},
-		{
-			"name": "Weather",
-			"charts": {
-				"ZSs8Jq2rubC3hrd1": {
-					"id": "ZSs8Jq2rubC3hrd1",
-					"name": "Humidity",
-					"chartPlugin": "dygraph",
-					"datasources": [
-						{
-							"id": "28e8479a.d717b8",
-							"config": {
-								"label": "Humidity-humidity",
-								"area": false
-							}
-						}
-					],
-					"config": {
-						"history": 1200000,
-						"xLabel": "",
-						"yLabel": "",
-						"dataLimit": "1000"
-					}
-				},
-				"OShUUJYw3CZLTUYE": {
-					"id": "OShUUJYw3CZLTUYE",
+				{
+					"id": "eBdJ8SQmVEUsIseM",
 					"name": "Temperature",
-					"chartPlugin": "dygraph",
+					"config": {
+						"xLabel": "",
+						"yLabel": "",
+						"dataLimit": "100",
+						"history": 1200000
+					},
 					"datasources": [
 						{
-							"id": "35b6c223.ca493e",
+							"id": "31707b3b.ce8f84",
 							"config": {
-								"label": "Humidity-temp",
-								"area": false
+								"area": false,
+								"label": "Temperature",
+								"components": {
+									"object": {
+										"enabled": true,
+										"label": ""
+									},
+									"ambient": {
+										"enabled": true,
+										"label": ""
+									}
+								}
 							}
 						}
 					],
-					"config": {
-						"history": 1200000,
-						"xLabel": "",
-						"yLabel": "",
-						"dataLimit": "1000"
-					}
-				},
-				"MoCRoGvey47zBNRe": {
-					"id": "MoCRoGvey47zBNRe",
-					"name": "test",
-					"chartPlugin": "dygraph",
-					"datasources": [
-						{
-							"id": "7159cce7.8ea634",
-							"config": {
-								"label": "Temp-object",
-								"area": false
-							}
-						},
-						{
-							"id": "334b63c0.ccb49c",
-							"config": {
-								"label": "Temp-ambient",
-								"area": false
-							}
-						}
-					],
-					"config": {
-						"history": 1200000,
-						"xLabel": "",
-						"yLabel": "",
-						"dataLimit": "1000"
-					}
+					"pos": {
+						"x": 0,
+						"y": 1,
+						"w": 2,
+						"h": 1
+					},
+					"plugin": "dygraph"
 				}
-			}
+			]
 		}
 	]
 }
