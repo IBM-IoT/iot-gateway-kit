@@ -1,0 +1,63 @@
+     ----------------------------------------
+          Updating Node & Node-red/components
+     ----------------------------------------
+          Start:  Tue 22 Aug 14:32:24 UTC 2017
+]2;Node-RED update
+ 
+This script will remove any pre-installed versions of node.js and Node-RED
+and replace them with node.js 6.x LTS (boron) and the latest Node-RED from Npm.
+ 
+It also moves any Node-RED nodes that are globally installed into your user
+~/.node-red/node_modules directory, and adds them to your package.json, so that
+you can manage them with the palette manager.
+ 
+It also tries to run 'npm rebuild' to refresh any extra nodes you have installed
+that may have a native binary component. While this normally works ok, you need
+to check that it succeeds for your combination of installed nodes.
+ 
+To do all this it runs commands as root - please satisfy yourself that this will
+not damage your Pi, or otherwise compromise your configuration.
+If in doubt please backup your SD card first.
+ 
+
+[3;J[H[2JRunning Node-RED update for user pi at /home/pi
+
+This can take 20-30 minutes on a Pi 1 - please wait.
+
+  Stop Node-RED                       
+  Remove old version of Node-RED      
+  Remove old version of node.js       
+  Install node.js                     
+  Clean npm cache                     
+  Install Node-RED core               
+  Move global nodes to local          
+  Install extra Pi nodes              
+  Npm rebuild existing nodes          
+  Add menu shortcut                   
+  Update systemd script               
+  Update update script                
+
+Any errors will be logged to   /var/log/nodered-install.log
+[14A  Stop Node-RED                       [1;32m✔[0m
+  Remove old version of Node-RED      [1;32m✔[0m
+  Remove old version of node.js       [1;32m✔[0m
+  Install node.js LTS                   Install node.js LTS                 [1;32m✔[0m   Node v6.11.2   Npm 3.10.10
+  Clean npm cache                     [1;32m✔[0m
+  Install Node-RED core               [1;32m✔[0m   0.17.5 
+  Move global nodes to local          [1;32m✔[0m
+  Install extra Pi nodes              -
+  Npm rebuild existing nodes          [1;32m✔[0m
+  Add menu shortcut                   [1;32m✔[0m
+  Update systemd script               [1;32m✔[0m
+  Update update script                [1;32m✔[0m
+
+
+
+All done.
+  You can now start Node-RED with the command  [0;36mnode-red-start[0m
+  or using the icon under   Menu / Programming / Node-RED
+  Then point your browser to [0;36mlocalhost:1880[0m or [0;36mhttp://{your_pi_ip-address}:1880[0m
+
+Started  Tue 22 Aug 14:32:36 UTC 2017  -  Finished  Tue 22 Aug 14:43:19 UTC 2017
+
+           Stop:  Tue 22 Aug 14:43:20 UTC 2017

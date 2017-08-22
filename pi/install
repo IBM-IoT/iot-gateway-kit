@@ -1,5 +1,78 @@
 #!/bin/bash
 
+
+function usage()
+{
+
+   echo ""    
+   echo "     1.  Run apt-get update"
+   echo "     2.  Create informix user "
+   echo "     3.  Update nodejs & node-red"
+   echo "     4.  Install node-red modules"
+   echo "     5.  Install BLE/Bluez Drivers"
+   echo "     6.  Install Informix Product"
+   echo "     7.  Configure Informix Product"
+   echo "     8.  Start iot Service"
+   echo "     9.  All"
+ 
+   
+
+}
+
+
+########################################################
+# Parse Arguments 
+########################################################
+
+if [[ "$#" -ne 0 ]]
+then
+   while test $# -gt 0
+   do
+      case "$1" in
+        "1" )
+            aptget_update=1
+            ;;
+        "2" )
+            cr_user=1
+            ;;
+        "3" )
+            upd_node=1
+            ;;
+        "4" )
+            install_modules=1
+            ;;
+        "5" )
+            install_ble=1
+            ;;
+        "6" )
+            install_ids=1
+            ;;
+        "7" )
+            configure_ids=1
+            ;;
+        "8" )
+            start_iot=1
+            ;;
+        "9" )
+            do_all=1
+            ;;
+
+      esac
+      shift
+   done
+else
+   usage
+   exit
+fi
+
+
+
+
+
+
+
+
+
 ########################################################
 # Setup environment 
 ########################################################
@@ -25,44 +98,66 @@ fi
 ########################################################
 sudo bash -c "echo 'Begin Install' > install.log" 
 
-########################################################
+
+
+
+
+if [[ "$aptget_update" == "1" || "$do_all" == "1" ]]
+then
+
+#################################################################
 # Run apt-get update 
-########################################################
-LOGSTART "Run apt-get update"
+#################################################################
+LOGSTART "Run apt-get update LOGFILE: $IOTKITDIR/LOG/update.log"
 . $IOTKITDIR/scripts/install.apt-get.update > $IOTKITDIR/LOG/update.log 2>&1
 LOGSTOP
 
+fi
+
+if [[ "$cr_user" == "1" || "$do_all" == "1" ]]
+then
 
 ########################################################
 # Create Informix user
 ########################################################
-LOGSTART "Create Informix User"
+LOGSTART "Create Informix User LOGFILE: $IOTKITDIR/LOG/user.log"
 . $IOTKITDIR/scripts/install.informix.user > $IOTKITDIR/LOG/user.log 2>&1
 LOGSTOP
 
+fi
 
 
+if [[ "$upd_node" == "1" || "$do_all" == "1" ]]
+then
 
 ########################################################
-# Install Node
+# Update Nodejs & Node-Red
 ########################################################
-LOGSTART "Install Node"
-. $IOTKITDIR/scripts/install.node > $IOTKITDIR/LOG/node.log 2>&1
+LOGSTART "Updating Nodejs & Node-Red LOGFILE: $IOTKITDIR/LOG/node.log"
+. $IOTKITDIR/scripts/update.node > $IOTKITDIR/LOG/node.log 2>&1
+LOGSTOP
+
+fi
+
+if [[ "$install_modules" == "1" || "$do_all" == "1" ]]
+then
+########################################################
+# Update Nodejs & Node-Red
+########################################################
+LOGSTART "Updating Nodejs & Node-Red LOGFILE: $IOTKITDIR/LOG/node.modules.log"
+. $IOTKITDIR/scripts/install.node.modules > $IOTKITDIR/LOG/node.modules.log 2>&1
 LOGSTOP
 
 
-########################################################
-# Install Node-red
-########################################################
-LOGSTART "Install Node-Red"
-. $IOTKITDIR/scripts/install.nodered > $IOTKITDIR/LOG/nodered.log 2>&1
-LOGSTOP
+fi
 
+if [[ "$install_ble" == "1" || "$do_all" == "1" ]]
+then
 
 ########################################################
 # Install Ble
 ########################################################
-LOGSTART "Install Ble"
+LOGSTART "Install Ble LOGFILE: $IOTKITDIR/LOG/ble.log"
 . $IOTKITDIR/scripts/install.ble > $IOTKITDIR/LOG/ble.log 2>&1
 LOGSTOP
 
@@ -70,32 +165,41 @@ LOGSTOP
 ########################################################
 # Install Bluez
 ########################################################
-LOGSTART "Install Bluez"
+LOGSTART "Install Bluez LOGFILE: $IOTKITDIR/LOG/bluez.log"
 . $IOTKITDIR/scripts/install.bluez > $IOTKITDIR/LOG/bluez.log 2>&1
 LOGSTOP
 
-########################################################
-# Install Zwave
-########################################################
-LOGSTART "Install Zwave"
-#. $IOTKITDIR/scripts/install.zwave > $IOTKITDIR/LOG/zwave.log 2>&1 
-LOGSTOP
+fi
 
+
+
+if [[ "$install_ids" == "1" || "$do_all" == "1" ]]
+then
 
 ########################################################
 # Install Informix Product 
 ########################################################
-LOGSTART "Install Informix Product"
-. $IOTKITDIR/scripts/install.informix.prod
+LOGSTART "Install Informix Product LOGFILE: $IOTKITDIR/LOG/prod.log"
+. $IOTKITDIR/scripts/install.informix.prod > $IOTKITDIR/LOG/prod.log 2>&1
 LOGSTOP
 
+fi
 
+
+if [[ "$configure_ids" == "1" || "$do_all" == "1" ]]
+then
 ########################################################
 # Install Informix General
 ########################################################
-LOGSTART "Install Informix General"
+LOGSTART "Install Informix General LOGFILE: $IOTKITDIR/LOG/informix.log"
 . $IOTKITDIR/scripts/install.informix.general > $IOTKITDIR/LOG/informix.log 2>&1 
 LOGSTOP
+
+fi
+
+
+if [[ "$start_iot" == "1" || "$do_all" == "1" ]]
+then
 
 ########################################################
 # Starting iot service 
@@ -105,5 +209,6 @@ sudo service informix stop
 sudo service iot start 
 LOGSTOP
 
+fi
 
 

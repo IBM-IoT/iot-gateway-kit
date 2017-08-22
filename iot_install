@@ -1,2 +1,2 @@
 . ./kit.env
-. $IOTKITDIR/install
+. $IOTKITDIR/install 

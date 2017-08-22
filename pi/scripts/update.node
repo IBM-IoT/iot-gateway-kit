@@ -1,0 +1,11 @@
+#!/bin/bash
+
+########################################################
+# Update Nodejs & Node-Red
+########################################################
+LOGSTART1 "Updating Node & Node-red/components"      
+echo "y" |bash <(curl -sL https://raw.githubusercontent.com/node-red/raspbian-deb-package/master/resources/update-nodejs-and-nodered) 
+LOGSTOP1
+
+
+

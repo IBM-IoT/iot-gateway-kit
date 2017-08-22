@@ -6,7 +6,7 @@ LOGSTART1 "Informix Product"
 ################################
 # Install Informix Product 
 ################################
-
+        
 while true
 do
 	WC=`ls $IOTKITDEPEND/ids.*.tar | wc -l`
@@ -19,7 +19,13 @@ do
 		INFORMIX="$IOTKITDEPEND/ids.*.tar"
 		cd $IOTKITDEPEND
 		sudo tar xvf $INFORMIX
-		sudo $IOTKITDEPEND/ids_install -DINSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
+                sudo mkdir -p /opt/IBM/informix
+                sudo chown informix:informix /opt/IBM
+                sudo chown informix:informix /opt/IBM/informix 
+                
+	        cd $IOTKITDEPEND
+		sudo ./ids_install -DUSER_INSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
+		#sudo $IOTKITDEPEND/ids_install -DUSER_INSTALL_DIR=/opt/IBM/informix -DLICENSE_ACCEPTED=TRUE -i silent
 		break
 
 	else
