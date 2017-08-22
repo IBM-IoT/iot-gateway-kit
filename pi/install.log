@@ -2,118 +2,118 @@ Begin Install
 ################################################
   Run apt-get update LOGFILE: /home/pi/iot-gateway-kit/pi/LOG/update.log
 ################################################
-   Start:  Tue 22 Aug 14:31:30 UTC 2017
+   Start:  Tue 22 Aug 19:28:00 UTC 2017
      ----------------------------------------
           apt-get update
      ----------------------------------------
-          Start:  Tue 22 Aug 14:31:31 UTC 2017
-           Stop:  Tue 22 Aug 14:32:22 UTC 2017
-    Stop:  Tue 22 Aug 14:32:22 UTC 2017
+          Start:  Tue 22 Aug 19:28:01 UTC 2017
+           Stop:  Tue 22 Aug 19:28:52 UTC 2017
+    Stop:  Tue 22 Aug 19:28:52 UTC 2017
 ################################################
   Create Informix User LOGFILE: /home/pi/iot-gateway-kit/pi/LOG/user.log
 ################################################
-   Start:  Tue 22 Aug 14:32:22 UTC 2017
+   Start:  Tue 22 Aug 19:28:53 UTC 2017
      ----------------------------------------
           Informix user
      ----------------------------------------
-          Start:  Tue 22 Aug 14:32:22 UTC 2017
-           Stop:  Tue 22 Aug 14:32:23 UTC 2017
-    Stop:  Tue 22 Aug 14:32:24 UTC 2017
+          Start:  Tue 22 Aug 19:28:53 UTC 2017
+           Stop:  Tue 22 Aug 19:28:54 UTC 2017
+    Stop:  Tue 22 Aug 19:28:54 UTC 2017
 ################################################
   Updating Nodejs & Node-Red LOGFILE: /home/pi/iot-gateway-kit/pi/LOG/node.log
 ################################################
-   Start:  Tue 22 Aug 14:32:24 UTC 2017
+   Start:  Tue 22 Aug 19:28:54 UTC 2017
      ----------------------------------------
           Updating Node & Node-red/components
      ----------------------------------------
-          Start:  Tue 22 Aug 14:32:24 UTC 2017
-           Stop:  Tue 22 Aug 14:43:20 UTC 2017
-    Stop:  Tue 22 Aug 14:43:20 UTC 2017
+          Start:  Tue 22 Aug 19:28:54 UTC 2017
+           Stop:  Tue 22 Aug 19:29:07 UTC 2017
+    Stop:  Tue 22 Aug 19:29:07 UTC 2017
 ################################################
   Updating Nodejs & Node-Red LOGFILE: /home/pi/iot-gateway-kit/pi/LOG/node.modules.log
 ################################################
-   Start:  Tue 22 Aug 14:43:20 UTC 2017
+   Start:  Tue 22 Aug 19:29:07 UTC 2017
      ----------------------------------------
           Installing npm
      ----------------------------------------
-          Start:  Tue 22 Aug 14:43:20 UTC 2017
-           Stop:  Tue 22 Aug 14:43:23 UTC 2017
+          Start:  Tue 22 Aug 19:29:07 UTC 2017
+           Stop:  Tue 22 Aug 19:29:11 UTC 2017
      ----------------------------------------
           Installing node-red-contrib
      ----------------------------------------
-          Start:  Tue 22 Aug 14:43:24 UTC 2017
-           Stop:  Tue 22 Aug 14:49:40 UTC 2017
-    Stop:  Tue 22 Aug 14:49:40 UTC 2017
+          Start:  Tue 22 Aug 19:29:11 UTC 2017
+           Stop:  Tue 22 Aug 19:34:17 UTC 2017
+    Stop:  Tue 22 Aug 19:34:17 UTC 2017
 ################################################
   Install Ble LOGFILE: /home/pi/iot-gateway-kit/pi/LOG/ble.log
 ################################################
-   Start:  Tue 22 Aug 14:49:41 UTC 2017
+   Start:  Tue 22 Aug 19:34:17 UTC 2017
      ----------------------------------------
           Copy Program Files
      ----------------------------------------
-          Start:  Tue 22 Aug 14:49:41 UTC 2017
-           Stop:  Tue 22 Aug 14:49:41 UTC 2017
+          Start:  Tue 22 Aug 19:34:17 UTC 2017
+           Stop:  Tue 22 Aug 19:34:17 UTC 2017
      ----------------------------------------
           Components
      ----------------------------------------
-          Start:  Tue 22 Aug 14:49:41 UTC 2017
-           Stop:  Tue 22 Aug 15:00:42 UTC 2017
-    Stop:  Tue 22 Aug 15:00:42 UTC 2017
+          Start:  Tue 22 Aug 19:34:18 UTC 2017
+           Stop:  Tue 22 Aug 19:45:48 UTC 2017
+    Stop:  Tue 22 Aug 19:45:48 UTC 2017
 ################################################
   Install Informix General LOGFILE: /home/pi/iot-gateway-kit/pi/LOG/informix.log
 ################################################
-   Start:  Tue 22 Aug 15:00:43 UTC 2017
+   Start:  Tue 22 Aug 19:45:48 UTC 2017
      ----------------------------------------
           init.d
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:43 UTC 2017
-           Stop:  Tue 22 Aug 15:00:47 UTC 2017
+          Start:  Tue 22 Aug 19:45:49 UTC 2017
+           Stop:  Tue 22 Aug 19:45:53 UTC 2017
      ----------------------------------------
           inf.env
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:47 UTC 2017
-           Stop:  Tue 22 Aug 15:00:48 UTC 2017
+          Start:  Tue 22 Aug 19:45:53 UTC 2017
+           Stop:  Tue 22 Aug 19:45:54 UTC 2017
      ----------------------------------------
           ONCONFIG
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:48 UTC 2017
-           Stop:  Tue 22 Aug 15:00:48 UTC 2017
+          Start:  Tue 22 Aug 19:45:54 UTC 2017
+           Stop:  Tue 22 Aug 19:45:54 UTC 2017
      ----------------------------------------
           SQLHOSTS
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:49 UTC 2017
-           Stop:  Tue 22 Aug 15:00:49 UTC 2017
+          Start:  Tue 22 Aug 19:45:55 UTC 2017
+           Stop:  Tue 22 Aug 19:45:55 UTC 2017
      ----------------------------------------
           sch_init_iotkit
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:49 UTC 2017
-           Stop:  Tue 22 Aug 15:00:50 UTC 2017
+          Start:  Tue 22 Aug 19:45:55 UTC 2017
+           Stop:  Tue 22 Aug 19:45:56 UTC 2017
      ----------------------------------------
           mongo.properties
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:50 UTC 2017
-           Stop:  Tue 22 Aug 15:00:50 UTC 2017
+          Start:  Tue 22 Aug 19:45:56 UTC 2017
+           Stop:  Tue 22 Aug 19:45:56 UTC 2017
      ----------------------------------------
           rest.properties
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:51 UTC 2017
-           Stop:  Tue 22 Aug 15:00:51 UTC 2017
+          Start:  Tue 22 Aug 19:45:57 UTC 2017
+           Stop:  Tue 22 Aug 19:45:57 UTC 2017
      ----------------------------------------
           iotkitlink
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:51 UTC 2017
-           Stop:  Tue 22 Aug 15:00:51 UTC 2017
+          Start:  Tue 22 Aug 19:45:57 UTC 2017
+           Stop:  Tue 22 Aug 19:45:57 UTC 2017
      ----------------------------------------
           Start Informix
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:52 UTC 2017
-           Stop:  Tue 22 Aug 15:02:51 UTC 2017
+          Start:  Tue 22 Aug 19:45:58 UTC 2017
+           Stop:  Tue 22 Aug 19:45:59 UTC 2017
      ----------------------------------------
           Setup Instance
      ----------------------------------------
-          Start:  Tue 22 Aug 15:02:52 UTC 2017
-           Stop:  Tue 22 Aug 15:03:21 UTC 2017
+          Start:  Tue 22 Aug 19:45:59 UTC 2017
+           Stop:  Tue 22 Aug 19:46:24 UTC 2017
      ----------------------------------------
           Configure Listener
      ----------------------------------------
-          Start:  Tue 22 Aug 15:03:21 UTC 2017
+          Start:  Tue 22 Aug 19:46:24 UTC 2017

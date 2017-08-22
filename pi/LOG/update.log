@@ -1,27 +1,41 @@
      ----------------------------------------
           apt-get update
      ----------------------------------------
-          Start:  Tue 22 Aug 14:31:31 UTC 2017
-Get:1 http://archive.raspberrypi.org jessie InRelease [22.9 kB]
-Get:2 http://mirrordirector.raspbian.org jessie InRelease [14.9 kB]
-Get:3 http://archive.raspberrypi.org jessie/main armhf Packages [170 kB]
-Get:4 http://mirrordirector.raspbian.org jessie/main armhf Packages [9,536 kB]
-Get:5 http://archive.raspberrypi.org jessie/ui armhf Packages [58.9 kB]
-Get:6 http://mirrordirector.raspbian.org jessie/contrib armhf Packages [43.3 kB]
-Get:7 http://mirrordirector.raspbian.org jessie/non-free armhf Packages [84.2 kB]
-Get:8 http://mirrordirector.raspbian.org jessie/rpi armhf Packages [1,356 B]
+          Start:  Tue 22 Aug 19:28:01 UTC 2017
+Hit http://archive.raspberrypi.org jessie InRelease
+Hit http://mirrordirector.raspbian.org jessie InRelease
+Hit https://deb.nodesource.com jessie InRelease
+Hit http://archive.raspberrypi.org jessie/main armhf Packages
+Hit http://mirrordirector.raspbian.org jessie/main armhf Packages
+Hit https://deb.nodesource.com jessie/main Sources
+Hit https://deb.nodesource.com jessie/main armhf Packages
+Get:1 https://deb.nodesource.com jessie/main Translation-en_GB [162 B]
+Get:2 https://deb.nodesource.com jessie/main Translation-en [162 B]
+Get:3 https://deb.nodesource.com jessie/main Translation-en_GB [162 B]
+Hit http://mirrordirector.raspbian.org jessie/contrib armhf Packages
+Hit http://archive.raspberrypi.org jessie/ui armhf Packages
+Get:4 https://deb.nodesource.com jessie/main Translation-en [162 B]
+Get:5 https://deb.nodesource.com jessie/main Translation-en_GB [162 B]
+Get:6 https://deb.nodesource.com jessie/main Translation-en [162 B]
+Get:7 https://deb.nodesource.com jessie/main Translation-en_GB [162 B]
+Hit http://mirrordirector.raspbian.org jessie/non-free armhf Packages
+Get:8 https://deb.nodesource.com jessie/main Translation-en [162 B]
+Get:9 https://deb.nodesource.com jessie/main Translation-en_GB [162 B]
+Ign https://deb.nodesource.com jessie/main Translation-en_GB
+Get:10 https://deb.nodesource.com jessie/main Translation-en [162 B]
+Hit http://mirrordirector.raspbian.org jessie/rpi armhf Packages
+Ign https://deb.nodesource.com jessie/main Translation-en
 Ign http://archive.raspberrypi.org jessie/main Translation-en_GB
 Ign http://archive.raspberrypi.org jessie/main Translation-en
 Ign http://archive.raspberrypi.org jessie/ui Translation-en_GB
 Ign http://mirrordirector.raspbian.org jessie/contrib Translation-en_GB
+Ign http://archive.raspberrypi.org jessie/ui Translation-en
 Ign http://mirrordirector.raspbian.org jessie/contrib Translation-en
 Ign http://mirrordirector.raspbian.org jessie/main Translation-en_GB
-Ign http://archive.raspberrypi.org jessie/ui Translation-en
 Ign http://mirrordirector.raspbian.org jessie/main Translation-en
 Ign http://mirrordirector.raspbian.org jessie/non-free Translation-en_GB
 Ign http://mirrordirector.raspbian.org jessie/non-free Translation-en
 Ign http://mirrordirector.raspbian.org jessie/rpi Translation-en_GB
 Ign http://mirrordirector.raspbian.org jessie/rpi Translation-en
-Fetched 9,931 kB in 27s (355 kB/s)
 Reading package lists...
-           Stop:  Tue 22 Aug 14:32:22 UTC 2017
+           Stop:  Tue 22 Aug 19:28:52 UTC 2017

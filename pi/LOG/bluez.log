@@ -1,14 +1,12 @@
      ----------------------------------------
           git clone bluez
      ----------------------------------------
-          Start:  Tue 22 Aug 14:51:22 UTC 2017
+          Start:  Tue 22 Aug 19:35:38 UTC 2017
 Reading package lists...
 Building dependency tree...
 Reading state information...
 E: Unable to locate package bulid-essential
-Cloning into 'bluepy'...
-tar xzf bluez-src.tgz
-touch ./bluez-5.29/lib/bluetooth.c ./bluez-5.29/lib/hci.c ./bluez-5.29/lib/sdp.c ./bluez-5.29/lib/uuid.c ./bluez-5.29/attrib/att.c ./bluez-5.29/attrib/gatt.c ./bluez-5.29/attrib/gattrib.c ./bluez-5.29/attrib/utils.c ./bluez-5.29/btio/btio.c ./bluez-5.29/src/log.c ./bluez-5.29/src/shared/mgmt.c ./bluez-5.29/src/shared/crypto.c ./bluez-5.29/src/shared/att.c ./bluez-5.29/src/shared/queue.c ./bluez-5.29/src/shared/util.c ./bluez-5.29/src/shared/io-glib.c ./bluez-5.29/src/shared/timeout-glib.c
+fatal: destination path 'bluepy' already exists and is not an empty directory.
 Package glib-2.0 was not found in the pkg-config search path.
 Perhaps you should add the directory containing `glib-2.0.pc'
 to the PKG_CONFIG_PATH environment variable
@@ -56,8 +54,8 @@ compilation terminated.
 compilation terminated.
 Makefile:28: recipe for target 'bluepy-helper' failed
 make: *** [bluepy-helper] Error 1
-           Stop:  Tue 22 Aug 14:52:05 UTC 2017
+           Stop:  Tue 22 Aug 19:36:11 UTC 2017
      ----------------------------------------
           replace sensortag.py
      ----------------------------------------
-          Start:  Tue 22 Aug 14:52:05 UTC 2017
+          Start:  Tue 22 Aug 19:36:11 UTC 2017

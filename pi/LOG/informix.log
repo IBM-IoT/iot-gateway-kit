@@ -1,57 +1,64 @@
      ----------------------------------------
           init.d
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:43 UTC 2017
-           Stop:  Tue 22 Aug 15:00:47 UTC 2017
+          Start:  Tue 22 Aug 19:45:49 UTC 2017
+           Stop:  Tue 22 Aug 19:45:53 UTC 2017
      ----------------------------------------
           inf.env
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:47 UTC 2017
-           Stop:  Tue 22 Aug 15:00:48 UTC 2017
+          Start:  Tue 22 Aug 19:45:53 UTC 2017
+           Stop:  Tue 22 Aug 19:45:54 UTC 2017
      ----------------------------------------
           ONCONFIG
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:48 UTC 2017
-           Stop:  Tue 22 Aug 15:00:48 UTC 2017
+          Start:  Tue 22 Aug 19:45:54 UTC 2017
+           Stop:  Tue 22 Aug 19:45:54 UTC 2017
      ----------------------------------------
           SQLHOSTS
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:49 UTC 2017
-           Stop:  Tue 22 Aug 15:00:49 UTC 2017
+          Start:  Tue 22 Aug 19:45:55 UTC 2017
+           Stop:  Tue 22 Aug 19:45:55 UTC 2017
      ----------------------------------------
           sch_init_iotkit
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:49 UTC 2017
-           Stop:  Tue 22 Aug 15:00:50 UTC 2017
+          Start:  Tue 22 Aug 19:45:55 UTC 2017
+           Stop:  Tue 22 Aug 19:45:56 UTC 2017
      ----------------------------------------
           mongo.properties
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:50 UTC 2017
-           Stop:  Tue 22 Aug 15:00:50 UTC 2017
+          Start:  Tue 22 Aug 19:45:56 UTC 2017
+           Stop:  Tue 22 Aug 19:45:56 UTC 2017
      ----------------------------------------
           rest.properties
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:51 UTC 2017
-           Stop:  Tue 22 Aug 15:00:51 UTC 2017
+          Start:  Tue 22 Aug 19:45:57 UTC 2017
+           Stop:  Tue 22 Aug 19:45:57 UTC 2017
      ----------------------------------------
           iotkitlink
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:51 UTC 2017
-           Stop:  Tue 22 Aug 15:00:52 UTC 2017
+          Start:  Tue 22 Aug 19:45:57 UTC 2017
+           Stop:  Tue 22 Aug 19:45:57 UTC 2017
      ----------------------------------------
           Start Informix
      ----------------------------------------
-          Start:  Tue 22 Aug 15:00:52 UTC 2017
+          Start:  Tue 22 Aug 19:45:58 UTC 2017
 Warning: Parameter's user-configured value was adjusted. (DS_TOTAL_MEMORY)
 Warning: Parameter's user-configured value was adjusted. (DS_MAX_SCANS)
 Warning: Parameter's user-configured value was adjusted. (ONLIDX_MAXMEM)
-           Stop:  Tue 22 Aug 15:02:52 UTC 2017
+oninit: Fatal error in shared memory creation
+
+WARNING: server initialization failed or timed out.
+Check the message log, online.log, for errors.
+           Stop:  Tue 22 Aug 19:45:59 UTC 2017
      ----------------------------------------
           Setup Instance
      ----------------------------------------
-          Start:  Tue 22 Aug 15:02:52 UTC 2017
+          Start:  Tue 22 Aug 19:45:59 UTC 2017
 
 Database selected.
+
+
+Database dropped.
 
 
 Database closed.
@@ -94,10 +101,10 @@ Routine executed.
 
 Database closed.
 
-           Stop:  Tue 22 Aug 15:03:21 UTC 2017
+           Stop:  Tue 22 Aug 19:46:24 UTC 2017
      ----------------------------------------
           Configure Listener
      ----------------------------------------
-          Start:  Tue 22 Aug 15:03:21 UTC 2017
-Cloning into 'rest-listener'...
-           Stop:  Tue 22 Aug 15:03:41 UTC 2017
+          Start:  Tue 22 Aug 19:46:24 UTC 2017
+fatal: destination path 'rest-listener' already exists and is not an empty directory.
+           Stop:  Tue 22 Aug 19:46:25 UTC 2017
