@@ -1,0 +1,5 @@
+cd ~informix/node-red
+rm -f nohup.out
+
+sudo node-red --userDir ~informix/node-red > nohup.out &
+#sudo node red.js -v --userDir ~informix/node-red ~informix/IotKit/flows/flows_version_1.json > nohup.out &

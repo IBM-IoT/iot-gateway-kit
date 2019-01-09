@@ -1,0 +1,13 @@
+     ----------------------------------------
+          apt-get update
+     ----------------------------------------
+          Start:  Wed Jan 2 20:28:01 CST 2019
+Hit:1 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+Get:2 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Ign:4 http://dl.google.com/linux/chrome/deb stable InRelease
+Hit:5 http://dl.google.com/linux/chrome/deb stable Release
+Get:6 http://security.ubuntu.com/ubuntu bionic-security InRelease [83.2 kB]
+Fetched 247 kB in 1s (224 kB/s)
+Reading package lists...
+           Stop:  Wed Jan 2 20:28:05 CST 2019

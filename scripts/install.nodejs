@@ -1,0 +1,32 @@
+#!/bin/bash
+
+
+LOGSTART1 "apt-get remove nodejs"
+sudo apt-get remove nodejs -y
+LOGSTOP1
+
+LOGSTART1 "apt-get install libudev"
+sudo apt-get install libudev-dev -y
+LOGSTOP1
+
+LOGSTART1 "apt-get nodejs & npm"
+
+wc=`lscpu | grep armv6 | wc -l`
+if [ "$wc" -eq "1" ]; then
+	cd $IOTKITDEPEND
+	wget http://node-arm.herokuapp.com/node_0.10.36_armhf.deb
+	sudo dpkg -i node_0.10.36_armhf.deb
+	sudo apt-get install build-essential python-dev python-rpi.gpio -y
+
+fi
+
+wc=`lscpu | grep armv7 | wc -l`
+
+if [ "$wc" -eq "1" ]; then
+	curl -kL https://deb.nodesource.com/setup_7.x | sudo bash - 	
+	sudo apt-get install -y build-essential python-dev python-rpi.gpio nodejs npm -y
+fi
+
+LOGSTOP1
+
+

@@ -1,5 +1,0 @@
-#!/bin/bash
-
-
-IOTKITDIR=${IOTKITDIR=`readlink -f ..`}
-IOTKITDEPEND=$IOTKITDIR/../iot-gateway-kit-depend

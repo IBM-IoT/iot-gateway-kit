@@ -1,0 +1,141 @@
+     --------------------------------------------------
+          Copy Program Files
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:26:23 CST 2019
+           Stop:  Wed Jan 9 13:26:23 CST 2019
+     --------------------------------------------------
+          Components
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:26:23 CST 2019
+Reading package lists...
+Building dependency tree...
+Reading state information...
+bluez is already the newest version (5.43-2+rpt2+deb9u2).
+bluez set to manually installed.
+The following NEW packages will be installed:
+  libbluetooth-dev
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 181 kB of archives.
+After this operation, 519 kB of additional disk space will be used.
+Get:1 http://archive.raspberrypi.org/debian stretch/main armhf libbluetooth-dev armhf 5.43-2+rpt2+deb9u2 [181 kB]
+Fetched 181 kB in 0s (236 kB/s)
+Selecting previously unselected package libbluetooth-dev.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 130875 files and directories currently installed.)
+Preparing to unpack .../libbluetooth-dev_5.43-2+rpt2+deb9u2_armhf.deb ...
+Unpacking libbluetooth-dev (5.43-2+rpt2+deb9u2) ...
+Setting up libbluetooth-dev (5.43-2+rpt2+deb9u2) ...
+(node:6003) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+npm WARN package.json iot-gateway-kit-misc@0.1.0 license should be a valid SPDX license expression
+npm WARN package.json node-red-contrib-graphs@0.3.5 license should be a valid SPDX license expression
+npm WARN package.json node-red-contrib-scx-ibmiotapp@0.0.49 license should be a valid SPDX license expression
+npm WARN package.json node-red-contrib-sensortag@0.1.4 license should be a valid SPDX license expression
+npm WARN package.json node-red-contrib-timeseries@1.0.1 license should be a valid SPDX license expression
+npm WARN optional dep failed, continuing xpc-connection@0.1.4
+
+> usb@1.5.0 install /home/informix/node-red/node_modules/sensortag/node_modules/noble-device/node_modules/noble/node_modules/bluetooth-hci-socket/node_modules/usb
+> node-pre-gyp install --fallback-to-build
+
+node-pre-gyp WARN Using request for node-pre-gyp https download 
+node-pre-gyp WARN Tried to download(404): https://github.com/tessel/node-usb/releases/download/1.5.0/usb_bindings-v1.5.0-node-v57-linux-arm.tar.gz 
+node-pre-gyp WARN Pre-built binaries not found for usb@1.5.0 and node@8.11.1 (node-v57 ABI, glibc) (falling back to source compile with node-gyp) 
+make: Entering directory '/home/informix/node-red/node_modules/sensortag/node_modules/noble-device/node_modules/noble/node_modules/bluetooth-hci-socket/node_modules/usb/build'
+  CC(target) Release/obj.target/libusb/libusb/libusb/core.o
+  CC(target) Release/obj.target/libusb/libusb/libusb/descriptor.o
+  CC(target) Release/obj.target/libusb/libusb/libusb/hotplug.o
+  CC(target) Release/obj.target/libusb/libusb/libusb/io.o
+  CC(target) Release/obj.target/libusb/libusb/libusb/strerror.o
+  CC(target) Release/obj.target/libusb/libusb/libusb/sync.o
+  CC(target) Release/obj.target/libusb/libusb/libusb/os/poll_posix.o
+  CC(target) Release/obj.target/libusb/libusb/libusb/os/threads_posix.o
+  CC(target) Release/obj.target/libusb/libusb/libusb/os/linux_usbfs.o
+  CC(target) Release/obj.target/libusb/libusb/libusb/os/linux_udev.o
+  AR(target) Release/obj.target/usb.a
+  COPY Release/usb.a
+  CXX(target) Release/obj.target/usb_bindings/src/node_usb.o
+../src/node_usb.cc: In function ‘void handleHotplug(std::pair<libusb_device*, libusb_hotplug_event>)’:
+../src/node_usb.cc:151:58: warning: ‘v8::Local<v8::Value> Nan::MakeCallback(v8::Local<v8::Object>, const char*, int, v8::Local<v8::Value>*)’ is deprecated [-Wdeprecated-declarations]
+  Nan::MakeCallback(Nan::New(hotplugThis), "emit", 2, argv);
+                                                          ^
+In file included from ../src/helpers.h:3:0,
+                 from ../src/node_usb.h:21,
+                 from ../src/node_usb.cc:1:
+../../nan/nan.h:1001:46: note: declared here
+   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+                                              ^~~~~~~~~~~~
+  CXX(target) Release/obj.target/usb_bindings/src/device.o
+../src/device.cc: In static member function ‘static void Req::default_after(uv_work_t*)’:
+../src/device.cc:237:64: warning: ‘v8::Local<v8::Value> Nan::MakeCallback(v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*)’ is deprecated [-Wdeprecated-declarations]
+    Nan::MakeCallback(device, Nan::New(baton->callback), 1, argv);
+                                                                ^
+In file included from ../src/helpers.h:3:0,
+                 from ../src/node_usb.h:21,
+                 from ../src/device.cc:1:
+../../nan/nan.h:959:46: note: declared here
+   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+                                              ^~~~~~~~~~~~
+  CXX(target) Release/obj.target/usb_bindings/src/transfer.o
+../src/transfer.cc: In function ‘void handleCompletion(Transfer*)’:
+../src/transfer.cc:126:72: warning: ‘v8::Local<v8::Value> Nan::MakeCallback(v8::Local<v8::Object>, v8::Local<v8::Function>, int, v8::Local<v8::Value>*)’ is deprecated [-Wdeprecated-declarations]
+   Nan::MakeCallback(self->handle(), Nan::New(self->v8callback), 3, argv);
+                                                                        ^
+In file included from ../src/helpers.h:3:0,
+                 from ../src/node_usb.h:21,
+                 from ../src/transfer.cc:1:
+../../nan/nan.h:959:46: note: declared here
+   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+                                              ^~~~~~~~~~~~
+  SOLINK_MODULE(target) Release/obj.target/usb_bindings.node
+  COPY Release/usb_bindings.node
+  COPY /home/informix/node-red/node_modules/sensortag/node_modules/noble-device/node_modules/noble/node_modules/bluetooth-hci-socket/node_modules/usb/src/binding/usb_bindings.node
+  TOUCH Release/obj.target/action_after_build.stamp
+make: Leaving directory '/home/informix/node-red/node_modules/sensortag/node_modules/noble-device/node_modules/noble/node_modules/bluetooth-hci-socket/node_modules/usb/build'
+
+> bluetooth-hci-socket@0.5.1 install /home/informix/node-red/node_modules/sensortag/node_modules/noble-device/node_modules/noble/node_modules/bluetooth-hci-socket
+> node-gyp rebuild
+
+make: Entering directory '/home/informix/node-red/node_modules/sensortag/node_modules/noble-device/node_modules/noble/node_modules/bluetooth-hci-socket/build'
+  CXX(target) Release/obj.target/binding/src/BluetoothHciSocket.o
+../src/BluetoothHciSocket.cpp: In member function ‘void BluetoothHciSocket::poll()’:
+../src/BluetoothHciSocket.cpp:251:95: warning: ‘v8::Local<v8::Value> Nan::MakeCallback(v8::Local<v8::Object>, v8::Local<v8::String>, int, v8::Local<v8::Value>*)’ is deprecated [-Wdeprecated-declarations]
+     Nan::MakeCallback(Nan::New<Object>(this->This), Nan::New("emit").ToLocalChecked(), 2, argv);
+                                                                                               ^
+In file included from ../src/BluetoothHciSocket.cpp:8:0:
+../node_modules/nan/nan.h:980:46: note: declared here
+   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+                                              ^~~~~~~~~~~~
+../src/BluetoothHciSocket.cpp: In member function ‘void BluetoothHciSocket::emitErrnoError()’:
+../src/BluetoothHciSocket.cpp:275:72: warning: ‘v8::Local<v8::Object> v8::Function::NewInstance(int, v8::Local<v8::Value>*) const’ is deprecated: Use maybe version [-Wdeprecated-declarations]
+   Local<Value> error = errorConstructor->NewInstance(1, constructorArgs);
+                                                                        ^
+In file included from /usr/include/nodejs/deps/v8/include/v8.h:26:0,
+                 from /usr/include/nodejs/src/node.h:63,
+                 from /usr/include/nodejs/src/node_buffer.h:25,
+                 from ../src/BluetoothHciSocket.cpp:7:
+/usr/include/nodejs/deps/v8/include/v8.h:3847:31: note: declared here
+                 Local<Object> NewInstance(int argc, Local<Value> argv[]) const);
+                               ^
+/usr/include/nodejs/deps/v8/include/v8config.h:318:3: note: in definition of macro ‘V8_DEPRECATED’
+   declarator __attribute__((deprecated(message)))
+   ^~~~~~~~~~
+../src/BluetoothHciSocket.cpp:282:93: warning: ‘v8::Local<v8::Value> Nan::MakeCallback(v8::Local<v8::Object>, v8::Local<v8::String>, int, v8::Local<v8::Value>*)’ is deprecated [-Wdeprecated-declarations]
+   Nan::MakeCallback(Nan::New<Object>(this->This), Nan::New("emit").ToLocalChecked(), 2, argv);
+                                                                                             ^
+In file included from ../src/BluetoothHciSocket.cpp:8:0:
+../node_modules/nan/nan.h:980:46: note: declared here
+   NAN_DEPRECATED inline v8::Local<v8::Value> MakeCallback(
+                                              ^~~~~~~~~~~~
+  SOLINK_MODULE(target) Release/obj.target/binding.node
+  COPY Release/binding.node
+make: Leaving directory '/home/informix/node-red/node_modules/sensortag/node_modules/noble-device/node_modules/noble/node_modules/bluetooth-hci-socket/build'
+sensortag@1.3.0 node_modules/sensortag
+└── noble-device@1.4.1 (noble@1.9.1)
+(node:6435) [DEP0022] DeprecationWarning: os.tmpDir() is deprecated. Use os.tmpdir() instead.
+npm WARN package.json iot-gateway-kit-misc@0.1.0 license should be a valid SPDX license expression
+npm WARN package.json node-red-contrib-graphs@0.3.5 license should be a valid SPDX license expression
+npm WARN package.json node-red-contrib-scx-ibmiotapp@0.0.49 license should be a valid SPDX license expression
+npm WARN package.json node-red-contrib-sensortag@0.1.4 license should be a valid SPDX license expression
+npm WARN package.json node-red-contrib-timeseries@1.0.1 license should be a valid SPDX license expression
+getmac@1.4.6 node_modules/getmac
+├── editions@2.1.3 (semver@5.6.0, errlop@1.1.1)
+└── extract-opts@3.3.1 (editions@1.3.4, eachr@3.2.0, typechecker@4.7.0)
+           Stop:  Wed Jan 9 13:28:05 CST 2019

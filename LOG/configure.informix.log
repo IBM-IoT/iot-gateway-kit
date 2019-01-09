@@ -1,0 +1,103 @@
+     --------------------------------------------------
+          init.d
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:36:07 CST 2019
+           Stop:  Wed Jan 9 13:36:09 CST 2019
+     --------------------------------------------------
+          inf.env
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:36:09 CST 2019
+           Stop:  Wed Jan 9 13:36:10 CST 2019
+     --------------------------------------------------
+          ONCONFIG
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:36:10 CST 2019
+           Stop:  Wed Jan 9 13:36:10 CST 2019
+     --------------------------------------------------
+          SQLHOSTS
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:36:10 CST 2019
+           Stop:  Wed Jan 9 13:36:10 CST 2019
+     --------------------------------------------------
+          sch_init_iotkit
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:36:10 CST 2019
+           Stop:  Wed Jan 9 13:36:10 CST 2019
+     --------------------------------------------------
+          mongo.properties
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:36:10 CST 2019
+           Stop:  Wed Jan 9 13:36:10 CST 2019
+     --------------------------------------------------
+          rest.properties
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:36:10 CST 2019
+           Stop:  Wed Jan 9 13:36:10 CST 2019
+     --------------------------------------------------
+          iotkitlink
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:36:10 CST 2019
+           Stop:  Wed Jan 9 13:36:10 CST 2019
+     --------------------------------------------------
+          Start Informix
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:36:10 CST 2019
+Warning: Parameter's user-configured value was adjusted. (DS_TOTAL_MEMORY)
+Warning: Parameter's user-configured value was adjusted. (DS_MAX_SCANS)
+Warning: Parameter's user-configured value was adjusted. (ONLIDX_MAXMEM)
+           Stop:  Wed Jan 9 13:37:56 CST 2019
+     --------------------------------------------------
+          Setup Instance
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:37:56 CST 2019
+
+Database selected.
+
+
+Database closed.
+
+
+Database created.
+
+
+
+Database closed.
+
+
+Database selected.
+
+
+Table dropped.
+
+
+Table dropped.
+
+
+Row type dropped.
+
+
+1 row(s) inserted.
+
+
+Row type created.
+
+
+Table created.
+
+
+Routine executed.
+
+
+Routine executed.
+
+
+
+Database closed.
+
+           Stop:  Wed Jan 9 13:38:08 CST 2019
+     --------------------------------------------------
+          Configure Listener
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:38:08 CST 2019
+Cloning into 'rest-listener'...
+           Stop:  Wed Jan 9 13:38:16 CST 2019

@@ -1,8 +1,0 @@
-{
-	"device": "ttyUSB0",
-	"post": {
-		"host": "localhost",
-		"port": "1880",
-		"url": "/zwave/"
-	}
-}

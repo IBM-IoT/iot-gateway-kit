@@ -1,0 +1,23 @@
+#!/bin/bash
+
+###############################################################
+# Pull in node-red
+###############################################################
+LOGSTART1 "npm install node-red"
+cd ~informix
+sudo npm install node-red -gy
+
+
+
+
+###############################################################
+# Make directories and copy util file
+###############################################################
+LOGSTART1 "MK dir and cp"
+sudo mkdir ~informix/node-red/runIot
+sudo cp $IOTKITDIR/bin/util.js ~informix/node-red/runIot/util.js
+sudo mkdir ~informix/node-red/runIot/config
+LOGSTOP1
+
+
+LOGSTOP1

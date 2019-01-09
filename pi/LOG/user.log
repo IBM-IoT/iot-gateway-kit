@@ -1,7 +1,0 @@
-     ----------------------------------------
-          Informix user
-     ----------------------------------------
-          Start:  Tue 22 Aug 19:28:53 UTC 2017
-groupadd: group 'informix' already exists
-useradd: user 'informix' already exists
-           Stop:  Tue 22 Aug 19:28:54 UTC 2017

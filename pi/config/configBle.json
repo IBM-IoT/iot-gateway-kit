@@ -1,7 +1,0 @@
-{
-	"post":{
-		"host": "localhost",
-		"port": "1880",
-		"url": "/ble/"
-	}
-}

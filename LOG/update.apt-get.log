@@ -1,0 +1,8 @@
+     --------------------------------------------------
+          apt-get update
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:18:42 CST 2019
+Hit:1 http://archive.raspberrypi.org/debian stretch InRelease
+Hit:2 http://raspbian.raspberrypi.org/raspbian stretch InRelease
+Reading package lists...
+           Stop:  Wed Jan 9 13:18:48 CST 2019

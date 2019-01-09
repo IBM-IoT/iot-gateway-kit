@@ -1,0 +1,7 @@
+     ----------------------------------------
+          Informix user
+     ----------------------------------------
+          Start:  Wed Jan 2 20:28:39 CST 2019
+groupadd: group 'informix' already exists
+useradd: user 'informix' already exists
+           Stop:  Wed Jan 2 20:28:39 CST 2019

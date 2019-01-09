@@ -1,9 +1,0 @@
-#!/bin/bash
-
-########################
-# apt-get update 
-########################
-LOGSTART1 "apt-get update"
-sudo apt-get update 
-LOGSTOP1
-

@@ -1,0 +1,63 @@
+     --------------------------------------------------
+          git clone bluez
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:28:05 CST 2019
+Reading package lists...
+Building dependency tree...
+Reading state information...
+E: Unable to locate package bulid-essential
+Cloning into 'bluepy'...
+tar xzf bluez-src.tgz
+touch ./bluez-5.47/lib/bluetooth.c ./bluez-5.47/lib/hci.c ./bluez-5.47/lib/sdp.c ./bluez-5.47/lib/uuid.c ./bluez-5.47/attrib/att.c ./bluez-5.47/attrib/gatt.c ./bluez-5.47/attrib/gattrib.c ./bluez-5.47/attrib/utils.c ./bluez-5.47/btio/btio.c ./bluez-5.47/src/log.c ./bluez-5.47/src/shared/mgmt.c ./bluez-5.47/src/shared/crypto.c ./bluez-5.47/src/shared/att.c ./bluez-5.47/src/shared/queue.c ./bluez-5.47/src/shared/util.c ./bluez-5.47/src/shared/io-glib.c ./bluez-5.47/src/shared/timeout-glib.c
+Package glib-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `glib-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'glib-2.0' found
+Package glib-2.0 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `glib-2.0.pc'
+to the PKG_CONFIG_PATH environment variable
+No package 'glib-2.0' found
+cc -L. -g -Wall  -Os -DHAVE_CONFIG_H -I./bluez-5.47/attrib -I./bluez-5.47 -I./bluez-5.47/lib -I./bluez-5.47/src -I./bluez-5.47/gdbus -I./bluez-5.47/btio -I./bluez-5.47/sys  -o bluepy-helper bluepy-helper.c ./bluez-5.47/lib/bluetooth.c ./bluez-5.47/lib/hci.c ./bluez-5.47/lib/sdp.c ./bluez-5.47/lib/uuid.c ./bluez-5.47/attrib/att.c ./bluez-5.47/attrib/gatt.c ./bluez-5.47/attrib/gattrib.c ./bluez-5.47/attrib/utils.c ./bluez-5.47/btio/btio.c ./bluez-5.47/src/log.c ./bluez-5.47/src/shared/mgmt.c ./bluez-5.47/src/shared/crypto.c ./bluez-5.47/src/shared/att.c ./bluez-5.47/src/shared/queue.c ./bluez-5.47/src/shared/util.c ./bluez-5.47/src/shared/io-glib.c ./bluez-5.47/src/shared/timeout-glib.c 
+bluepy-helper.c:33:18: fatal error: glib.h: No such file or directory
+ #include <glib.h>
+                  ^
+compilation terminated.
+./bluez-5.47/attrib/att.c:33:18: fatal error: glib.h: No such file or directory
+ #include <glib.h>
+                  ^
+compilation terminated.
+./bluez-5.47/attrib/gatt.c:32:18: fatal error: glib.h: No such file or directory
+ #include <glib.h>
+                  ^
+compilation terminated.
+./bluez-5.47/attrib/gattrib.c:34:18: fatal error: glib.h: No such file or directory
+ #include <glib.h>
+                  ^
+compilation terminated.
+./bluez-5.47/attrib/utils.c:30:18: fatal error: glib.h: No such file or directory
+ #include <glib.h>
+                  ^
+compilation terminated.
+./bluez-5.47/btio/btio.c:37:18: fatal error: glib.h: No such file or directory
+ #include <glib.h>
+                  ^
+compilation terminated.
+./bluez-5.47/src/log.c:38:18: fatal error: glib.h: No such file or directory
+ #include <glib.h>
+                  ^
+compilation terminated.
+./bluez-5.47/src/shared/io-glib.c:30:18: fatal error: glib.h: No such file or directory
+ #include <glib.h>
+                  ^
+compilation terminated.
+./bluez-5.47/src/shared/timeout-glib.c:22:18: fatal error: glib.h: No such file or directory
+ #include <glib.h>
+                  ^
+compilation terminated.
+Makefile:30: recipe for target 'bluepy-helper' failed
+make: *** [bluepy-helper] Error 1
+           Stop:  Wed Jan 9 13:28:24 CST 2019
+     --------------------------------------------------
+          replace sensortag.py
+     --------------------------------------------------
+          Start:  Wed Jan 9 13:28:24 CST 2019
